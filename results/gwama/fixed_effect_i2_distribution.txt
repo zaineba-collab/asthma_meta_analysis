@@ -1,0 +1,7 @@
+statistic	value
+Minimum I2	0
+1st quartile I2	0
+Median I2	0
+Mean I2	0.0700981676991403
+3rd quartile I2	0
+Maximum I2	0.997165

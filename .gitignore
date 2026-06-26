@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+
+# Python virtual environment
+.venv/
+
+# Large data files
+data/
+raw/
+harmonised/
+final_hg38/
+reference_panel/
+
+# GWAMA per-study input files (derived)
+gwama_input/*.gwama.txt
+config/gwama_input/*.gwama.txt
+
+# Full GWAMA output (large)
+results/gwama/*.out
+results/gwama/asthma_fixed_for_plink_clumping.txt
+results/gwama/high_heterogeneity_i2_75.txt
+results/gwama/significant_heterogeneity_qp.txt
+
+# Liftover intermediates
+liftover/*.bed
+liftover/*.unmap
+
+# Large derived pruning/clumping intermediates
+results/ld_clumping/asthma_clump_snps.txt
+results/pruning/asthma_fixed_for_sentinel_selection.txt
+
+# Third-party tools
+tools/
+
+# R/script logs
+scripts/*.out
+scripts/wetransfer*/

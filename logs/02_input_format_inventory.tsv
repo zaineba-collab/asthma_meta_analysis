@@ -1,0 +1,13 @@
+file	likely_build	has_beta	has_se	has_or	has_ci	has_p	columns
+495_PheCode.v1.0.fastGWA.tsv	unknown	TRUE	TRUE	FALSE	FALSE	TRUE	chromosome | variant_id | base_pair_location | effect_allele | other_allele | N | effect_allele_frequency | T | SE_T | P_noSPA | beta | standard_error | p_value | CONVERGE
+asthma_DISCOVERY.tsv	unknown	TRUE	TRUE	FALSE	FALSE	TRUE	chromosome | base_pair_location | effect_allele | other_allele | beta | standard_error | effect_allele_frequency | p_value | VARIANT_id | INFO | N | TEST | CHISQ | LOG10P
+GCST90029018_buildGRCh37.tsv	GRCh37	TRUE	TRUE	FALSE	FALSE	TRUE	variant_id | chromosome | base_pair_location | effect_allele | other_allele | REF | effect_allele_frequency | beta | standard_error | p_value | n | INFO
+GCST90077671_buildGRCh38.tsv	GRCh38	TRUE	TRUE	TRUE	TRUE	TRUE	chromosome | base_pair_location | other_allele | effect_allele | odds_ratio | ci_lower | ci_upper | p_value | effect_allele_frequency | standard_error | beta | variant_id
+GCST90077672_buildGRCh38.tsv	GRCh38	TRUE	TRUE	TRUE	TRUE	TRUE	chromosome | base_pair_location | other_allele | effect_allele | odds_ratio | ci_lower | ci_upper | p_value | effect_allele_frequency | standard_error | beta | variant_id
+GCST90079456_buildGRCh38.tsv	GRCh38	TRUE	TRUE	TRUE	TRUE	TRUE	chromosome | base_pair_location | other_allele | effect_allele | odds_ratio | ci_lower | ci_upper | p_value | effect_allele_frequency | standard_error | beta | variant_id
+GCST90080141_buildGRCh38.tsv	GRCh38	TRUE	TRUE	TRUE	TRUE	TRUE	chromosome | base_pair_location | other_allele | effect_allele | odds_ratio | ci_lower | ci_upper | p_value | effect_allele_frequency | standard_error | beta | variant_id
+GCST90081448_buildGRCh38.tsv	GRCh38	TRUE	TRUE	TRUE	TRUE	TRUE	chromosome | base_pair_location | other_allele | effect_allele | odds_ratio | ci_lower | ci_upper | p_value | effect_allele_frequency | standard_error | beta | variant_id
+HanY_prePMID_asthma_UKBB.txt.gz	unknown	FALSE	FALSE	TRUE	TRUE	TRUE	SNP | CHR | BP | EA | NEA | EAF | INFO | OR | OR_95L | OR_95U | P | N
+Shrine_30552067_moderate-severe_asthma.txt.gz	GRCh37	TRUE	TRUE	TRUE	TRUE	TRUE	#SNP | Chromosome | Position_b37 | Coded | Non_coded | Coded_freq | INFO | beta | SE_GC | OR | OR_L95 | OR_U95 | P_GC
+ukb.allasthma.final.assoc	unknown	TRUE	TRUE	FALSE	FALSE	TRUE	SNP | CHR | BP | A1 | A2 | BETA | SE | P
+UKBB.asthma-2.assoc	unknown	FALSE	TRUE	TRUE	FALSE	TRUE	SNP | CHR | POS | A1 | A2 | OR | SE | STAT | P
