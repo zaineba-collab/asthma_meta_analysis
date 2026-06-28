@@ -4,22 +4,32 @@ library(data.table)
 # 09_summarise_heterogeneity.R
 #
 # Purpose:
-#   Summarise SNP heterogeneity in the fixed-effect GWAMA
-#   meta-analysis results.
+#   Summarise heterogeneity across the corrected fixed-effect
+#   GWAMA meta-analysis by reporting:
+#     - total number of analysed SNPs,
+#     - variants with high heterogeneity (I² ≥ 0.75),
+#     - variants with significant Cochran's Q test (Q p < 0.05),
+#     - distribution of I² values.
+#
+#   These summaries are used as quality-control metrics to assess
+#   the consistency of genetic effects across contributing studies
+#   before downstream interpretation.
 #
 # Inputs:
-#   results/gwama/asthma_meta_fixed.out
-#   results/gwama/high_heterogeneity_i2_75.txt
-#   results/gwama/significant_heterogeneity_qp.txt
+#   results/gwama/asthma_meta.out
 #
 # Outputs:
-#   results/gwama/fixed_effect_heterogeneity_summary.txt
-#   results/gwama/fixed_effect_i2_distribution.txt
+#   results/gwama/high_heterogeneity_i2_75.txt
+#   results/gwama/significant_heterogeneity_qp.txt
+#   results/gwama/heterogeneity_summary.txt
+#   results/gwama/i2_distribution.txt
 #
 # Notes:
 #   I2 >= 0.75 is treated as high heterogeneity.
 #   Q p-value < 0.05 indicates statistically significant
 #   evidence of heterogeneity between studies.
+#   The high-I2 and significant-Q files are regenerated directly
+#   from asthma_meta.out, so they match the corrected Shrine run.
 # ============================================================
 
 script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
@@ -28,45 +38,38 @@ project_dir <- dirname(script_dir)
 
 gwama_results_dir <- file.path(project_dir, "results", "gwama")
 
-fixed_file <- file.path(gwama_results_dir, "asthma_meta_fixed.out")
+input_file <- file.path(gwama_results_dir, "asthma_meta.out")
 high_i2_file <- file.path(gwama_results_dir, "high_heterogeneity_i2_75.txt")
 significant_q_file <- file.path(gwama_results_dir, "significant_heterogeneity_qp.txt")
 
-summary_file <- file.path(gwama_results_dir, "fixed_effect_heterogeneity_summary.txt")
-i2_distribution_file <- file.path(gwama_results_dir, "fixed_effect_i2_distribution.txt")
+summary_file <- file.path(gwama_results_dir, "heterogeneity_summary.txt")
+i2_distribution_file <- file.path(gwama_results_dir, "i2_distribution.txt")
 
 i2_threshold <- 0.75
 q_p_threshold <- 0.05
 
-message("Reading full fixed-effect GWAMA output for total SNP count and I2 distribution...")
-fixed <- fread(
-  fixed_file,
-  select = c("rs_number", "q_p-value", "i2")
+message("Reading GWAMA output for heterogeneity columns...")
+results <- fread(
+  input_file,
+  select = c("rs_number", "q_p-value", "q_statistic", "i2")
 )
 
-message("Reading high I2 SNP file...")
-high_i2 <- fread(high_i2_file, select = "rs_number")
+message("Filtering high I2 SNP file...")
+high_i2 <- results[i2 >= i2_threshold, .(rs_number)]
 
-message("Reading significant Q p-value SNP file...")
-significant_q <- fread(significant_q_file, select = "rs_number")
+message("Filtering significant Q p-value SNP file...")
+significant_q <- results[`q_p-value` < q_p_threshold, .(rs_number)]
 
-total_snps <- nrow(fixed)
-n_high_i2 <- nrow(high_i2) - 1
-n_significant_q <- nrow(significant_q) - 1
+fwrite(high_i2, high_i2_file, sep = "\t", quote = FALSE, na = "NA")
+fwrite(significant_q, significant_q_file, sep = "\t", quote = FALSE, na = "NA")
 
-# Safety check: if fread has already treated the first row as header,
-# do not subtract one.
-if (!"rs_number" %in% high_i2$rs_number[1]) {
-  n_high_i2 <- nrow(high_i2)
-}
-
-if (!"rs_number" %in% significant_q$rs_number[1]) {
-  n_significant_q <- nrow(significant_q)
-}
+total_snps <- nrow(results)
+n_high_i2 <- nrow(high_i2) 
+n_significant_q <- nrow(significant_q) 
 
 summary_table <- data.table(
   metric = c(
-    "Total SNPs in fixed-effect GWAMA output",
+    "Total SNPs in GWAMA output",
     "SNPs with I2 >= 0.75",
     "Percentage of SNPs with I2 >= 0.75",
     "SNPs with Q p-value < 0.05",
@@ -91,12 +94,12 @@ i2_distribution <- data.table(
     "Maximum I2"
   ),
   value = c(
-    min(fixed$i2, na.rm = TRUE),
-    quantile(fixed$i2, 0.25, na.rm = TRUE),
-    median(fixed$i2, na.rm = TRUE),
-    mean(fixed$i2, na.rm = TRUE),
-    quantile(fixed$i2, 0.75, na.rm = TRUE),
-    max(fixed$i2, na.rm = TRUE)
+    min(results$i2, na.rm = TRUE),
+    quantile(results$i2, 0.25, na.rm = TRUE),
+    median(results$i2, na.rm = TRUE),
+    mean(results$i2, na.rm = TRUE),
+    quantile(results$i2, 0.75, na.rm = TRUE),
+    max(results$i2, na.rm = TRUE)
   )
 )
 
@@ -108,4 +111,3 @@ message("Written: ", i2_distribution_file)
 
 print(summary_table)
 print(i2_distribution)
-

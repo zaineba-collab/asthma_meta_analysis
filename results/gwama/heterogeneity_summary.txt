@@ -1,0 +1,6 @@
+metric	value
+Total SNPs in fixed-effect GWAMA output	34316972
+SNPs with I2 >= 0.75	229395
+Percentage of SNPs with I2 >= 0.75	0.668
+SNPs with Q p-value < 0.05	966173
+Percentage of SNPs with Q p-value < 0.05	2.815
