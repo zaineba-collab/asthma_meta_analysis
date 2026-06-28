@@ -5,19 +5,21 @@ library(ggplot2)
 # 10_manhattan_plot.R
 #
 # Purpose:
-#   Create a Manhattan plot from the fixed-effect GWAMA
-#   meta-analysis results.
+#   Generate a Manhattan plot from the fixed-effect GWAMA meta-analysis.
+#   Reads the formatted GWAMA results, calculates genomic positions,
+#   highlights genome-wide significant associations, and saves a
+#   publication-ready Manhattan plot.
 #
 # Input:
-#   results/gwama/asthma_meta_fixed.out
+#   results/gwama/asthma_meta.out
 #
 # Output:
-#   results/gwama/manhattan_fixed_effect.png
+#   results/gwama/manhattan_plot.png
 #
 # Notes:
 #   The GWAMA output does not contain chromosome/position, so
-#   this script uses SNP positions from the harmonised final hg38
-#   files and merges them onto the GWAMA results by rs_number.
+#   this script uses SNP positions from data/final_hg38 and merges
+#   them onto the GWAMA results by SNP ID.
 # ============================================================
 
 script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
@@ -27,8 +29,8 @@ project_dir <- dirname(script_dir)
 gwama_dir <- file.path(project_dir, "results", "gwama")
 final_dir <- file.path(project_dir, "data", "final_hg38")
 
-gwama_file <- file.path(gwama_dir, "asthma_meta_fixed.out")
-plot_file <- file.path(gwama_dir, "manhattan_fixed_effect.png")
+gwama_file <- file.path(gwama_dir, "asthma_meta.out")
+plot_file <- file.path(gwama_dir, "manhattan_plot.png")
 
 message("Reading GWAMA p-values...")
 gwas <- fread(
@@ -64,12 +66,14 @@ message("Preparing cumulative chromosome positions...")
 setorder(dt, CHR, POS)
 
 chr_lengths <- dt[, .(chr_len = max(POS, na.rm = TRUE)), by = CHR]
+setorder(chr_lengths, CHR)
 chr_lengths[, offset := cumsum(shift(chr_len, fill = 0))]
 dt <- merge(dt, chr_lengths[, .(CHR, offset)], by = "CHR")
 dt[, BPcum := POS + offset]
 dt[, logp := -log10(P)]
 
 axis_df <- dt[, .(center = (min(BPcum) + max(BPcum)) / 2), by = CHR]
+setorder(axis_df, CHR)
 
 message("Creating Manhattan plot...")
 
