@@ -1,25 +1,30 @@
 #!/usr/bin/env Rscript
 
 # ============================================================
-# 06_extract_top20_fixed_signals.R
+# 07_extract_top20_random_signals.R
 #
+# NOTE:
+#   This script is retained for a future/random-effects sensitivity analysis.
+#   It should only be run if results/gwama/asthma_meta_random.out exists.
+#   The current corrected GWAMA run produces results/gwama/asthma_meta.out.
 # Purpose:
 #   Extract the 20 most statistically significant SNPs from the
-#   fixed-effect GWAMA meta-analysis. These results are used for
-#   quality control and to summarise the strongest association
-#   signals before downstream pruning and locus definition.
+#   random-effects GWAMA meta-analysis. These results are used to
+#   summarise the strongest association signals while accounting
+#   for between-study heterogeneity.
 #
 # Inputs:
-#   ../results/gwama/asthma_meta_fixed.out
+#   ../results/gwama/asthma_meta_random.out
 #
 # Outputs:
-#   ../results/gwama/top20_fixed_signals.txt
+#   ../results/gwama/genome_wide_significant_random.txt
+#   ../results/gwama/top20_random_signals.txt
 #
 # Output columns:
 #   rs_number        = single nucleotide polymorphism (SNP) identifier
 #   reference_allele = reference allele
 #   other_allele     = alternate/non-reference allele
-#   beta             = fixed-effect beta estimate
+#   beta             = random-effects beta estimate
 #   se               = standard error
 #   p-value          = association p-value
 #   z                = z statistic
@@ -29,17 +34,23 @@
 #   n_studies        = number of contributing studies
 #
 # Notes:
-#   - Results are sorted from most significant to least significant
-#     using ascending p-value.
+#   - Genome-wide significant variants are defined as p-value < 5e-8.
+#   - The top 20 table is sorted from most significant to least
+#     significant using ascending p-value.
 #   - Only the columns listed above are retained for a compact
-#     fixed-effect summary table.
+#     random-effects summary table.
+#   - This script reproduces the terminal workflow:
+#       1. Filter asthma_meta_random.out to genome-wide significant
+#          variants.
+#       2. Sort the filtered results by p-value.
+#       3. Keep the first 20 rows.
 #
 # Version notes:
 #   - Paths are anchored to this script's location, so it can be
 #     run from the project root with:
-#       Rscript scripts/06_extract_top20_fixed_signals.R
+#       Rscript scripts/07_extract_top20_random_signals.R
 #   - The script stops with a clear error if any required column is
-#     missing from asthma_meta_fixed.out.
+#     missing from asthma_meta_random.out.
 # ============================================================
 
 library(data.table)
@@ -49,8 +60,9 @@ script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else 
 project_dir <- dirname(script_dir)
 
 gwama_results_dir <- file.path(project_dir, "results", "gwama")
-input_file <- file.path(gwama_results_dir, "genome_wide_significant.txt")
-output_file <- file.path(gwama_results_dir, "top20_signals.txt")
+input_file <- file.path(gwama_results_dir, "asthma_meta_random.out")
+genome_wide_file <- file.path(gwama_results_dir, "genome_wide_significant_random.txt")
+output_file <- file.path(gwama_results_dir, "top20_random_signals.txt")
 
 required_columns <- c(
   "rs_number",
@@ -78,7 +90,24 @@ if (length(missing_columns) > 0) {
   )
 }
 
-top20 <- results[
+genome_wide_significant <- results[`p-value` < 5e-8]
+
+fwrite(
+  genome_wide_significant,
+  genome_wide_file,
+  sep = "\t",
+  quote = FALSE,
+  na = "NA"
+)
+
+message(
+  "Written: ",
+  genome_wide_file,
+  " | rows: ",
+  nrow(genome_wide_significant)
+)
+
+top20 <- genome_wide_significant[
   order(`p-value`),
   ..required_columns
 ][1:20]
