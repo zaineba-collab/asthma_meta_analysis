@@ -8,11 +8,13 @@ library(ggplot2)
 #   Create a QQ plot from the fixed-effect GWAMA meta-analysis
 #   p-values and estimate genomic inflation factor lambda GC.
 #
+#
 # Input file:
-#   Fixed-effect GWAMA output in the results/gwama directory.
+#   results/gwama/asthma_meta.out
 #
 # Output files:
-#   QQ plot PNG and lambda GC TSV in the results/gwama directory.
+#   results/gwama/qq_plot.png
+#   results/gwama/lambda_gc.txt
 # ============================================================
 
 script_arg <- grep("^--file=", commandArgs(FALSE), value = TRUE)[1]
@@ -25,9 +27,9 @@ script_dir <- if (!is.na(script_file)) {
 project_dir <- dirname(script_dir)
 
 gwama_dir <- file.path(project_dir, "results", "gwama")
-input_file <- file.path(gwama_dir, "asthma_meta_fixed.out")
-plot_file <- file.path(gwama_dir, "qq_plot_fixed_effect.png")
-lambda_file <- file.path(gwama_dir, "lambda_gc_fixed_effect.txt")
+input_file <- file.path(gwama_dir, "asthma_meta.out")
+plot_file <- file.path(gwama_dir, "qq_plot.png")
+lambda_file <- file.path(gwama_dir, "lambda_gc.txt")
 
 message("Reading GWAMA p-values...")
 dt <- fread(input_file, select = "p-value")
@@ -62,7 +64,7 @@ p <- ggplot(dt, aes(x = expected, y = observed)) +
   geom_abline(intercept = 0, slope = 1, linetype = "dashed") +
   labs(
     title = "Asthma GWAS meta-analysis QQ plot",
-    subtitle = paste0("Fixed-effect GWAMA; lambda GC = ", round(lambda_gc, 3)),
+    subtitle = paste0("GWAMA; lambda GC = ", round(lambda_gc, 3)),
     x = expression(Expected ~ -log[10](P)),
     y = expression(Observed ~ -log[10](P))
   ) +

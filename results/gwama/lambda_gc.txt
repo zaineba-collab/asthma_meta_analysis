@@ -1,0 +1,2 @@
+metric	value
+Lambda GC	1.3171038076398
