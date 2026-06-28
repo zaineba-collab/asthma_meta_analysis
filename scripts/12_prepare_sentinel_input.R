@@ -35,14 +35,14 @@ pruning_dir <- file.path(project_dir, "results", "pruning")
 
 dir.create(pruning_dir, showWarnings = FALSE, recursive = TRUE)
 
-gwama_file <- file.path(gwama_dir, "asthma_meta_fixed.out")
+gwama_file <- file.path(gwama_dir, "asthma_meta.out")
 output_file <- file.path(pruning_dir, "asthma_fixed_for_sentinel_selection.txt")
 
 message("Reading GWAMA fixed-effect results...")
 
 gwas <- fread(
   gwama_file,
-  select = c("SNP", "beta1", "se1", "p_value_lrt")
+  select = c("rs_number", "beta", "se", "p-value")
 )
 
 setnames(
