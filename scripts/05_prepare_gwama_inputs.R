@@ -46,8 +46,6 @@ for (f in files) {
   
   out <- dt[, .(
     MARKERNAME,
-    CHR,
-    POS,
     EA,
     NEA,
     BETA,
