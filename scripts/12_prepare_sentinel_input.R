@@ -42,7 +42,7 @@ message("Reading GWAMA fixed-effect results...")
 
 gwas <- fread(
   gwama_file,
-  select = c("rs_number", "beta", "se", "p-value")
+  select = c("SNP", "beta1", "se1", "p_value_lrt")
 )
 
 setnames(
