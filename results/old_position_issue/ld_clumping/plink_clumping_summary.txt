@@ -1,0 +1,8 @@
+Metric	Value
+Significant candidate variants in clumping input	39934
+PLINK index candidates after missing IDs removed	35336
+Independent lead SNPs	3084
+Total PLINK LD clumps	3084
+Missing variant IDs	4597
+Strongest clumped SNP	rs9273374
+Strongest clumped p-value	5.22e-253

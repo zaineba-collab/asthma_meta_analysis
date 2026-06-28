@@ -16,7 +16,11 @@ library(data.table)
 #   results/gwama/top20_fixed_random_comparison.txt
 # ============================================================
 
-gwama_dir <- "../results/gwama"
+script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
+script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else getwd()
+project_dir <- dirname(script_dir)
+
+gwama_dir <- file.path(project_dir, "results", "gwama")
 
 fixed <- fread(file.path(gwama_dir, "top20_fixed_signals.txt"))
 random <- fread(file.path(gwama_dir, "top20_random_signals.txt"))

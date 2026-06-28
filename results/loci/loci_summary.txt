@@ -1,6 +1,0 @@
-Metric	Value
-Total loci	405
-Largest locus (bp)	24489380
-Median locus size (bp)	4674582
-Mean locus size (bp)	6047095
-Maximum sentinel SNPs within one locus	16

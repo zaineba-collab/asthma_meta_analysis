@@ -7,8 +7,8 @@ library(data.table)
 #   Prepare GRCh37 variants for coordinate liftover to GRCh38.
 #
 # Inputs:
-#   ../harmonised/GCST90029018_buildGRCh37.gwama_ready.tsv
-#   ../harmonised/Shrine_30552067_moderate-severe_asthma.txt.gwama_ready.tsv
+#   data/harmonised/GCST90029018_buildGRCh37.gwama_ready.tsv
+#   data/harmonised/Shrine_30552067_moderate-severe_asthma.txt.gwama_ready.tsv
 #
 # Outputs:
 #   ../liftover/*.hg19.bed
@@ -29,8 +29,12 @@ library(data.table)
 #     coordinates can be merged back onto harmonised rows later.
 # ============================================================
 
-harmonised_dir <- "../harmonised"
-liftover_dir <- "../liftover"
+script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
+script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else getwd()
+project_dir <- dirname(script_dir)
+
+harmonised_dir <- file.path(project_dir, "data", "harmonised")
+liftover_dir <- file.path(project_dir, "liftover")
 
 dir.create(liftover_dir, showWarnings = FALSE, recursive = TRUE)
 

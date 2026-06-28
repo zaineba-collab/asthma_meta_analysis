@@ -19,7 +19,7 @@ library(data.table)
 #
 # Inputs:
 #   results/gwama/asthma_meta_fixed.out
-#   final_hg38/*gwama_ready.tsv
+#   data/final_hg38/*gwama_ready.tsv
 #
 # Output:
 #   results/pruning/asthma_fixed_for_sentinel_selection.txt
@@ -30,7 +30,7 @@ script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else 
 project_dir <- dirname(script_dir)
 
 gwama_dir <- file.path(project_dir, "results", "gwama")
-final_dir <- file.path(project_dir, "final_hg38")
+final_dir <- file.path(project_dir, "data", "final_hg38")
 pruning_dir <- file.path(project_dir, "results", "pruning")
 
 dir.create(pruning_dir, showWarnings = FALSE, recursive = TRUE)

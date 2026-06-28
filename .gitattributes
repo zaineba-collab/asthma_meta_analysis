@@ -1,3 +1,4 @@
 results/gwama/asthma_meta_fixed.out.gz filter=lfs diff=lfs merge=lfs -text
 results/gwama/asthma_meta_random.out.gz filter=lfs diff=lfs merge=lfs -text
 results/gwama/significant_heterogeneity_qp.txt.gz filter=lfs diff=lfs merge=lfs -text
+results/gwama/asthma_meta.out.gz filter=lfs diff=lfs merge=lfs -text

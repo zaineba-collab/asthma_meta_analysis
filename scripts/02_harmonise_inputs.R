@@ -15,11 +15,11 @@
 #   7. Write harmonised *.gwama_ready.tsv files.
 #
 # Inputs:
-#   ../raw/*
+#   data/raw/*
 #
 # Outputs:
-#   ../logs/02_input_format_inventory.tsv
-#   ../harmonised/*.gwama_ready.tsv
+#   logs/02_input_format_inventory.tsv
+#   data/harmonised/*.gwama_ready.tsv
 #
 # Notes:
 #   - Asthma is a binary trait. All effects are represented
@@ -42,9 +42,13 @@ library(data.table)
 # STEP 1: Define project folders
 # ============================================================
 
-raw_dir <- "../raw"
-harmonised_dir <- "../harmonised"
-log_dir <- "../logs"
+script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
+script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else getwd()
+project_dir <- dirname(script_dir)
+
+raw_dir <- file.path(project_dir, "data", "raw")
+harmonised_dir <- file.path(project_dir, "data", "harmonised")
+log_dir <- file.path(project_dir, "logs")
 
 dir.create(harmonised_dir, showWarnings = FALSE, recursive = TRUE)
 dir.create(log_dir, showWarnings = FALSE, recursive = TRUE)

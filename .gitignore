@@ -21,6 +21,15 @@ results/gwama/asthma_fixed_for_plink_clumping.txt
 results/gwama/high_heterogeneity_i2_75.txt
 results/gwama/significant_heterogeneity_qp.txt
 
+# Archived old-position run: keep small summaries only
+results/old_position_issue/**/*.out
+results/old_position_issue/gwama/asthma_meta_*.out.gz
+results/old_position_issue/gwama/asthma_fixed_for_plink_clumping.txt
+results/old_position_issue/gwama/high_heterogeneity_i2_75.txt
+results/old_position_issue/gwama/significant_heterogeneity_qp.txt
+results/old_position_issue/ld_clumping/asthma_clump_snps.txt
+results/old_position_issue/pruning/asthma_fixed_for_sentinel_selection.txt
+
 # Liftover intermediates
 liftover/*.bed
 liftover/*.unmap

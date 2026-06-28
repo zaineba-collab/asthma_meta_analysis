@@ -25,7 +25,7 @@ script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else 
 project_dir <- dirname(script_dir)
 
 gwama_dir <- file.path(project_dir, "results", "gwama")
-final_dir <- file.path(project_dir, "final_hg38")
+final_dir <- file.path(project_dir, "data", "final_hg38")
 
 gwama_file <- file.path(gwama_dir, "asthma_meta_fixed.out")
 plot_file <- file.path(gwama_dir, "manhattan_fixed_effect.png")

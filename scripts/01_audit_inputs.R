@@ -10,10 +10,10 @@
 #   harmonisation.
 #
 # Inputs:
-#   ../raw/*
+#   data/raw/*
 #
 # Outputs:
-#   ../logs/asthma_input_inventory.tsv
+#   logs/asthma_input_inventory.tsv
 #
 # What this script records:
 #   - Original column names for each raw file.
@@ -29,8 +29,12 @@
 
 library(data.table)
 
-raw_dir <- "../raw"
-log_dir <- "../logs"
+script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
+script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else getwd()
+project_dir <- dirname(script_dir)
+
+raw_dir <- file.path(project_dir, "data", "raw")
+log_dir <- file.path(project_dir, "logs")
 dir.create(log_dir, showWarnings = FALSE, recursive = TRUE)
 
 files <- list.files(raw_dir, full.names = TRUE)
@@ -59,4 +63,4 @@ audit <- rbindlist(lapply(files, audit_one), fill = TRUE)
 fwrite(audit, file.path(log_dir, "asthma_input_inventory.tsv"), sep = "\t")
 
 print(audit)
-cat("\nWritten to ../logs/asthma_input_inventory.tsv\n")
+cat("\nWritten to ", file.path(log_dir, "asthma_input_inventory.tsv"), "\n", sep = "")

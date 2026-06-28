@@ -8,12 +8,12 @@ library(data.table)
 #   the two studies that required coordinate conversion.
 #
 # Inputs:
-#   harmonised/*.gwama_ready.tsv for the GRCh37 studies
+#   data/harmonised/*.gwama_ready.tsv for the GRCh37 studies
 #   liftover/*.hg38.bed files produced by the liftover tool
 #
 # Outputs:
-#   harmonised/*GRCh38.lifted.gwama_ready.tsv
-#   harmonised/*hg38.lifted.gwama_ready.tsv
+#   data/harmonised/*GRCh38.lifted.gwama_ready.tsv
+#   data/harmonised/*hg38.lifted.gwama_ready.tsv
 #
 # Notes:
 #   - Merges lifted coordinates back by MARKERNAME.
@@ -33,7 +33,7 @@ script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = T
 script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else getwd()
 project_dir <- dirname(script_dir)
 
-harmonised_dir <- file.path(project_dir, "harmonised")
+harmonised_dir <- file.path(project_dir, "data", "harmonised")
 liftover_dir <- file.path(project_dir, "liftover")
 
 apply_liftover <- function(harmonised_file, lifted_bed, output_file) {
