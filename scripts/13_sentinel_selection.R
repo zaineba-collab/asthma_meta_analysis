@@ -5,7 +5,7 @@ library(data.table)
 #
 # Purpose:
 #   Perform distance-based sentinel SNP selection using the
-#   fixed-effect GWAMA meta-analysis results.
+#   GWAMA meta-analysis results.
 #
 # Method:
 #   1. Keep SNPs passing p < 5e-9.

@@ -4,8 +4,8 @@ library(data.table)
 # 12_prepare_sentinel_input.R
 #
 # Purpose:
-#   Prepare the fixed-effect GWAMA meta-analysis output for
-#   distance-based sentinel SNP selection.
+#   Prepare the current GWAMA meta-analysis output for distance-based
+#   sentinel SNP selection after the corrected Shrine file rerun.
 #
 # Why this is needed:
 #   My supervisor-provided sentinel-selection script expects
@@ -15,10 +15,10 @@ library(data.table)
 #   GWAMA output uses different names and does not include
 #   chromosome/position directly, so this script merges GWAMA
 #   results with the hg38 coordinates from the final harmonised
-#   files.
+#   files in data/final_hg38.
 #
 # Inputs:
-#   results/gwama/asthma_meta_fixed.out
+#   results/gwama/asthma_meta.out
 #   data/final_hg38/*gwama_ready.tsv
 #
 # Output:
@@ -38,7 +38,7 @@ dir.create(pruning_dir, showWarnings = FALSE, recursive = TRUE)
 gwama_file <- file.path(gwama_dir, "asthma_meta.out")
 output_file <- file.path(pruning_dir, "asthma_fixed_for_sentinel_selection.txt")
 
-message("Reading GWAMA fixed-effect results...")
+message("Reading GWAMA results...")
 
 gwas <- fread(
   gwama_file,
