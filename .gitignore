@@ -10,6 +10,8 @@ raw/
 harmonised/
 final_hg38/
 reference_panel/
+reference_panel/raw/
+reference_panel/eur/
 
 # GWAMA per-study input files (derived)
 gwama_input/*.gwama.txt

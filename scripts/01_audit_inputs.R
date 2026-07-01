@@ -2,7 +2,7 @@
 
 # ============================================================
 # Project: Asthma GWAS Meta-analysis
-# Script:
+# Script: 01_audit_inputs
 # Author: Zaineb Ahmed
 #
 # Purpose:
