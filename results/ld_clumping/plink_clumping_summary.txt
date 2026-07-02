@@ -1,0 +1,10 @@
+Metric	Value
+Independent lead loci	18
+Total PLINK LD clumps	18
+Clumps containing additional SNPs	1
+Clumps containing only the lead SNP	17
+Additional SNPs assigned to clumps	2
+PLINK index candidates	19
+Missing variant IDs	39914
+Strongest lead SNP	11:867462:C:T
+Strongest lead SNP p-value	1e-14
