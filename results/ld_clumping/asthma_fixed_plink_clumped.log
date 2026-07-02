@@ -10,11 +10,11 @@ Options in effect:
   --clump-r2 0.1
   --out results\ld_clumping\asthma_fixed_plink_clumped
 
-Hostname: WK-LIB-111
-Working directory: C:\Users\ZainebAHMED(Student)\OneDrive - Birkbeck, University of London\Documents\GitHub\asthma_meta_analysis
-Start time: Wed Jul 01 20:12:02 2026
+Hostname: WK-LIB-113
+Working directory: C:\Users\ZainebAHMED(Student)\Documents\GitHub\asthma_meta_analysis
+Start time: Thu Jul 02 15:16:52 2026
 
-Random number seed: 1782933122
+Random number seed: 1783001812
 16059 MiB RAM detected; reserving 8029 MiB for main workspace.
 Using up to 12 threads (change this with --threads).
 633 samples (328 females, 305 males; 525 founders) loaded from
@@ -27,4 +27,4 @@ written to results\ld_clumping\asthma_fixed_plink_clumped.clumps.missing_id .
 --clump: 18 clumps formed from 19 index candidates.
 Results written to results\ld_clumping\asthma_fixed_plink_clumped.clumps .
 
-End time: Wed Jul 01 20:12:07 2026
+End time: Thu Jul 02 15:17:05 2026

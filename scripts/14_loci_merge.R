@@ -1,11 +1,3 @@
-sink(stderr())
-
-library(data.table)
-library(dplyr)
-
-suppressMessages(library(GenomicRanges))
-suppressMessages(library(tidyverse))
-
 # ============================================================
 # 14_loci_merge.R
 #
@@ -22,6 +14,13 @@ suppressMessages(library(tidyverse))
 # Output:
 #   results/loci/asthma_fixed_sentinel_merge_loci.txt
 # ============================================================
+sink(stderr())
+
+library(data.table)
+library(dplyr)
+
+suppressMessages(library(GenomicRanges))
+suppressMessages(library(tidyverse))
 
 script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
 script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else getwd()
