@@ -1,0 +1,2 @@
+SNP	chr	pos	beta.outcome	se.outcome	samplesize.outcome	pval.outcome	eaf.outcome	effect_allele.outcome	other_allele.outcome	outcome	id.outcome	proxy.outcome	target_snp.outcome	proxy_snp.outcome	target_a1.outcome	target_a2.outcome	proxy_a1.outcome	proxy_a2.outcome	originalname.outcome	outcome.deprecated	mr_keep.outcome	data_source.outcome
+rs10975471	9	6172380	-0.0053	0.0052	233530	0.3081	0.2167	T	C	BMI	ieu-a-835	TRUE	rs10975471	rs7032572	T	C	G	A	Body mass index	Body mass index ||  || 	TRUE	igd

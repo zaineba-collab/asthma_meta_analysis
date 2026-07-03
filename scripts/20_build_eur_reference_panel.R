@@ -9,33 +9,41 @@
 #   reference panel for LD clumping.
 #
 # Inputs:
-#   reference_panel/raw/all_phase3.pgen.zst
-#   reference_panel/raw/all_phase3.pvar.zst
-#   reference_panel/raw/phase3_corrected.psam
+#   data/reference_panel/raw/all_phase3.pgen.zst
+#   data/reference_panel/raw/all_phase3.pvar.zst
+#   data/reference_panel/raw/phase3_corrected.psam
 #
 # Outputs:
-#   reference_panel/raw/all_phase3.pgen
-#   reference_panel/raw/eur_samples_iid.txt
-#   reference_panel/eur/1000G_EUR_biallelic.bed
-#   reference_panel/eur/1000G_EUR_biallelic.bim
-#   reference_panel/eur/1000G_EUR_biallelic.fam
-#   reference_panel/eur/1000G_EUR_biallelic.log
+#   data/reference_panel/raw/all_phase3.pgen
+#   data/reference_panel/raw/eur_samples_iid.txt
+#   data/reference_panel/eur/1000G_EUR_biallelic.bed
+#   data/reference_panel/eur/1000G_EUR_biallelic.bim
+#   data/reference_panel/eur/1000G_EUR_biallelic.fam
+#   data/reference_panel/eur/1000G_EUR_biallelic.log
 #
 # Notes:
 #   - This script keeps all 1000 Genomes samples where SuperPop == "EUR".
 #   - PLINK2 performs the decompression and reference panel build.
-#   - Do not commit reference_panel/raw/ or reference_panel/eur/.
-#     This repository currently ignores reference_panel/.
+#   - Do not commit data/reference_panel/raw/ or data/reference_panel/eur/.
+#     This repository currently ignores data/.
 # ============================================================
 
 script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
 script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else getwd()
 project_dir <- dirname(script_dir)
 
-plink2 <- "C:/Users/ZainebAHMED(Student)/OneDrive - Birkbeck, University of London/Documents/Tools/plink2/plink2.exe"
+plink2 <- Sys.getenv("PLINK2", unset = Sys.which("plink2"))
+if (identical(plink2, "")) {
+  stop(
+    "PLINK2 was not found. Install plink2 and add it to PATH, ",
+    "or set PLINK2 to the executable path before running this script.",
+    call. = FALSE
+  )
+}
 
-raw_dir <- file.path(project_dir, "reference_panel", "raw")
-eur_dir <- file.path(project_dir, "reference_panel", "eur")
+reference_panel_dir <- file.path(project_dir, "data", "reference_panel")
+raw_dir <- file.path(reference_panel_dir, "raw")
+eur_dir <- file.path(reference_panel_dir, "eur")
 
 pgen_zst <- file.path(raw_dir, "all_phase3.pgen.zst")
 pvar_zst <- file.path(raw_dir, "all_phase3.pvar.zst")
@@ -44,6 +52,7 @@ pgen_file <- file.path(raw_dir, "all_phase3.pgen")
 eur_keep_file <- file.path(raw_dir, "eur_samples_iid.txt")
 out_prefix <- file.path("..", "eur", "1000G_EUR_biallelic")
 out_prefix_abs <- file.path(eur_dir, "1000G_EUR_biallelic")
+expected_outputs <- paste0(out_prefix_abs, c(".bed", ".bim", ".fam", ".log"))
 
 dir.create(raw_dir, showWarnings = FALSE, recursive = TRUE)
 dir.create(eur_dir, showWarnings = FALSE, recursive = TRUE)
@@ -136,27 +145,30 @@ write.table(
 )
 
 cat("\nEUR sample count: ", length(eur_samples), "\n", sep = "")
-if (length(eur_samples) != 633) {
-  warning("Expected 633 EUR samples, but found ", length(eur_samples), call. = FALSE)
+if (length(eur_samples) != 503) {
+  warning("Expected 503 EUR samples, but found ", length(eur_samples), call. = FALSE)
 }
 
 # Build the all-European biallelic SNP reference panel. The PVAR remains
 # compressed, and PLINK2 reads it directly with '--pfile all_phase3 vzs'.
-run_plink2(
-  args = c(
-    "--pfile", "all_phase3", "vzs",
-    "--psam", "phase3_corrected.psam",
-    "--keep", "eur_samples_iid.txt",
-    "--snps-only", "just-acgt",
-    "--max-alleles", "2",
-    "--make-bed",
-    "--out", out_prefix
-  ),
-  wd = raw_dir
-)
+if (all(file.exists(expected_outputs))) {
+  cat("\nAll expected PLINK binary outputs already exist; skipping rebuild.\n")
+} else {
+  run_plink2(
+    args = c(
+      "--pfile", "all_phase3", "vzs",
+      "--psam", "phase3_corrected.psam",
+      "--keep", "eur_samples_iid.txt",
+      "--snps-only", "just-acgt",
+      "--max-alleles", "2",
+      "--make-bed",
+      "--out", out_prefix
+    ),
+    wd = raw_dir
+  )
+}
 
 # Confirm the expected PLINK binary output files were created.
-expected_outputs <- paste0(out_prefix_abs, c(".bed", ".bim", ".fam", ".log"))
 created <- file.exists(expected_outputs)
 output_check <- data.frame(file = expected_outputs, created = created)
 

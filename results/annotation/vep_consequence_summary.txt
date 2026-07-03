@@ -1,0 +1,9 @@
+Consequence	N
+intron_variant	218
+downstream_gene_variant	114
+intron_variant,non_coding_transcript_variant	45
+3_prime_UTR_variant	42
+intron_variant,NMD_transcript_variant	24
+upstream_gene_variant	6
+intergenic_variant	4
+non_coding_transcript_exon_variant	4
