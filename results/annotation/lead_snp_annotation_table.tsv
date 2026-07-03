@@ -1,0 +1,19 @@
+Lead_SNP	Chromosome	Position	P_value	Gene_symbol	Consequence	Impact
+11:867462:C:T	11	867462	1e-14	CHID1,TSPAN4	downstream_gene_variant,3_prime_UTR_variant	MODIFIER
+9:6949487:G:A	9	6949487	1.85e-14	KDM4C	intron_variant,intron_variant,NMD_transcript_variant,downstream_gene_variant,intron_variant,non_coding_transcript_variant	MODIFIER
+1:203920161:C:T	1	203920161	6.52e-13		intron_variant,non_coding_transcript_variant	MODIFIER
+6:156484013:T:C	6	156484013	1.99e-12		intergenic_variant	MODIFIER
+9:6179318:C:T	9	6179318	1.07e-11		intergenic_variant	MODIFIER
+19:14144200:C:T	19	14144200	5.95e-11	ADGRL1,ADGRL1-AS1	downstream_gene_variant,intron_variant,non_coding_transcript_variant	MODIFIER
+6:32554837:C:T	6	32554837	2.08e-10	HLA-DRB6,RNU1-61P	non_coding_transcript_exon_variant,upstream_gene_variant	MODIFIER
+9:4785585:C:T	9	4785585	2.25e-10		upstream_gene_variant,intron_variant,non_coding_transcript_variant	MODIFIER
+9:7891690:C:G	9	7891690	3.12e-10	DMAC1	upstream_gene_variant	MODIFIER
+9:11051753:C:A	9	11051753	5.61e-10	LINC03131	intron_variant,non_coding_transcript_variant	MODIFIER
+9:18144094:A:G	9	18144094	5.98e-10	ADAMTSL1	intron_variant	MODIFIER
+4:54294500:A:G	4	54294500	1e-09	PDGFRA	intron_variant	MODIFIER
+9:8230244:T:C	9	8230244	1.16e-09		intergenic_variant	MODIFIER
+4:41449053:C:T	4	41449053	2.17e-09	LIMCH1	intron_variant,intron_variant,non_coding_transcript_variant,intron_variant,NMD_transcript_variant	MODIFIER
+12:777048:G:A	12	777048	2.68e-09	WNK1,RNU4ATAC16P	intron_variant,intron_variant,NMD_transcript_variant,upstream_gene_variant	MODIFIER
+3:10033678:A:G	3	10033678	3.74e-09	FANCD2,RNU6-670P	intron_variant,intron_variant,NMD_transcript_variant,upstream_gene_variant,downstream_gene_variant	MODIFIER
+9:27932226:G:A	9	27932226	3.9e-09		intergenic_variant	MODIFIER
+10:59275805:T:C	10	59275805	4.11e-09	FAM13C	intron_variant,intron_variant,non_coding_transcript_variant,intron_variant,NMD_transcript_variant	MODIFIER
