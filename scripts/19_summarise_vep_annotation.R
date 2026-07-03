@@ -66,6 +66,7 @@ wanted_cols <- c(
   "Feature",
   "Feature_type",
   "Consequence",
+  "Existing_variation",
   "IMPACT",
   "SYMBOL",
   "BIOTYPE",

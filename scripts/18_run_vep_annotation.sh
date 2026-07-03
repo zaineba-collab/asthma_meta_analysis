@@ -20,6 +20,8 @@ set -euo pipefail
 # Notes:
 #   - This uses a local command-line VEP install, not the Ensembl web UI.
 #   - VEP runs offline against the local cache in ~/.vep.
+#   - --check_existing asks VEP to report known co-located variant IDs
+#     such as dbSNP rsIDs in the Existing_variation column.
 #   - Run scripts/19_summarise_vep_annotation.R after this to create
 #     the cleaned gene and consequence summaries.
 # ============================================================
@@ -71,6 +73,7 @@ common_args=(
   --symbol
   --gene_phenotype
   --variant_class
+  --check_existing
   --force_overwrite
   --no_stats
 )

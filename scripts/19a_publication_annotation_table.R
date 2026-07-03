@@ -22,13 +22,11 @@ library(data.table)
 #     one row per lead SNP, suitable for reporting and interpretation.
 # ============================================================
 
-# Work out the project directory from the script location so the script can be
-# run from the project root or another working directory.
+
 script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
 script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else getwd()
 project_dir <- dirname(script_dir)
 
-# Input table created by scripts/16_summarise_plink_clumping.R.
 lead_file <- file.path(project_dir, "results", "ld_clumping", "independent_lead_snps.tsv")
 
 # Cleaned VEP annotation table created by scripts/19_summarise_vep_annotation.R.
