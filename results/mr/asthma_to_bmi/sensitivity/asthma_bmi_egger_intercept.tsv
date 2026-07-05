@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	egger_intercept	se	pval
+asthma_gwama	ieu-a-835	BMI	Asthma	-0.00121371507463656	0.000450880046061715	0.00740869214103404

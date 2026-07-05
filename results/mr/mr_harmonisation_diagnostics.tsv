@@ -1,0 +1,13 @@
+metric	value
+exposure_snps_before_harmonisation	5254
+outcome_rows_before_harmonisation	476
+unique_outcome_snps_before_harmonisation	476
+exposure_snps_without_outcome_before_harmonisation	4778
+outcome_rows_not_harmonised	0
+snps_retained_after_harmonisation	476
+snps_removed_during_harmonisation	81
+mr_keep_true_rows	395
+mr_keep_false_rows	81
+palindromic_snps_removed	81
+ambiguous_snps_removed	81
+final_usable_mr_instruments	395

@@ -1,0 +1,16 @@
+metric	value
+primary_mr_direction	Asthma -> BMI
+supervisor_plan	Use already LD-clumped asthma signals; do not clump again using TwoSampleMR
+exposure_snps_before_harmonisation	5254
+bmi_outcome_rows_before_harmonisation	476
+unique_bmi_outcome_snps_before_harmonisation	476
+exposure_snps_without_bmi_outcome_before_harmonisation	4778
+outcome_rows_not_harmonised	0
+snps_retained_after_harmonisation	476
+snps_removed_during_harmonisation	81
+mr_keep_true_rows	395
+mr_keep_false_rows	81
+palindromic_snps_removed	81
+ambiguous_snps_removed	81
+final_usable_mr_instruments	395
+additional_twosamplemr_clumping_performed	No

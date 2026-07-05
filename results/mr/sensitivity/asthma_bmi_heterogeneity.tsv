@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	method	Q	Q_df	Q_pval
+asthma_gwama	ieu-a-835	BMI	Asthma	MR Egger	615.942045885821	393	4.21884095156954e-12
+asthma_gwama	ieu-a-835	BMI	Asthma	Inverse variance weighted	627.298918677917	394	6.32450375930405e-13

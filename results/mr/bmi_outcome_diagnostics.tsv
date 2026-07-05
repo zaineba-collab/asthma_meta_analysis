@@ -1,0 +1,12 @@
+metric	value
+total_exposure_snps	5254
+non_rsid_snps_skipped	2
+rsid_snps_queried	5252
+bmi_outcome_rows_returned	476
+unique_bmi_outcome_snps_returned	476
+direct_matches	124
+proxy_matches	352
+unmatched_queried_snps	4776
+percentage_outcome_coverage	9.063
+duplicate_exact_outcome_rows	0
+duplicate_outcome_snp_rows	0
