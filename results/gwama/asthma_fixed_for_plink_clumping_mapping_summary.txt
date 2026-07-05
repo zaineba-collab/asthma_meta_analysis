@@ -1,0 +1,8 @@
+Metric	Value
+Total variants in GWAMA output	34316972
+Variants evaluated for PLINK clumping input (p-value <= 5e-09)	39933
+Variants matched to rsID	37669
+Variants not matched	2235
+Percentage matched among evaluated variants	94.33
+Duplicate rsID rows collapsed	29
+Ambiguous matches resolved by first rsID	0

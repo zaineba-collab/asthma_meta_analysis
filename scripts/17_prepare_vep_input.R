@@ -6,11 +6,12 @@ library(data.table)
 # 17_prepare_vep_input.R
 #
 # Purpose:
-#   Prepare independent lead SNPs from PLINK clumping for Ensembl
-#   Variant Effect Predictor (VEP) annotation.
+#   Prepare rsID-based independent lead SNPs from PLINK clumping
+#   for Ensembl Variant Effect Predictor (VEP) annotation.
 #
-# Input:
+# Inputs:
 #   results/ld_clumping/independent_lead_snps.tsv
+#   data/reference_panel/eur/1000G_EUR_biallelic.bim
 #
 # Outputs:
 #   results/annotation/independent_lead_snps_vep_input.txt
@@ -18,25 +19,17 @@ library(data.table)
 #   results/annotation/independent_lead_snps_ids.txt
 #
 # Notes:
-#   - The current clumping workflow uses variant IDs in this format:
-#       chromosome:position:reference_allele:alternate_allele
-#     for example:
-#       11:867462:C:T
-#   - VEP accepts a six-column tab-delimited input:
-#       chromosome, start, end, allele, strand, identifier
-#   - The allele column is written as REF/ALT, e.g. C/T.
+#   - The cleaned clumping pipeline now uses rsIDs as SNP identifiers.
+#   - VEP six-column input still needs an allele change, so this script
+#     looks up the alleles for each rsID in the PLINK BIM reference file.
 # ============================================================
 
 script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
 script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else getwd()
 project_dir <- dirname(script_dir)
 
-lead_snps_file <- file.path(
-  project_dir,
-  "results",
-  "ld_clumping",
-  "independent_lead_snps.tsv"
-)
+lead_snps_file <- file.path(project_dir, "results", "ld_clumping", "independent_lead_snps.tsv")
+bim_file <- file.path(project_dir, "data", "reference_panel", "eur", "1000G_EUR_biallelic.bim")
 
 annotation_dir <- file.path(project_dir, "results", "annotation")
 dir.create(annotation_dir, showWarnings = FALSE, recursive = TRUE)
@@ -52,6 +45,7 @@ stop_if_missing <- function(path, label) {
 }
 
 stop_if_missing(lead_snps_file, "Independent lead SNP table")
+stop_if_missing(bim_file, "PLINK reference BIM")
 
 message("Reading independent lead SNPs: ", lead_snps_file)
 lead <- fread(lead_snps_file)
@@ -59,11 +53,7 @@ lead <- fread(lead_snps_file)
 required_cols <- c("SNP", "chromosome", "position", "p_value")
 missing_cols <- setdiff(required_cols, names(lead))
 if (length(missing_cols) > 0) {
-  stop(
-    "Lead SNP table is missing required column(s): ",
-    paste(missing_cols, collapse = ", "),
-    call. = FALSE
-  )
+  stop("Lead SNP table is missing required column(s): ", paste(missing_cols, collapse = ", "), call. = FALSE)
 }
 
 lead[, chromosome := as.character(chromosome)]
@@ -71,48 +61,58 @@ lead[, position := as.integer(position)]
 lead[, p_value := as.numeric(p_value)]
 
 lead <- lead[
-  chromosome %in% as.character(1:22) &
+  grepl("^rs[0-9]+$", SNP) &
+    chromosome %in% as.character(1:22) &
     !is.na(position) &
     !is.na(p_value)
 ]
 
 if (nrow(lead) == 0) {
-  stop("No autosomal lead SNPs with valid position and p-value were found.", call. = FALSE)
+  stop("No autosomal rsID lead SNPs with valid position and p-value were found.", call. = FALSE)
 }
 
-# Parse the current SNP identifier so VEP receives the allele change directly.
-# This avoids relying on a separate PLINK BIM file and makes the step easier to
-# rerun on a different machine.
-snp_parts <- tstrsplit(lead$SNP, ":", fixed = TRUE)
-if (length(snp_parts) != 4) {
-  stop(
-    "SNP IDs must use chromosome:position:reference_allele:alternate_allele format.",
-    call. = FALSE
-  )
-}
+message("Filtering BIM alleles for lead rsIDs...")
+rsid_file <- tempfile(pattern = "vep_lead_rsids_", fileext = ".txt")
+writeLines(lead$SNP, rsid_file)
 
-lead[, parsed_chromosome := snp_parts[[1]]]
-lead[, parsed_position := as.integer(snp_parts[[2]])]
-lead[, reference_allele := toupper(snp_parts[[3]])]
-lead[, alternate_allele := toupper(snp_parts[[4]])]
+bim_filter_cmd <- sprintf(
+  "awk 'NR==FNR { ids[$1]; next } ($2 in ids)' %s %s",
+  shQuote(rsid_file),
+  shQuote(bim_file)
+)
 
-invalid_ids <- lead[
-  parsed_chromosome != chromosome |
-    parsed_position != position |
-    is.na(parsed_position) |
-    !grepl("^[ACGT]+$", reference_allele) |
-    !grepl("^[ACGT]+$", alternate_allele)
+bim <- fread(
+  cmd = bim_filter_cmd,
+  header = FALSE,
+  col.names = c("bim_chromosome", "SNP", "genetic_distance", "bim_position", "A1", "A2")
+)[
+  ,
+  .(SNP, bim_chromosome, bim_position, A1, A2)
 ]
 
-if (nrow(invalid_ids) > 0) {
-  stop(
-    "Some SNP IDs could not be safely parsed for VEP. First invalid ID: ",
-    invalid_ids$SNP[1],
-    call. = FALSE
-  )
+unlink(rsid_file)
+
+bim[, bim_chromosome := as.character(bim_chromosome)]
+bim[, bim_position := as.integer(bim_position)]
+bim[, A1 := toupper(A1)]
+bim[, A2 := toupper(A2)]
+
+lead <- merge(lead, bim, by = "SNP", all.x = TRUE, sort = FALSE)
+
+missing_alleles <- lead[is.na(A1) | is.na(A2)]
+if (nrow(missing_alleles) > 0) {
+  stop("Missing BIM allele lookup for ", nrow(missing_alleles), " lead SNP(s).", call. = FALSE)
 }
 
-lead[, allele := paste0(reference_allele, "/", alternate_allele)]
+position_mismatch <- lead[
+  chromosome != bim_chromosome |
+    position != bim_position
+]
+if (nrow(position_mismatch) > 0) {
+  warning("BIM position differs from clump position for ", nrow(position_mismatch), " SNP(s). Using clump positions.")
+}
+
+lead[, allele := paste0(A1, "/", A2)]
 setorder(lead, p_value)
 
 vep_input <- lead[, .(

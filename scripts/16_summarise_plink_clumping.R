@@ -89,15 +89,8 @@ n_clumps_with_additional_snps <- clumps[TOTAL > 0, .N]
 n_clumps_without_additional_snps <- clumps[TOTAL == 0, .N]
 n_additional_snps <- sum(clumps$TOTAL, na.rm = TRUE)
 
-# Optional run diagnostics from PLINK sidecar files. These are useful for
-# reproducibility, but the summary still works if the sidecar files are absent.
-n_missing_variant_ids <- if (file.exists(missing_file)) {
-  length(readLines(missing_file, warn = FALSE))
-} else {
-  NA_integer_
-}
-
 n_index_candidates <- NA_integer_
+n_missing_variant_ids <- NA_integer_
 if (file.exists(log_file)) {
   log_lines <- readLines(log_file, warn = FALSE)
   n_index_candidates <- extract_log_integer(
@@ -105,6 +98,15 @@ if (file.exists(log_file)) {
     "clumps formed from [0-9]+ index candidates",
     ".*formed from ([0-9]+) index candidates.*"
   )
+  n_missing_variant_ids <- extract_log_integer(
+    log_lines,
+    "[0-9]+ top variant IDs in --clump file missing from main dataset",
+    ".*Warning: ([0-9]+) top variant IDs in --clump file missing from main dataset.*"
+  )
+}
+
+if (is.na(n_missing_variant_ids)) {
+  n_missing_variant_ids <- 0L
 }
 
 summary <- data.table(
