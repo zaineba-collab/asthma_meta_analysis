@@ -7,26 +7,31 @@ library(TwoSampleMR)
 # 23_harmonise_mr_data.R
 #
 # Primary MR direction:
-#   Asthma -> BMI
+#   Asthma -> configured outcome
 #
 # Supervisor plan:
 #   Use already LD-clumped asthma signals as MR instruments and do
 #   not clump again using TwoSampleMR.
 #
 # Purpose:
-#   Harmonise asthma exposure instruments with BMI outcome associations.
+#   Harmonise asthma exposure instruments with configured outcome associations.
 # ============================================================
 
 script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
 script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else getwd()
 project_dir <- dirname(script_dir)
+source(file.path(script_dir, "mr_config_helpers.R"))
 
-primary_dir <- file.path(project_dir, "results", "mr", "asthma_to_bmi")
+mr_config <- read_mr_outcome_config(project_dir)
+outcome_label <- mr_config$outcome_label
+outcome_name <- mr_config$outcome_name
+
+primary_dir <- file.path(project_dir, "results", "mr", paste0("asthma_to_", outcome_label))
 harmonised_dir <- file.path(primary_dir, "harmonised")
 
 exposure_file <- file.path(primary_dir, "asthma_exposure_twosamplemr.tsv")
-outcome_file <- file.path(primary_dir, "bmi_outcome_twosamplemr.tsv")
-harmonised_file <- file.path(harmonised_dir, "asthma_bmi_harmonised.tsv")
+outcome_file <- file.path(primary_dir, paste0(outcome_label, "_outcome_twosamplemr.tsv"))
+harmonised_file <- file.path(harmonised_dir, paste0("asthma_", outcome_label, "_harmonised.tsv"))
 diagnostics_file <- file.path(primary_dir, "mr_harmonisation_diagnostics.tsv")
 
 minimum_usable_instruments <- as.integer(Sys.getenv("MR_MIN_USABLE_INSTRUMENTS", unset = "10"))
@@ -45,15 +50,15 @@ count_true <- function(x) sum(x %in% TRUE, na.rm = TRUE)
 count_false <- function(x) sum(x %in% FALSE, na.rm = TRUE)
 
 stop_if_missing(exposure_file, "Asthma exposure file")
-stop_if_missing(outcome_file, "BMI outcome file")
+stop_if_missing(outcome_file, paste(outcome_name, "outcome file"))
 dir.create(harmonised_dir, showWarnings = FALSE, recursive = TRUE)
 
-message("Primary MR direction: Asthma -> BMI")
-message("Using already LD-clumped asthma signals. No additional TwoSampleMR clumping performed.")
+message("Primary MR direction: Asthma -> ", outcome_name)
+print_mr_config(mr_config, primary_dir)
 message("Reading asthma exposure data: ", exposure_file)
 exposure <- fread(exposure_file)
 
-message("Reading BMI outcome data: ", outcome_file)
+message("Reading ", outcome_name, " outcome data: ", outcome_file)
 outcome <- fread(outcome_file)
 
 required_exposure_cols <- c(
@@ -95,7 +100,7 @@ if (nrow(duplicate_exposure) > 0) {
 }
 
 if (nrow(duplicate_outcome) > 0) {
-  stop("Duplicate BMI outcome SNP rows found: ", paste(sort(unique(duplicate_outcome$SNP)), collapse = ", "), call. = FALSE)
+  stop("Duplicate ", outcome_name, " outcome SNP rows found: ", paste(sort(unique(duplicate_outcome$SNP)), collapse = ", "), call. = FALSE)
 }
 
 exposure_snps_before <- uniqueN(exposure$SNP)
@@ -103,8 +108,8 @@ outcome_rows_before <- nrow(outcome)
 outcome_snps_before <- uniqueN(outcome$SNP)
 
 message("Exposure SNPs before harmonisation: ", exposure_snps_before)
-message("BMI outcome rows before harmonisation: ", outcome_rows_before)
-message("Unique BMI outcome SNPs before harmonisation: ", outcome_snps_before)
+message(outcome_name, " outcome rows before harmonisation: ", outcome_rows_before)
+message("Unique ", outcome_name, " outcome SNPs before harmonisation: ", outcome_snps_before)
 
 harmonised <- harmonise_data(
   exposure_dat = as.data.frame(exposure),
@@ -146,9 +151,9 @@ diagnostics <- data.table(
     "primary_mr_direction",
     "supervisor_plan",
     "exposure_snps_before_harmonisation",
-    "bmi_outcome_rows_before_harmonisation",
-    "unique_bmi_outcome_snps_before_harmonisation",
-    "exposure_snps_without_bmi_outcome_before_harmonisation",
+    paste0(outcome_label, "_outcome_rows_before_harmonisation"),
+    paste0("unique_", outcome_label, "_outcome_snps_before_harmonisation"),
+    paste0("exposure_snps_without_", outcome_label, "_outcome_before_harmonisation"),
     "outcome_rows_not_harmonised",
     "snps_retained_after_harmonisation",
     "snps_removed_during_harmonisation",
@@ -160,7 +165,7 @@ diagnostics <- data.table(
     "additional_twosamplemr_clumping_performed"
   ),
   value = c(
-    "Asthma -> BMI",
+    paste("Asthma ->", outcome_name),
     "Use already LD-clumped asthma signals; do not clump again using TwoSampleMR",
     exposure_snps_before,
     outcome_rows_before,

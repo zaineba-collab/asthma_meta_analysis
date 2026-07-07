@@ -6,7 +6,7 @@ library(data.table)
 # 21_prepare_mr_exposure.R
 #
 # Primary MR direction:
-#   Asthma -> BMI
+#   Asthma -> BMI by default, or another configured outcome
 #
 # Supervisor plan:
 #   Use already LD-clumped asthma signals as MR instruments and do
@@ -22,17 +22,23 @@ library(data.table)
 #   results/gwama/asthma_meta.out
 #
 # Output:
-#   results/mr/asthma_to_bmi/asthma_exposure_twosamplemr.tsv
+#   results/mr/asthma_to_<outcome>/asthma_exposure_twosamplemr.tsv
 # ============================================================
 
 script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
 script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else getwd()
 project_dir <- dirname(script_dir)
+source(file.path(script_dir, "mr_config_helpers.R"))
 
 lead_file <- file.path(project_dir, "results", "ld_clumping", "independent_lead_snps.tsv")
 clump_input_file <- file.path(project_dir, "results", "gwama", "asthma_fixed_for_plink_clumping.txt")
 gwama_file <- file.path(project_dir, "results", "gwama", "asthma_meta.out")
-output_dir <- file.path(project_dir, "results", "mr", "asthma_to_bmi")
+
+mr_config <- read_mr_outcome_config(project_dir)
+outcome_label <- mr_config$outcome_label
+outcome_name <- mr_config$outcome_name
+
+output_dir <- file.path(project_dir, "results", "mr", paste0("asthma_to_", outcome_label))
 output_file <- file.path(output_dir, "asthma_exposure_twosamplemr.tsv")
 diagnostics_file <- file.path(output_dir, "asthma_exposure_diagnostics.tsv")
 
@@ -80,8 +86,8 @@ stop_if_missing(lead_file, "Independent lead SNP table")
 stop_if_missing(clump_input_file, "rsID PLINK clumping input")
 stop_if_missing(gwama_file, "GWAMA meta-analysis output")
 
-message("Primary MR direction: Asthma -> BMI")
-message("Using already LD-clumped asthma signals. No additional TwoSampleMR clumping performed.")
+message("Primary MR direction: Asthma -> ", outcome_name)
+print_mr_config(mr_config, output_dir)
 message("Reading corrected PLINK LD-clumped asthma lead SNPs: ", lead_file)
 
 lead <- fread(lead_file)
@@ -200,7 +206,7 @@ diagnostics <- data.table(
     "source_ld_clumped_file"
   ),
   value = c(
-    "Asthma -> BMI",
+    paste("Asthma ->", outcome_name),
     "Use already LD-clumped asthma signals; do not clump again using TwoSampleMR",
     nrow(lead),
     nrow(exposure),

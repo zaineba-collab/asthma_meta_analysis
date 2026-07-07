@@ -1,0 +1,7 @@
+outcome_label	outcome_name	outcome_id	outcome_type
+bmi	BMI	ieu-a-835	continuous
+hdl	HDL cholesterol	ieu-b-109	continuous
+ldl	LDL cholesterol	ieu-b-110	continuous
+triglycerides	Triglycerides	ieu-b-111	continuous
+sbp	Systolic blood pressure	ieu-b-5138	continuous
+dbp	Diastolic blood pressure	ieu-b-5139	continuous

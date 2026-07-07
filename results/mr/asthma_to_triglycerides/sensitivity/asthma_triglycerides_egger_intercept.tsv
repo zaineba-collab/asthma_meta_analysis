@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	egger_intercept	se	pval
+asthma_gwama	ieu-b-111	Triglycerides	Asthma	0.000599061488811702	0.00030881740942785	0.0528300139534382

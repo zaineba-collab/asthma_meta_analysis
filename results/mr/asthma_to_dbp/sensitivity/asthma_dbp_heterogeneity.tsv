@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	method	Q	Q_df	Q_pval
+asthma_gwama	ieu-b-5139	Diastolic blood pressure	Asthma	MR Egger	3504.7310193136	712	0
+asthma_gwama	ieu-b-5139	Diastolic blood pressure	Asthma	Inverse variance weighted	3509.48166245226	713	0

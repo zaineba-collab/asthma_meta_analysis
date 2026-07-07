@@ -1,0 +1,20 @@
+metric	value
+primary_mr_direction	Asthma -> Diastolic blood pressure
+supervisor_plan	Use already LD-clumped asthma signals; do not clump again using TwoSampleMR
+outcome_id	ieu-b-5139
+outcome_name	Diastolic blood pressure
+total_asthma_exposure_snps	5254
+non_rsid_snps_skipped	2
+rsid_snps_queried	5252
+dbp_outcome_rows_returned	893
+unique_dbp_outcome_snps_returned	891
+dbp_outcome_rows_used_for_mr	889
+unique_dbp_outcome_snps_used_for_mr	889
+direct_matches	885
+proxy_matches	4
+unmatched_queried_snps	4372
+percentage_outcome_coverage	16.927
+duplicate_exact_outcome_rows	0
+duplicate_outcome_snp_rows	2
+duplicate_outcome_snps_excluded	2
+additional_twosamplemr_clumping_performed	No

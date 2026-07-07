@@ -8,7 +8,7 @@ library(ggplot2)
 # 24_run_mr_analysis.R
 #
 # Primary MR direction:
-#   Asthma -> BMI
+#   Asthma -> configured continuous outcome
 #
 # Supervisor plan:
 #   Use already LD-clumped asthma signals as MR instruments and do
@@ -16,22 +16,28 @@ library(ggplot2)
 #
 # Purpose:
 #   Run the main TwoSampleMR estimates for asthma as the exposure
-#   and BMI as the continuous outcome.
+#   and a configured continuous outcome.
 # ============================================================
 
 script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
 script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else getwd()
 project_dir <- dirname(script_dir)
+source(file.path(script_dir, "mr_config_helpers.R"))
 
-primary_dir <- file.path(project_dir, "results", "mr", "asthma_to_bmi")
-harmonised_file <- file.path(primary_dir, "harmonised", "asthma_bmi_harmonised.tsv")
+mr_config <- read_mr_outcome_config(project_dir)
+outcome_label <- mr_config$outcome_label
+outcome_name <- mr_config$outcome_name
+outcome_type <- mr_config$outcome_type
+
+primary_dir <- file.path(project_dir, "results", "mr", paste0("asthma_to_", outcome_label))
+harmonised_file <- file.path(primary_dir, "harmonised", paste0("asthma_", outcome_label, "_harmonised.tsv"))
 analysis_dir <- file.path(primary_dir, "analysis")
 figures_dir <- file.path(primary_dir, "figures")
 
-raw_results_file <- file.path(analysis_dir, "asthma_bmi_mr_results.tsv")
-publication_results_file <- file.path(analysis_dir, "asthma_bmi_mr_results_publication.tsv")
-scatter_png_file <- file.path(figures_dir, "asthma_bmi_mr_scatter_plot.png")
-scatter_pdf_file <- file.path(figures_dir, "asthma_bmi_mr_scatter_plot.pdf")
+raw_results_file <- file.path(analysis_dir, paste0("asthma_", outcome_label, "_mr_results.tsv"))
+publication_results_file <- file.path(analysis_dir, paste0("asthma_", outcome_label, "_mr_results_publication.tsv"))
+scatter_png_file <- file.path(figures_dir, paste0("asthma_", outcome_label, "_mr_scatter_plot.png"))
+scatter_pdf_file <- file.path(figures_dir, paste0("asthma_", outcome_label, "_mr_scatter_plot.pdf"))
 
 minimum_usable_instruments <- as.integer(Sys.getenv("MR_MIN_USABLE_INSTRUMENTS", unset = "10"))
 
@@ -62,12 +68,12 @@ required_columns <- c(
   "mr_keep"
 )
 
-stop_if_missing(harmonised_file, "Harmonised asthma-BMI file")
+stop_if_missing(harmonised_file, paste("Harmonised asthma-", outcome_name, " file", sep = ""))
 dir.create(analysis_dir, showWarnings = FALSE, recursive = TRUE)
 dir.create(figures_dir, showWarnings = FALSE, recursive = TRUE)
 
-message("Primary MR direction: Asthma -> BMI")
-message("Using already LD-clumped asthma signals. No additional TwoSampleMR clumping performed.")
+message("Primary MR direction: Asthma -> ", outcome_name)
+print_mr_config(mr_config, primary_dir)
 message("Reading harmonised data: ", harmonised_file)
 harmonised <- fread(harmonised_file)
 
@@ -120,7 +126,8 @@ if (nrow(mr_results) == 0) {
 mr_results[, beta_lci95 := b - 1.96 * se]
 mr_results[, beta_uci95 := b + 1.96 * se]
 
-# BMI is continuous, so odds ratios are not calculated or interpreted.
+# Continuous outcomes are reported on their original beta scale. Odds ratios are
+# not calculated unless a future config row explicitly supports a binary scale.
 publication_results <- mr_results[
   ,
   .(
@@ -134,7 +141,7 @@ publication_results <- mr_results[
     beta_uci95,
     odds_ratio_lci95 = NA_real_,
     odds_ratio_uci95 = NA_real_,
-    odds_ratio_note = "Not calculated: BMI is a continuous outcome"
+    odds_ratio_note = paste("Not calculated:", outcome_name, "is a", outcome_type, "outcome")
   )
 ]
 

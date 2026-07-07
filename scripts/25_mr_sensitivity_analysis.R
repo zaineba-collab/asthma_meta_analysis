@@ -8,38 +8,43 @@ library(ggplot2)
 # 25_mr_sensitivity_analysis.R
 #
 # Primary MR direction:
-#   Asthma -> BMI
+#   Asthma -> configured outcome
 #
 # Supervisor plan:
 #   Use already LD-clumped asthma signals as MR instruments and do
 #   not clump again using TwoSampleMR.
 #
 # Purpose:
-#   Run sensitivity analyses for the asthma -> BMI TwoSampleMR
+#   Run sensitivity analyses for the asthma -> configured outcome TwoSampleMR
 #   analysis using the already harmonised dataset.
 # ============================================================
 
 script_file <- sub("--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
 script_dir <- if (!is.na(script_file)) dirname(normalizePath(script_file)) else getwd()
 project_dir <- dirname(script_dir)
+source(file.path(script_dir, "mr_config_helpers.R"))
 
-primary_dir <- file.path(project_dir, "results", "mr", "asthma_to_bmi")
-harmonised_file <- file.path(primary_dir, "harmonised", "asthma_bmi_harmonised.tsv")
+mr_config <- read_mr_outcome_config(project_dir)
+outcome_label <- mr_config$outcome_label
+outcome_name <- mr_config$outcome_name
+
+primary_dir <- file.path(project_dir, "results", "mr", paste0("asthma_to_", outcome_label))
+harmonised_file <- file.path(primary_dir, "harmonised", paste0("asthma_", outcome_label, "_harmonised.tsv"))
 sensitivity_dir <- file.path(primary_dir, "sensitivity")
 figures_dir <- file.path(primary_dir, "figures")
 
-heterogeneity_file <- file.path(sensitivity_dir, "asthma_bmi_heterogeneity.tsv")
-egger_intercept_file <- file.path(sensitivity_dir, "asthma_bmi_egger_intercept.tsv")
-single_snp_file <- file.path(sensitivity_dir, "asthma_bmi_single_snp.tsv")
-leave_one_out_file <- file.path(sensitivity_dir, "asthma_bmi_leave_one_out.tsv")
-sensitivity_summary_file <- file.path(sensitivity_dir, "asthma_bmi_sensitivity_summary.tsv")
+heterogeneity_file <- file.path(sensitivity_dir, paste0("asthma_", outcome_label, "_heterogeneity.tsv"))
+egger_intercept_file <- file.path(sensitivity_dir, paste0("asthma_", outcome_label, "_egger_intercept.tsv"))
+single_snp_file <- file.path(sensitivity_dir, paste0("asthma_", outcome_label, "_single_snp.tsv"))
+leave_one_out_file <- file.path(sensitivity_dir, paste0("asthma_", outcome_label, "_leave_one_out.tsv"))
+sensitivity_summary_file <- file.path(sensitivity_dir, paste0("asthma_", outcome_label, "_sensitivity_summary.tsv"))
 
-forest_png_file <- file.path(figures_dir, "asthma_bmi_single_snp_forest_plot.png")
-forest_pdf_file <- file.path(figures_dir, "asthma_bmi_single_snp_forest_plot.pdf")
-loo_png_file <- file.path(figures_dir, "asthma_bmi_leave_one_out_plot.png")
-loo_pdf_file <- file.path(figures_dir, "asthma_bmi_leave_one_out_plot.pdf")
-funnel_png_file <- file.path(figures_dir, "asthma_bmi_funnel_plot.png")
-funnel_pdf_file <- file.path(figures_dir, "asthma_bmi_funnel_plot.pdf")
+forest_png_file <- file.path(figures_dir, paste0("asthma_", outcome_label, "_single_snp_forest_plot.png"))
+forest_pdf_file <- file.path(figures_dir, paste0("asthma_", outcome_label, "_single_snp_forest_plot.pdf"))
+loo_png_file <- file.path(figures_dir, paste0("asthma_", outcome_label, "_leave_one_out_plot.png"))
+loo_pdf_file <- file.path(figures_dir, paste0("asthma_", outcome_label, "_leave_one_out_plot.pdf"))
+funnel_png_file <- file.path(figures_dir, paste0("asthma_", outcome_label, "_funnel_plot.png"))
+funnel_pdf_file <- file.path(figures_dir, paste0("asthma_", outcome_label, "_funnel_plot.pdf"))
 
 minimum_usable_instruments <- as.integer(Sys.getenv("MR_MIN_USABLE_INSTRUMENTS", unset = "10"))
 
@@ -91,20 +96,20 @@ save_plot_pair <- function(plot_object, png_file, pdf_file, width, height) {
 
   tryCatch(
     {
-      ggsave(png_file, plot = plot_object, width = width, height = height, dpi = 300)
-      ggsave(pdf_file, plot = plot_object, width = width, height = height)
+      ggsave(png_file, plot = plot_object, width = width, height = height, dpi = 300, limitsize = FALSE)
+      ggsave(pdf_file, plot = plot_object, width = width, height = height, limitsize = FALSE)
       NA_character_
     },
     error = function(e) conditionMessage(e)
   )
 }
 
-stop_if_missing(harmonised_file, "Harmonised asthma-BMI file")
+stop_if_missing(harmonised_file, paste("Harmonised asthma-", outcome_name, " file", sep = ""))
 dir.create(sensitivity_dir, showWarnings = FALSE, recursive = TRUE)
 dir.create(figures_dir, showWarnings = FALSE, recursive = TRUE)
 
-message("Primary MR direction: Asthma -> BMI")
-message("Using already LD-clumped asthma signals. No additional TwoSampleMR clumping performed.")
+message("Primary MR direction: Asthma -> ", outcome_name)
+print_mr_config(mr_config, primary_dir)
 message("Reading harmonised data: ", harmonised_file)
 harmonised <- fread(harmonised_file)
 
@@ -179,7 +184,7 @@ sensitivity_summary <- data.table(
   heterogeneity_p_lt_0_05 = heterogeneity_significant,
   directional_pleiotropy_p_lt_0_05 = directional_pleiotropy_significant,
   notes = paste(
-    "Sensitivity analyses should be interpreted alongside the main asthma -> BMI MR estimates;",
+    paste("Sensitivity analyses should be interpreted alongside the main asthma ->", outcome_name, "MR estimates;"),
     "these tests assess evidence of heterogeneity and directional pleiotropy,",
     "but do not prove or disprove causality."
   )

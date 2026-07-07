@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	egger_intercept	se	pval
+asthma_gwama	ieu-b-5138	Systolic blood pressure	Asthma	-0.012175490064295	0.00378887101325582	0.00137044802904369

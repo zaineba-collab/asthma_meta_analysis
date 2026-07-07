@@ -1,0 +1,7 @@
+outcome_label	outcome_name	outcome_id	outcome_type	total_asthma_exposure_snps	outcome_rows_returned	direct_matches	proxy_matches	unmatched_snps	outcome_coverage_percentage	harmonised_rows	mr_keep_true	mr_keep_false	final_usable_instruments	duplicate_exact_outcome_rows	duplicate_outcome_snp_rows	additional_twosamplemr_clumping_performed
+bmi	BMI	ieu-a-835	continuous	5254	476	124	352	4776	9.063	476	395	81	395	0	0	No
+dbp	Diastolic blood pressure	ieu-b-5139	continuous	5254	893	885	4	4372	16.927	880	714	166	714	0	2	No
+hdl	HDL cholesterol	ieu-b-109	continuous	5254	1026	883	143	4456	19.535	796	651	145	651	0	0	No
+ldl	LDL cholesterol	ieu-b-110	continuous	5254	1026	883	143	4456	19.535	796	651	145	651	0	0	No
+sbp	Systolic blood pressure	ieu-b-5138	continuous	5254	893	885	4	4372	16.927	880	714	166	714	0	2	No
+triglycerides	Triglycerides	ieu-b-111	continuous	5254	1032	883	143	4456	19.535	796	651	145	651	0	3	No
