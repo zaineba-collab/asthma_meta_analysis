@@ -1,0 +1,7 @@
+LDSC installation status: NOT INSTALLED
+Reason: conda, mamba, and micromamba were not available; installation stopped as instructed.
+System Python observed but not used: /opt/homebrew/bin/python3 (Python 3.14.2)
+Repository/branch/commit/version/environment: NA (not installed)
+munge_sumstats.py plain-text test: NOT RUN
+munge_sumstats.py gzip test: NOT RUN
+No LDSC source code was cloned or modified.

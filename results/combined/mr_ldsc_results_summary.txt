@@ -1,0 +1,7 @@
+Machine-generated MR–LDSC numerical results summary
+No MR IVW association survived Bonferroni correction (0 of 12).
+Seven genetic correlations survived Bonferroni correction (7 of 12 planned outcomes).
+The strongest positive genetic correlation was asthma–Allergic rhinitis (rg=0.7114).
+The strongest negative genetic correlation was asthma–HDL cholesterol (rg=-0.1329).
+Eosinophilic disease rg was not estimable because its univariate LDSC h2 estimate was non-positive.
+These statements are descriptive and do not assign causal meaning.

@@ -1,0 +1,17 @@
+Metric	Result
+Number of input GWAS	12
+Variants analysed	34316972
+Variants with P < 5e-8	50764
+Project-significant variants (P <= 5e-9)	39933
+Top SNP	rs9273374
+Top chromosome	6
+Top position (corrected GRCh38 coordinate)	32658837
+Top beta	-0.153052
+Top SE	0.004504
+Top association P	5.22e-253
+lambda_GC	1.3171038076398
+Variants with I2 >= 0.75	229395
+Percentage with I2 >= 0.75	0.668
+Variants with Cochran Q P < 0.05	966173
+Percentage with Cochran Q P < 0.05	2.815
+Project signal-selection threshold	P <= 5e-9

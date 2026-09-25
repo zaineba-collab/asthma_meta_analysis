@@ -1,0 +1,3 @@
+exposure	outcome	outcome_id	outcome_type	method	method_id	nsnp	Q	Q_df	Q_p_value
+Asthma	Bronchiectasis	J10_BRONCHIECTASIS	binary	Inverse variance weighted	mr_ivw	652	779.644374013018	651	0.000372587851844782
+Asthma	Bronchiectasis	J10_BRONCHIECTASIS	binary	MR Egger	mr_egger_regression	652	759.794992033673	650	0.0018240674490219

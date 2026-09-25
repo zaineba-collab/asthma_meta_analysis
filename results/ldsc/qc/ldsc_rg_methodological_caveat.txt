@@ -1,0 +1,10 @@
+LDSC genetic-correlation methodological caveat
+==============================================
+
+The R12 FinnGen laboratory traits (CRP, ALT, AST, GGT, HDL cholesterol, LDL cholesterol, and fasting triglycerides) derive from mixed-model analyses. Their nominal sample sizes are retained unchanged. No rescaling or alternative effective sample size is introduced.
+
+Genetic correlation is scale-normalised through genetic covariance and trait heritabilities, so the requested standard analyses are run while retaining this caveat. Results remain associational population-genetic estimates and must not be assigned causal meaning.
+
+Cross-trait intercepts are freely estimated. A nonzero cross-trait intercept is not by itself proof of participant overlap, because it may also reflect correlated stratification or other covariance.
+
+Eosinophilic disease is deliberately not analysed with --rg because its univariate observed-scale h2 is non-positive (-0.0004). It is not forced with --return-silly-things.

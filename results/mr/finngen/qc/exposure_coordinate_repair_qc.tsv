@@ -1,0 +1,11 @@
+metric	value
+coordinate_provenance	PLINK .clumps #CHROM/POS copied from 1000G_EUR_biallelic.bim; repaired from current explicit liftover/GWAMA IDs, then FinnGen exact-rsID gaps
+inferred_PLINK_build	GRCh37/hg19
+total_instruments	5254
+GRCh38_coordinates_recovered	5238
+coordinates_unresolved	16
+old_position_equals_new	2191
+old_position_differs_new	3047
+chromosome_changed	0
+duplicate_coordinate_allele_combinations	0
+rs9273374_GRCh38	6:32658837

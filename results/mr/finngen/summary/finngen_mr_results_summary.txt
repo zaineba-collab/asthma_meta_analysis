@@ -1,0 +1,9 @@
+FinnGen MR numerical-results summary
+
+None of the 12 IVW estimates reached nominal p < 0.05.
+No IVW association survived Bonferroni or BH FDR correction.
+Significant IVW heterogeneity was detected for 10 of 12 outcomes.
+MR-Egger intercept evidence of possible directional pleiotropy occurred for 5 of 12 outcomes; 5 remained significant after BH FDR correction.
+Leave-one-out sign reversals occurred for 3 of 12 outcomes.
+These are descriptive statistical diagnostics; no outcome or SNP was excluded.
+Validation against known completed results: PASS; no discrepancies detected.

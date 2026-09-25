@@ -1,0 +1,33 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 3.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/results/ldsc/h2/nafld \
+--h2 /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/nafld.sumstats.gz \
+--ref-ld-chr /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/reference/1000G_Phase3_ldscores/LDscore. \
+--w-ld-chr /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/reference/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC. 
+
+Beginning analysis at Mon Aug 24 06:04:25 2026
+Reading summary statistics from /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/nafld.sumstats.gz ...
+RuntimeWarning: compression has no effect when passing a non-binary object as input for file /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/nafld.sumstats.gz
+Read summary statistics for 1150250 SNPs.
+Reading reference panel LD Score from /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/reference/1000G_Phase3_ldscores/LDscore.[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1190321 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/reference/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC.[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1187349 SNPs.
+After merging with reference panel LD, 1150250 SNPs remain.
+After merging with regression SNP LD, 1150250 SNPs remain.
+Using two-step estimator with cutoff at 30.
+Total Observed scale h2: 0.0049 (0.0011)
+Lambda GC: 1.0679
+Mean Chi^2: 1.0889
+Intercept: 1.0313 (0.0078)
+Ratio: 0.3526 (0.0873)
+Analysis finished at Mon Aug 24 06:04:28 2026
+Total time elapsed: 2.83s

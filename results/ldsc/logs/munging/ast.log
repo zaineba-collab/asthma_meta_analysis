@@ -1,0 +1,54 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 3.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./munge_sumstats.py \
+--sumstats /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/raw_hm3/ast_hm3.tsv \
+--out /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/ast \
+--merge-alleles /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/w_hm3_merge_alleles.tsv \
+--snp SNP \
+--N-col N \
+--a1 A1 \
+--a2 A2 \
+--p P \
+--frq FRQ \
+--signed-sumstats BETA,0 
+
+Interpreting column names as follows:
+SNP:	Variant ID (e.g., rs number)
+A1:	Allele 1, interpreted as ref allele for signed sumstat.
+A2:	Allele 2, interpreted as non-ref allele for signed sumstat.
+BETA:	Directional summary statistic as specified by --signed-sumstats.
+P:	p-Value
+FRQ:	Allele frequency
+N:	Sample size
+
+Reading list of SNPs for allele merge from /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/w_hm3_merge_alleles.tsv
+Read 1187349 SNPs for allele merge.
+Reading sumstats from /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/raw_hm3/ast_hm3.tsv into memory 5000000 SNPs at a time.
+Read 1174736 SNPs from --sumstats file.
+Removed 0 SNPs not in --merge-alleles.
+Removed 0 SNPs with missing values.
+Removed 0 SNPs with INFO <= 0.9.
+Removed 24378 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 4 variants that were not SNPs or were strand-ambiguous.
+1150354 SNPs remain.
+Removed 0 SNPs with duplicated rs numbers (1150354 SNPs remain).
+Removed 0 SNPs with N < 83212.0 (1150354 SNPs remain).
+Median value of SIGNED_SUMSTATS was -1.753785e-05, which seems sensible.
+Removed 0 SNPs whose alleles did not match --merge-alleles (1150354 SNPs remain).
+Writing summary statistics for 1187349 SNPs (1150354 with nonmissing beta) to /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/ast.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 1.26
+Lambda GC = 1.196
+Max chi^2 = 338.816
+563 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Sun Aug 23 10:36:20 2026
+Total time elapsed: 9.03s

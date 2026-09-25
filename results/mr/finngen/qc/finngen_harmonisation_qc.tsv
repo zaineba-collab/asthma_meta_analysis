@@ -1,0 +1,13 @@
+outcome	outcome_id	outcome_type	corrected_finngen_matched_snps	snps_entering_harmonisation	snps_successfully_harmonised	palindromic_snps	palindromic_unresolved_missing_exposure_eaf	ambiguous_snps	allele_incompatible_snps	allele_flips	strand_complements	removed_snps	final_mr_keep_snps	retention_percentage	action	exposure_eaf_available
+Allergic rhinitis	ALLERG_RHINITIS	binary	810	810	810	158	158	158	0	157	44	158	652	80.4938271604938	2	FALSE
+Bronchiectasis	J10_BRONCHIECTASIS	binary	810	810	810	158	158	158	0	157	44	158	652	80.4938271604938	2	FALSE
+Eosinophilic disease	EOSINOPHIL_DISEASE	binary	810	810	810	158	158	158	0	157	44	158	652	80.4938271604938	2	FALSE
+BMI (inverse-rank normalized)	BMI_IRN	continuous	810	810	810	158	158	158	0	157	44	158	652	80.4938271604938	2	FALSE
+NAFLD	NAFLD	binary	810	810	810	158	158	158	0	157	44	158	652	80.4938271604938	2	FALSE
+CRP	3020460	continuous	797	797	797	156	156	156	0	157	44	156	641	80.426599749059	2	FALSE
+ALT	3006923	continuous	798	798	798	156	156	156	0	157	44	156	642	80.4511278195489	2	FALSE
+AST	3013721	continuous	773	773	773	150	150	150	0	157	44	150	623	80.5950840879689	2	FALSE
+GGT	3026910	continuous	796	796	796	155	155	155	0	157	44	155	641	80.5276381909548	2	FALSE
+HDL cholesterol	3023602	continuous	798	798	798	156	156	156	0	157	44	156	642	80.4511278195489	2	FALSE
+LDL cholesterol	3001308	continuous	798	798	798	156	156	156	0	157	44	156	642	80.4511278195489	2	FALSE
+Triglycerides (fasting)	3048773	continuous	797	797	797	156	156	156	0	157	44	156	641	80.426599749059	2	FALSE

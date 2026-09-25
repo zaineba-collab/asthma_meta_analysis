@@ -1,0 +1,15 @@
+Univariate LDSC h2 methodological caveat
+=======================================
+
+These analyses are an observed-scale diagnostic/QC stage. Binary traits are not transformed to the liability scale, and no sample or population prevalence is supplied.
+
+FinnGen summary statistics were produced using REGENIE. The FinnGen R12 quantitative laboratory documentation specifically describes a linear mixed-model framework. LDSC documentation cautions that mixed-model summary statistics may have effective sample sizes that differ from nominal sample sizes, which can affect absolute SNP-heritability estimates.
+
+Accordingly:
+- The requested univariate LDSC outputs are preserved and used primarily as diagnostics/readiness checks.
+- R12 laboratory h2 estimates must not be described as definitive biological SNP heritability estimates.
+- Absolute h2 values should not be compared naively across traits.
+- No alternative effective sample size is estimated or substituted.
+- This caveat does not automatically invalidate later genetic-correlation analysis, because multiplicative sample-size scaling can cancel in rg, but future rg still requires appropriate h2/readiness review.
+
+The LDSC intercept is estimated freely. Neither --no-intercept nor --intercept-h2 is used.

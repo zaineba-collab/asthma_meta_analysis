@@ -1,0 +1,14 @@
+trait	positive_h2	h2_nominally_different_from_zero	weak_h2_signal	very_low_mean_chisq	intercept_above_1	intercept_below_1	intercept_deviation	ldsc_warning_present	regression_SNP_count_unexpectedly_low	rg_numerically_possible	rg_readiness_category
+Asthma	yes	yes	no	no	yes	no	0.10840000000000005	no	no	YES	A — STRONGER_H2_SIGNAL
+Allergic rhinitis	yes	yes	no	no	yes	no	0.083800000000000097	no	no	YES	A — STRONGER_H2_SIGNAL
+Bronchiectasis	yes	yes	no	no	yes	no	0.014299999999999979	no	no	YES	B — MODERATE_H2_SIGNAL
+Eosinophilic disease	no	no	yes	yes	yes	no	0.0033000000000000806	yes	no	NO	D — H2_OUT_OF_BOUNDS
+BMI IRN	yes	yes	no	no	yes	no	0.66280000000000006	no	no	YES	A — STRONGER_H2_SIGNAL
+NAFLD	yes	yes	no	no	yes	no	0.031300000000000106	no	no	YES	A — STRONGER_H2_SIGNAL
+CRP	yes	yes	no	no	yes	no	0.08230000000000004	no	no	YES	A — STRONGER_H2_SIGNAL
+ALT	yes	yes	no	no	yes	no	0.40500000000000003	no	no	YES	B — MODERATE_H2_SIGNAL
+AST	yes	yes	no	no	yes	no	0.091499999999999915	no	no	YES	A — STRONGER_H2_SIGNAL
+GGT	yes	yes	no	no	yes	no	0.36339999999999995	no	no	YES	A — STRONGER_H2_SIGNAL
+HDL cholesterol	yes	yes	no	no	yes	no	0.83660000000000001	no	no	YES	A — STRONGER_H2_SIGNAL
+LDL cholesterol	yes	yes	no	no	yes	no	0.24219999999999997	no	no	YES	A — STRONGER_H2_SIGNAL
+Fasting triglycerides	yes	yes	no	no	yes	no	0.60759999999999992	no	no	YES	A — STRONGER_H2_SIGNAL

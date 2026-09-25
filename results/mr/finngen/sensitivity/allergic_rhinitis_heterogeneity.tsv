@@ -1,0 +1,3 @@
+exposure	outcome	outcome_id	outcome_type	method	method_id	nsnp	Q	Q_df	Q_p_value
+Asthma	Allergic rhinitis	ALLERG_RHINITIS	binary	Inverse variance weighted	mr_ivw	652	2505.63070896066	651	4.87715594008264e-215
+Asthma	Allergic rhinitis	ALLERG_RHINITIS	binary	MR Egger	mr_egger_regression	652	1381.02096157443	650	8.33067887433811e-55

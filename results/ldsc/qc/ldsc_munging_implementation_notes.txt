@@ -1,0 +1,25 @@
+LDSC munging implementation notes
+=================================
+
+Installed CBIIT commit behavior:
+- BETA was supplied using --signed-sumstats BETA,0.
+- munge_sumstats.py computes the magnitude of Z as sqrt(chi2.isf(P, 1)).
+- It applies the sign according to whether BETA is below the null value 0.
+- SE is retained for premunging QC but is not used by this implementation to construct Z.
+- --merge-alleles uses the reconstructed no-MHC HapMap3 SNP/A1/A2 list.
+
+Header-bearing merge view:
+- The validated reconstructed reference has 1,187,349 headerless SNP/A1/A2 data rows.
+- This commit requires a literal SNP/A1/A2 header for --merge-alleles.
+- data/ldsc/prepared/w_hm3_merge_alleles.tsv is a derived view containing one header plus the identical 1,187,349 reference rows.
+- The validated reference itself was not changed.
+
+Complete-row filtering:
+- With --merge-alleles, this ldsc39 implementation writes every merge-list SNP and leaves filtered variants as rows with blank A1/A2/Z/N fields.
+- Script 28 retains only complete SNP/A1/A2/Z/N rows after successful munging.
+- Final row counts therefore equal each log's “with nonmissing beta” count.
+- LDSC source code was not modified.
+
+Blocked traits:
+- ALT, GGT, HDL cholesterol, LDL cholesterol, and fasting triglycerides were not munged because their official R12 pval fields contain numerical-underflow zeros.
+- No replacement p-values were invented and signs were not inferred from P.

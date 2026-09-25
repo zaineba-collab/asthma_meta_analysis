@@ -1,0 +1,53 @@
+Stage 3 LDSC installation status: FAILED — downstream work stopped
+Date: 2026-08-23 (Europe/London)
+
+Architecture: arm64
+Miniforge installer: official conda-forge Miniforge3-MacOSX-arm64.sh
+Miniforge prefix: /Users/zainebahmed/miniforge3
+Conda version: 26.5.3
+Environment: ldsc39
+Environment prefix: /Users/zainebahmed/miniforge3/envs/ldsc39
+Python version: 3.9.23
+Python executable: /Users/zainebahmed/miniforge3/envs/ldsc39/bin/python
+
+LDSC repository: https://github.com/CBIIT/ldsc.git
+Local clone: tools/ldsc
+Branch: ldsc39
+Commit: 6c673952cee74bd5c57aef1555a03b1c015399a0
+Version declared in ldsc.py: 3.0.1
+
+Attempted official dependency installation:
+python -m pip install -r tools/ldsc/requirements.txt
+
+Official requirements include:
+bitarray>=0.8,<0.9
+nose>=1.3,<1.4
+pybedtools>=0.7,<0.8
+scipy>=0.18,<0.19
+numpy>=1.16,<1.17
+pandas>=0.20,<0.21
+
+Exact failing package: pandas 0.20.3
+Failure stage: package metadata generation (python setup.py egg_info)
+Exit status: 1
+
+Key error:
+error in pandas setup command: 'install_requires' must be a string or iterable of strings containing valid project/version requirement specifiers; Expected end or semicolon (after version specifier)
+    pytz >= 2011k
+         ~~~~~~~^
+
+pip final classification:
+error: metadata-generation-failed
+This is an issue with the package mentioned above, not pip.
+
+Consequences:
+- LDSC installation was not verified.
+- ldsc.py -h was not run because dependencies did not install successfully.
+- munge_sumstats.py -h was not run.
+- Plain/gzip compatibility testing was not run.
+- Reference Stage 3 validation was not continued.
+- No GWAS was prepared or munged.
+- No univariate heritability analysis was run.
+- No genetic correlation analysis was run.
+
+No LDSC source code was modified. The environment and repository clone have been retained for review; nothing was deleted.

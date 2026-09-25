@@ -1,0 +1,65 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 3.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/results/ldsc/rg/crp \
+--rg /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/asthma.sumstats.gz,/Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/crp.sumstats.gz \
+--ref-ld-chr /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/reference/1000G_Phase3_ldscores/LDscore. \
+--w-ld-chr /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/reference/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC. 
+
+Beginning analysis at Mon Aug 24 06:10:49 2026
+Reading summary statistics from /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/asthma.sumstats.gz ...
+Read summary statistics for 1165303 SNPs.
+Reading reference panel LD Score from /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/reference/1000G_Phase3_ldscores/LDscore.[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1190321 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/reference/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC.[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1187349 SNPs.
+After merging with reference panel LD, 1165303 SNPs remain.
+After merging with regression SNP LD, 1165303 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/crp.sumstats.gz ...
+Read summary statistics for 1150290 SNPs.
+After merging with summary statistics, 1140759 SNPs remain.
+1140759 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.0445 (0.0049)
+Lambda GC: 1.2798
+Mean Chi^2: 1.4543
+Intercept: 1.0987 (0.0156)
+Ratio: 0.2173 (0.0344)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.007 (0.0019)
+Lambda GC: 1.1301
+Mean Chi^2: 1.1391
+Intercept: 1.0839 (0.0123)
+Ratio: 0.6033 (0.0882)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: -0.0013 (0.0011)
+Mean z1*z2: -0.0038
+Intercept: 0.0053 (0.0051)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: -0.0717 (0.0635)
+Z-score: -1.1288
+P: 0.259
+
+
+Summary of Genetic Correlation Results
+                                                                                            p1                                                                                          p2      rg     se       z      p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+/Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/asthma.sumstats.gz /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/crp.sumstats.gz -0.0717 0.0635 -1.1288 0.2590  0.0070     0.0019  1.0839     0.0123    0.0053       0.0051
+
+Analysis finished at Mon Aug 24 06:10:54 2026
+Total time elapsed: 4.74s

@@ -1,0 +1,35 @@
+python --version
+Python 3.9.23
+which python
+/Users/zainebahmed/miniforge3/envs/ldsc39/bin/python
+conda --version
+conda 26.5.3
+
+conda list
+# packages in environment at /Users/zainebahmed/miniforge3/envs/ldsc39:
+#
+# Name                     Version          Build               Channel
+bzip2                      1.0.8            h4e30115_10         conda-forge
+ca-certificates            2026.7.22        hbd8a1cb_0          conda-forge
+icu                        78.3             py310h579977c_2     conda-forge
+libexpat                   2.8.1            hf6b4638_1          conda-forge
+libffi                     3.7.0            hcf2aa1b_0          conda-forge
+liblzma                    5.8.3            h8088a28_1          conda-forge
+libsqlite                  3.53.4           hca69786_1          conda-forge
+libzlib                    1.3.2            h8088a28_3          conda-forge
+ncurses                    6.6              he64c551_1          conda-forge
+openssl                    3.6.3            hd24854e_1          conda-forge
+pip                        25.2             pyh8b19718_0        conda-forge
+python                     3.9.23           h7139b31_0_cpython  conda-forge
+readline                   8.3              h8b90a29_1          conda-forge
+setuptools                 80.9.0           pyhff2d567_0        conda-forge
+tk                         8.6.13           hbeba79b_4          conda-forge
+tzdata                     2026c            h151e31d_0          conda-forge
+wheel                      0.45.1           pyhd8ed1ab_1        conda-forge
+
+python -m pip list
+Package    Version
+---------- -------
+pip        25.2
+setuptools 80.9.0
+wheel      0.45.1

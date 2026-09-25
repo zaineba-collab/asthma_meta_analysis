@@ -1,0 +1,67 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 3.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--out /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/results/ldsc/rg/hdl \
+--rg /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/asthma.sumstats.gz,/Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/hdl.sumstats.gz \
+--ref-ld-chr /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/reference/1000G_Phase3_ldscores/LDscore. \
+--w-ld-chr /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/reference/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC. 
+
+Beginning analysis at Mon Aug 24 06:11:09 2026
+Reading summary statistics from /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/asthma.sumstats.gz ...
+RuntimeWarning: compression has no effect when passing a non-binary object as input for file /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/asthma.sumstats.gz
+Read summary statistics for 1165303 SNPs.
+Reading reference panel LD Score from /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/reference/1000G_Phase3_ldscores/LDscore.[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1190321 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/reference/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC.[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1187349 SNPs.
+After merging with reference panel LD, 1165303 SNPs remain.
+After merging with regression SNP LD, 1165303 SNPs remain.
+Computing rg for phenotype 2/2
+Reading summary statistics from /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/hdl.sumstats.gz ...
+RuntimeWarning: compression has no effect when passing a non-binary object as input for file /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/hdl.sumstats.gz
+Read summary statistics for 1150113 SNPs.
+After merging with summary statistics, 1140576 SNPs remain.
+1140576 SNPs with valid alleles.
+
+Heritability of phenotype 1
+---------------------------
+Total Observed scale h2: 0.0444 (0.0049)
+Lambda GC: 1.2798
+Mean Chi^2: 1.4544
+Intercept: 1.0989 (0.0156)
+Ratio: 0.2176 (0.0344)
+
+Heritability of phenotype 2/2
+-----------------------------
+Total Observed scale h2: 0.1623 (0.0218)
+Lambda GC: 2.4052
+Mean Chi^2: 3.6862
+Intercept: 2.1939 (0.1896)
+Ratio: 0.4445 (0.0706)
+
+Genetic Covariance
+------------------
+Total Observed scale gencov: -0.0113 (0.0029)
+Mean z1*z2: -0.095
+Intercept: 0.015 (0.01)
+
+Genetic Correlation
+-------------------
+Genetic Correlation: -0.1329 (0.0324)
+Z-score: -4.097
+P: 4.1846e-05
+
+
+Summary of Genetic Correlation Results
+                                                                                            p1                                                                                          p2      rg     se       z      p  h2_obs  h2_obs_se  h2_int  h2_int_se  gcov_int  gcov_int_se
+/Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/asthma.sumstats.gz /Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/data/ldsc/prepared/munged/hdl.sumstats.gz -0.1329 0.0324 -4.0970 0.0000  0.1623     0.0218  2.1939     0.1896    0.0150       0.0100
+
+Analysis finished at Mon Aug 24 06:11:14 2026
+Total time elapsed: 4.76s

@@ -1,0 +1,13 @@
+source_filename	study_publication_identifier	ancestry_population	sample_size	cases	controls	cohort_name	UK_Biobank_included	genome_build	ancestry_category	verification_needed
+"495_PheCode.v1.0.fastGWA.gwama_ready.gwama.txt"	"Unresolved"	"Not established from local metadata"	"Per-variant N; observed 456285 at first row"	NA	NA	"Unresolved"	"Unresolved"	"Unknown"	"Unresolved"	"Publication/cohort metadata"
+"asthma_DISCOVERY.gwama_ready.gwama.txt"	"Unresolved"	"Not established from local metadata"	"Per-variant/column N; observed 339345 at first row"	NA	NA	"Unresolved"	"Unresolved"	"Unknown"	"Unresolved"	"Publication/cohort metadata"
+"GCST90029018_buildGRCh38.lifted.gwama_ready.gwama.txt"	"GCST90029018"	"Not established from local metadata"	"N column; observed 458699 at first row"	NA	NA	"Unresolved"	"Unresolved"	"GRCh38 (lifted)"	"Unresolved"	"GCST90029018 record"
+"GCST90077671_buildGRCh38.gwama_ready.gwama.txt"	"GCST90077671"	"Not established from local metadata"	"None"	NA	NA	"Unresolved"	"Unresolved"	"GRCh38"	"Unresolved"	"GCST90077671 record"
+"GCST90077672_buildGRCh38.gwama_ready.gwama.txt"	"GCST90077672"	"Not established from local metadata"	"None"	NA	NA	"Unresolved"	"Unresolved"	"GRCh38"	"Unresolved"	"GCST90077672 record"
+"GCST90079456_buildGRCh38.gwama_ready.gwama.txt"	"GCST90079456"	"Not established from local metadata"	"None"	NA	NA	"Unresolved"	"Unresolved"	"GRCh38"	"Unresolved"	"GCST90079456 record"
+"GCST90080141_buildGRCh38.gwama_ready.gwama.txt"	"GCST90080141"	"Not established from local metadata"	"None"	NA	NA	"Unresolved"	"Unresolved"	"GRCh38"	"Unresolved"	"GCST90080141 record"
+"GCST90081448_buildGRCh38.gwama_ready.gwama.txt"	"GCST90081448"	"Not established from local metadata"	"None"	NA	NA	"Unresolved"	"Unresolved"	"GRCh38"	"Unresolved"	"GCST90081448 record"
+"HanY_prePMID_asthma_UKBB.txt.gwama_ready.gwama.txt"	"pre-PMID"	"Not established from local metadata"	"N column; observed 393859 at first row"	NA	NA	"UK Biobank indicated by filename"	"Yes"	"Unknown"	"Unresolved"	"Publication/preprint identifier"
+"Shrine_30552067_moderate-severe_asthma.hg38.lifted.gwama_ready.gwama.txt"	"PMID:30552067"	"Four-ancestry moderate-to-severe asthma GWAS"	"None"	NA	NA	"Multiple cohorts"	"No/Not established locally"	"GRCh38 (lifted)"	"Multi-ancestry"	"None for ancestry category; PMID 30552067"
+"ukb.allasthma.final.gwama_ready.gwama.txt"	"Unresolved"	"Not established from local metadata"	"None"	NA	NA	"UK Biobank indicated by filename"	"Yes"	"Unknown"	"Unresolved"	"Publication/cohort metadata"
+"UKBB.asthma-2.gwama_ready.gwama.txt"	"Unresolved"	"Not established from local metadata"	"None"	NA	NA	"UK Biobank indicated by filename"	"Yes"	"Unknown"	"Unresolved"	"Publication/cohort metadata"

@@ -1,0 +1,8 @@
+outcome	outcome_id	SNP	issue	chromosome	position	ref	alt	exposure_effect_allele	exposure_other_allele
+R13 variant dictionary	BMI_IRN	rs12939565	requested_rsid_found_but_allele_pair_differs	17	39882136	A	G	A	T
+R13 variant dictionary	BMI_IRN	rs146054809	requested_rsid_found_but_allele_pair_differs	4	19859478	G	C	A	G
+R13 variant dictionary	BMI_IRN	rs2055456	requested_rsid_found_but_allele_pair_differs	3	79821757	T	G	C	T
+R13 variant dictionary	BMI_IRN	rs370943675	requested_rsid_found_but_allele_pair_differs	9	103156482	C	A	T	C
+R13 variant dictionary	BMI_IRN	rs558418140	requested_rsid_found_but_allele_pair_differs	14	34213322	C	A	G	C
+R13 variant dictionary	BMI_IRN	rs560335706	requested_rsid_found_but_allele_pair_differs	14	37682570	C	T	G	C
+R13 variant dictionary	BMI_IRN	rs571546412	requested_rsid_found_but_allele_pair_differs	10	25113308	A	G	T	A

@@ -1,0 +1,21 @@
+LDSC core dependency audit
+==========================
+
+Search scope:
+- tools/ldsc/ldsc.py
+- tools/ldsc/munge_sumstats.py
+- tools/ldsc/ldscore/
+- tools/ldsc/make_annot.py
+
+Search expression: pybedtools|from pybedtools|import pybedtools
+
+Result:
+tools/ldsc/make_annot.py:6:from pybedtools import BedTool
+
+Interpretation:
+- No pybedtools import was found in ldsc.py.
+- No pybedtools import was found in munge_sumstats.py.
+- No pybedtools import was found under ldscore/.
+- pybedtools is imported only by make_annot.py, which is optional for the planned standard h2/rg workflow.
+- pybedtools 0.10.0 remains an official environment3.yml dependency and will still be installed and tested separately.
+

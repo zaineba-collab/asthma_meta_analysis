@@ -1,0 +1,8 @@
+Number	Title	Recommendation	File	Status
+"Figure 3.1"	"Manhattan plot of asthma GWAS meta-analysis"	"Essential main figure"	"figures/Figure_3_1_Manhattan_plot.pdf"	"READY"
+"Figure 3.2"	"QQ plot of asthma GWAS meta-analysis"	"Essential main figure"	"figures/Figure_3_2_QQ_plot.png"	"READY"
+"Figure 3.3"	"Refinement of association signals to sentinel/locus and independent-lead sets"	"Essential main figure"	"figures/Figure_3_3_signal_refinement_flow.pdf"	"READY"
+"Figure 3.4"	"GRCh38-corrected VEP consequence distribution of independent lead variants"	"Essential main figure"	"figures/Figure_3_4_VEP_consequence_distribution.pdf"	"READY"
+"Figure 3.5"	"Mendelian randomisation estimates for asthma and FinnGen outcomes"	"Essential main figure"	"figures/Figure_3_5_MR_IVW_forest.pdf"	"READY"
+"Figure 3.6"	"LDSC genetic correlations between asthma and FinnGen outcomes"	"Essential main figure"	"figures/Figure_3_6_LDSC_genetic_correlation_forest.pdf"	"READY"
+"Figure 3.7"	"Comparison of MR and LDSC evidence across outcomes"	"Main or supplementary"	"figures/Figure_3_7_MR_LDSC_comparison.pdf"	"READY"

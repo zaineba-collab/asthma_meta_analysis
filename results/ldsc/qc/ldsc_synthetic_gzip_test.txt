@@ -1,0 +1,44 @@
+LDSC synthetic gzip munging test
+================================
+input=/private/tmp/ldsc_environment3_synthetic_sumstats.tsv.gz
+same 10 artificial variants as plaintext test; no project data
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 3.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./munge_sumstats.py \
+--sumstats /private/tmp/ldsc_environment3_synthetic_sumstats.tsv.gz \
+--out /private/tmp/ldsc_environment3_gzip 
+
+
+ERROR converting summary statistics:
+
+Traceback (most recent call last):
+  File "/Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/tools/ldsc/munge_sumstats.py", line 534, in munge_sumstats
+    file_cnames = read_header(args.sumstats)  # note keys not cleaned
+  File "/Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/tools/ldsc/munge_sumstats.py", line 125, in read_header
+    return [x.rstrip('\n') for x in openfunc(fh).readline().split()]
+  File "/Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/tools/ldsc/munge_sumstats.py", line 125, in <listcomp>
+    return [x.rstrip('\n') for x in openfunc(fh).readline().split()]
+TypeError: a bytes-like object is required, not 'str'
+
+
+Conversion finished at Sun Aug 23 09:51:19 2026
+Total time elapsed: 0.0s
+Traceback (most recent call last):
+  File "/Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/tools/ldsc/munge_sumstats.py", line 728, in <module>
+    munge_sumstats(parser.parse_args(), p=True)
+  File "/Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/tools/ldsc/munge_sumstats.py", line 534, in munge_sumstats
+    file_cnames = read_header(args.sumstats)  # note keys not cleaned
+  File "/Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/tools/ldsc/munge_sumstats.py", line 125, in read_header
+    return [x.rstrip('\n') for x in openfunc(fh).readline().split()]
+  File "/Users/zainebahmed/Documents/GWAMA_v2/asthma_meta/tools/ldsc/munge_sumstats.py", line 125, in <listcomp>
+    return [x.rstrip('\n') for x in openfunc(fh).readline().split()]
+TypeError: a bytes-like object is required, not 'str'
+munge_exit_code=1
+generated_files:
+/private/tmp/ldsc_environment3_gzip.log

@@ -1,0 +1,51 @@
+LDSC synthetic plaintext munging test
+=====================================
+input=/private/tmp/ldsc_environment3_synthetic_sumstats.tsv
+rows=10 artificial variants; no project data
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 3.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./munge_sumstats.py \
+--sumstats /private/tmp/ldsc_environment3_synthetic_sumstats.tsv \
+--out /private/tmp/ldsc_environment3_plain 
+
+{'SNP': 'SNP', 'A1': 'A1', 'A2': 'A2', 'BETA': 'BETA', 'P': 'P', 'N': 'N'}
+Interpreting column names as follows:
+SNP:	Variant ID (e.g., rs number)
+A1:	Allele 1, interpreted as ref allele for signed sumstat.
+A2:	Allele 2, interpreted as non-ref allele for signed sumstat.
+BETA:	[linear/logistic] regression coefficient (0 --> no effect; above 0 --> A1 is trait/risk increasing)
+P:	p-Value
+N:	Sample size
+
+Reading sumstats from /private/tmp/ldsc_environment3_synthetic_sumstats.tsv into memory 5000000 SNPs at a time.
+. done
+Read 10 SNPs from --sumstats file.
+Removed 0 SNPs with missing values.
+Removed 0 SNPs with INFO <= 0.9.
+Removed 0 SNPs with MAF <= 0.01.
+Removed 0 SNPs with out-of-bounds p-values.
+Removed 0 variants that were not SNPs or were strand-ambiguous.
+10 SNPs remain.
+Removed 0 SNPs with duplicated rs numbers (10 SNPs remain).
+Removed 0 SNPs with N < 66666.66666666667 (10 SNPs remain).
+Median value of BETA was 0.015, which seems sensible.
+Writing summary statistics for 10 SNPs (10 with nonmissing beta) to /private/tmp/ldsc_environment3_plain.sumstats.gz.
+
+Metadata:
+Mean chi^2 = 8.901
+Lambda GC = 13.745
+Max chi^2 = 25.001
+0 Genome-wide significant SNPs (some may have been removed by filtering).
+
+Conversion finished at Sun Aug 23 09:51:06 2026
+Total time elapsed: 0.01s
+munge_exit_code=0
+generated_files:
+/private/tmp/ldsc_environment3_plain.sumstats.gz
+/private/tmp/ldsc_environment3_plain.log

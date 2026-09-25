@@ -1,0 +1,5 @@
+European LD scores (chromosomes 1-22): data/ldsc/reference/1000G_Phase3_ldscores/LDscore.[1-22]
+European HM3 regression weights (chromosomes 1-22): data/ldsc/reference/1000G_Phase3_weights_hm3_no_MHC/weights.hm3_noMHC.[1-22]
+Reconstructed no-MHC HapMap3 allele list: data/ldsc/reference/w_hm3.snplist
+Header-bearing LDSC --merge-alleles view: data/ldsc/prepared/w_hm3_merge_alleles.tsv
+HapMap3 allele-list rows: 1,187,349; SNP duplicates: 0; SNP/allele duplicates: 0; invalid alleles: 0.

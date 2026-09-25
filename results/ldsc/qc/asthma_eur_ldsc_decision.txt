@@ -1,0 +1,8 @@
+Decision: 3. More metadata is required before deciding
+
+The existing 12-study meta-analysis is not currently appropriate for standard European LDSC.
+Eight exact input analyses are confirmed European, one (the local Han UK Biobank file) is confirmed multi-ancestry, and three remain unresolved.
+Therefore all 12 inputs cannot be treated as European. A European-restricted re-meta-analysis would be required before EUR LDSC unless provenance establishes an alternative already-European analysis set; the three unresolved files must first be identified so the correct subset can be defined.
+
+UK Biobank overlap is substantial: ten files are confirmed or explicitly identified as UKB-containing, including multiple asthma definitions and five Backman exome analyses. This affects independence in the existing GWAMA, prevents summing N, and complicates specification of LDSC sample size.
+No meta-analysis, LDSC munging, LDSC installation, or LDSC analysis was performed.

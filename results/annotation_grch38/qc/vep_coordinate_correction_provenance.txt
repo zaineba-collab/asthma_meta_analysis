@@ -1,0 +1,7 @@
+VEP coordinate correction provenance
+
+The final PLINK clumping reference positions were inherited from the 1000 Genomes European panel and are GRCh37/hg19.
+Script 17 used those positions directly and script 18 ran VEP with --assembly GRCh38; therefore the original results/annotation output was coordinate-incompatible and invalid.
+Validated GRCh38 coordinates were subsequently recovered in results/mr/finngen/exposure/asthma_exposure_5254_grch38.tsv.
+The corrected VEP run submitted 5050 variants with validated GRCh38 coordinates and genomic REF/ALT; 16 remained coordinate unresolved and 188 additional coordinate-resolved variants remained allele unresolved.
+VEP was rerun offline using Ensembl VEP/cache 116 and GRCh38. Old annotation outputs were excluded from dissertation reporting and remain preserved only for provenance.

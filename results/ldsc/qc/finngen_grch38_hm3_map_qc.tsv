@@ -1,0 +1,12 @@
+metric	value
+hapmap3_reference_snps	1187349
+mapped_unambiguously	1174992
+unmapped	12357
+percent_mapped	98.959278
+mappings_found_in_all_5_r13_files	1174992
+mappings_found_in_fewer_than_5	0
+conflicting_mapping_rows	0
+rejected_hm3_allele_incompatible_rows_across_sources	15739
+unique_SNPs	1174992
+unique_variants	1174992
+allele_compatible_with_hm3	1174992

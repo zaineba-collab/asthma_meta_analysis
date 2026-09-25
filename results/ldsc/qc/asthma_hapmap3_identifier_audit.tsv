@@ -1,0 +1,13 @@
+metric	value
+hapmap3_reference_snps	1187349
+canonical_rsid_rows	21072243
+unique_canonical_rsids	21072243
+duplicate_canonical_rsid_rows	0
+hapmap3_rsids_directly_present	1187270
+direct_with_valid_beta	1187270
+direct_with_valid_se	1187270
+direct_with_valid_effect_allele	1187270
+direct_with_valid_other_allele	1187270
+direct_with_all_required_fields	1187270
+direct_with_hapmap3_compatible_allele_pair	1187041
+hapmap3_reference_percent_represented	99.993347

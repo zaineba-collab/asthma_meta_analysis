@@ -1,0 +1,13 @@
+file	old_classification	new_classification	reason_for_change
+UKBB.asthma-2.assoc	Unresolved	European	Original EBI download metadata identifies GCST007562, whose discovery analysis is European.
+ukb.allasthma.final.assoc	Unresolved	Unresolved	No defensible ancestry evidence recovered; remains unresolved.
+HanY_prePMID_asthma_UKBB.txt.gz	Unresolved	Multi-ancestry	Exact file N and variant count match the primary-paper broad/all-ancestry UKB GWAS, not the European sensitivity analysis.
+Shrine_30552067_moderate-severe_asthma.txt.gz	Multi-ancestry	European	Corrected confirmed error: PMID 30552067/GCST006911 is a European-ancestry discovery GWAS.
+495_PheCode.v1.0.fastGWA.tsv	Unresolved	Unresolved	No defensible ancestry evidence recovered; remains unresolved.
+asthma_DISCOVERY.tsv	Unresolved	Unresolved	No defensible ancestry evidence recovered; remains unresolved.
+GCST90029018_buildGRCh37.tsv	Unresolved	European	Exact accession matched to official GWAS Catalog ancestry and sample description.
+GCST90077671_buildGRCh38.tsv	Unresolved	European	Exact accession matched to official GWAS Catalog ancestry and sample description.
+GCST90077672_buildGRCh38.tsv	Unresolved	European	Exact accession matched to official GWAS Catalog ancestry and sample description.
+GCST90079456_buildGRCh38.tsv	Unresolved	European	Exact accession matched to official GWAS Catalog ancestry and sample description.
+GCST90080141_buildGRCh38.tsv	Unresolved	European	Exact accession matched to official GWAS Catalog ancestry and sample description.
+GCST90081448_buildGRCh38.tsv	Unresolved	European	Exact accession matched to official GWAS Catalog ancestry and sample description.

@@ -1,0 +1,4 @@
+resource	path	source	chromosomes	n_ldscore	n_M	n_M_5_50	readable	snp_count	note
+"European LD scores"	"data/ldsc/reference/1000G_Phase3_ldscores"	"Official Broad relocation: Zenodo 7768714 / 1000G_Phase3_ldscores.tgz"	"1-22"	22	22	22	TRUE	NA	"Official replacement for inaccessible legacy Broad URL"
+"European HM3 regression weights"	"data/ldsc/reference/1000G_Phase3_weights_hm3_no_MHC"	"Official Broad relocation: Zenodo 7768714 / 1000G_Phase3_weights_hm3_no_MHC.tgz"	"1-22"	22	0	0	TRUE	1187349	"Weights bundle; M files are not included in this official archive"
+"HapMap3 allele list"	"data/ldsc/reference/w_hm3.snplist"	"Reconstructed from official HM3-no-MHC weight SNP IDs and official 1000G EUR Phase3 BIM alleles"	"1-22"	NA	NA	NA	TRUE	1187349	"Not the unavailable legacy w_hm3.snplist; one header token excluded; all requested IDs matched BIM"

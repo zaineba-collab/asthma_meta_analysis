@@ -1,0 +1,14 @@
+Asthma LDSC column mapping
+==========================
+
+Source: data/raw/asthma_DISCOVERY.tsv (GCST90302886)
+SNP: VARIANT_id (canonical rsIDs retained; coordinate-style IDs excluded)
+Effect allele / A1: effect_allele
+Other allele / A2: other_allele
+Beta: beta
+SE: standard_error
+P: p_value
+Effect-allele frequency: effect_allele_frequency
+N: N
+
+Orientation confirmation: the source uses the GWAS Catalog harmonised summary-statistics schema, in which beta and effect_allele_frequency are aligned to effect_allele. The current upstream script scripts/02_harmonise_inputs.R independently maps effect_allele to EA and beta to BETA without inversion (lines 218-230). Thus A1=effect_allele is the allele for which BETA was estimated.

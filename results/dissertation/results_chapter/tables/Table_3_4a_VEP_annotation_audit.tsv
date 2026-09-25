@@ -1,0 +1,7 @@
+Check	Result
+Independent lead SNPs	5254
+rsID SNPs submitted to VEP	5252
+Unique SNPs returned by VEP	5252
+PLINK coordinate build established later	GRCh37/hg19
+VEP assembly setting	GRCh38
+Dissertation reporting decision	WITHHOLD functional annotations pending coordinate-corrected VEP

@@ -1,0 +1,13 @@
+outcome	outcome_id	release	outcome_type	requested_snps	matched_snps	unmatched_snps	coverage_percent	duplicate_matches	missing_beta	missing_se	missing_effect_allele	missing_other_allele	missing_pvalue	missing_eaf	cases	controls	sample_size	extraction_method
+Allergic rhinitis	ALLERG_RHINITIS	R13	binary	5254	795	4459	15.1313285116102	0	0	0	0	0	0	0	15958	473610	489568	single-pass gzip streaming fallback
+Bronchiectasis	J10_BRONCHIECTASIS	R13	binary	5254	795	4459	15.1313285116102	0	0	0	0	0	0	0	3096	405986	409082	single-pass gzip streaming fallback
+Eosinophilic disease	EOSINOPHIL_DISEASE	R13	binary	5254	795	4459	15.1313285116102	0	0	0	0	0	0	0	571	264141	264712	single-pass gzip streaming fallback
+BMI (inverse-rank normalized)	BMI_IRN	R13	continuous	5254	795	4459	15.1313285116102	0	0	0	0	0	0	0	NA	NA	362216	single-pass gzip streaming fallback
+NAFLD	NAFLD	R13	binary	5254	795	4459	15.1313285116102	0	0	0	0	0	0	0	3943	496243	500186	single-pass gzip streaming fallback
+CRP	3020460	R12_lab_values	continuous	5254	782	4472	14.8838979824895	0	0	0	0	0	0	0	NA	NA	NA	single-pass gzip streaming fallback
+ALT	3006923	R12_lab_values	continuous	5254	783	4471	14.9029311001142	0	0	0	0	0	0	0	NA	NA	NA	single-pass gzip streaming fallback
+AST	3013721	R12_lab_values	continuous	5254	758	4496	14.4271031594975	0	0	0	0	0	0	0	NA	NA	NA	single-pass gzip streaming fallback
+GGT	3026910	R12_lab_values	continuous	5254	781	4473	14.8648648648649	0	0	0	0	0	0	0	NA	NA	NA	single-pass gzip streaming fallback
+HDL cholesterol	3023602	R12_lab_values	continuous	5254	783	4471	14.9029311001142	0	0	0	0	0	0	0	NA	NA	NA	single-pass gzip streaming fallback
+LDL cholesterol	3001308	R12_lab_values	continuous	5254	783	4471	14.9029311001142	0	0	0	0	0	0	0	NA	NA	NA	single-pass gzip streaming fallback
+Triglycerides (fasting)	3048773	R12_lab_values	continuous	5254	782	4472	14.8838979824895	0	0	0	0	0	0	0	NA	NA	NA	single-pass gzip streaming fallback

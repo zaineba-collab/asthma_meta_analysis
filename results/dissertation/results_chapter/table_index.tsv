@@ -1,0 +1,10 @@
+Number	Title	File	Status
+"Table 3.1"	"Summary of asthma GWAS meta-analysis results"	"tables/Table_3_1_GWAMA_summary.tsv"	"READY"
+"Table 3.2"	"Summary of sentinel SNP and locus identification"	"tables/Table_3_2_signal_refinement_summary.tsv"	"READY"
+"Table 3.3"	"rsID mapping and LD-clumping results"	"tables/Table_3_3_LD_clumping_summary.tsv"	"READY"
+"Table 3.4"	"Top functionally annotated independent lead variants"	"tables/Table_3_4_top_annotated_lead_variants.tsv"	"READY_CORRECTED_GRCH38"
+"Table 3.5"	"FinnGen outcome extraction and MR harmonisation"	"tables/Table_3_5_MR_instrument_harmonisation_summary.tsv"	"READY"
+"Table 3.6"	"Primary IVW Mendelian randomisation results"	"tables/Table_3_6_primary_MR_results.tsv"	"READY"
+"Table 3.7"	"MR sensitivity analyses"	"tables/Table_3_7_MR_sensitivity_summary.tsv"	"READY"
+"Table 3.8"	"LDSC genetic-correlation results"	"tables/Table_3_8_LDSC_genetic_correlations.tsv"	"READY"
+"Table 3.9"	"Comparison of MR and LDSC findings"	"tables/Table_3_9_MR_LDSC_comparison.tsv"	"READY"

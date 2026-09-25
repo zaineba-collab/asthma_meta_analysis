@@ -1,0 +1,10 @@
+VEP_version=116.0
+cache_version=116
+cache_assembly=GRCh38.p14
+dbSNP_version=156
+reference_fasta=data/reference/ensembl_116_GRCh38_primary_assembly.fa
+reference_fasta_source=https://ftp.ensembl.org/pub/release-116/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
+reference_fasta_compressed_SHA256=d8c3af0094a7bba6125763bad779ec18a81483c739c6ed122094bdf86c187b92
+assembly=GRCh38
+annotation_options=--offline --cache --species homo_sapiens --assembly GRCh38 --cache_version 116 --tab --symbol --gene_phenotype --variant_class --check_existing --fork 4 --no_stats
+command=tools/ensembl-vep/vep --offline --cache --dir_cache /Users/zainebahmed/.vep --species homo_sapiens --assembly GRCh38 --cache_version 116 --tab --symbol --gene_phenotype --variant_class --check_existing --fork 4 --force_overwrite --no_stats --input_file results/annotation_grch38/input/lead_snps_grch38_vep_input.tsv --output_file results/annotation_grch38/raw/lead_snps_grch38_vep_output.txt

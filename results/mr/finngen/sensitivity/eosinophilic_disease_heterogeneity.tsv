@@ -1,0 +1,3 @@
+exposure	outcome	outcome_id	outcome_type	method	method_id	nsnp	Q	Q_df	Q_p_value
+Asthma	Eosinophilic disease	EOSINOPHIL_DISEASE	binary	Inverse variance weighted	mr_ivw	652	701.521480447181	651	0.0832046302553067
+Asthma	Eosinophilic disease	EOSINOPHIL_DISEASE	binary	MR Egger	mr_egger_regression	652	680.409453169954	650	0.197934550961419

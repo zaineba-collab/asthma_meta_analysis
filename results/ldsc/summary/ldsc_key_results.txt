@@ -1,0 +1,12 @@
+LDSC key result counts (recalculated from authoritative source tables)
+planned outcomes = 12
+estimable rg outcomes = 11
+non-estimable outcomes = 1
+nominal rg P < 0.05 = 7
+Bonferroni significant = 7
+BH-FDR significant = 7
+significant positive rg = 6
+significant negative rg = 1
+nominal outcomes = Allergic rhinitis; BMI IRN; NAFLD; ALT; GGT; HDL cholesterol; Fasting triglycerides
+Bonferroni outcomes = Allergic rhinitis; BMI IRN; NAFLD; ALT; GGT; HDL cholesterol; Fasting triglycerides
+BH-FDR outcomes = Allergic rhinitis; BMI IRN; NAFLD; ALT; GGT; HDL cholesterol; Fasting triglycerides

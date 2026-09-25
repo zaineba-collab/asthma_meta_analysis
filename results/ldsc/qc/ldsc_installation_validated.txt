@@ -1,0 +1,44 @@
+LDSC installation validation
+============================
+
+Miniforge path: /Users/zainebahmed/miniforge3
+Environment: ldsc39 (/Users/zainebahmed/miniforge3/envs/ldsc39)
+Architecture: arm64; Conda platform osx-arm64
+Python: 3.9.23
+Conda: 26.5.3
+LDSC repository: https://github.com/CBIIT/ldsc.git
+LDSC branch: ldsc39
+LDSC commit: 6c673952cee74bd5c57aef1555a03b1c015399a0
+ldsc.py reported version: 3.0.1
+setup.py declared version: 3.0.2
+Dependency source: official tools/ldsc/environment3.yml
+
+Installed dependency versions:
+- numpy 1.21.5
+- pandas 1.3.3
+- scipy 1.7.3
+- bitarray 2.9.3 (satisfies bitarray=2)
+- pybedtools 0.10.0
+- nose 1.3.7 (satisfies nose=1.3)
+- Flask 3.1.2
+- requests 2.32.5
+- pip 25.2
+
+Validation results:
+- Scientific-stack imports: PASS
+- Core LDSC imports (ldscore.ldscore, parse, sumstats, regressions): PASS
+- pybedtools import/version: PASS (0.10.0)
+- pybedtools needed by ordinary munging/h2/rg core: no; import occurs only in make_annot.py
+- ldsc.py -h exit code: 0 (PASS)
+- munge_sumstats.py -h exit code: 0 (PASS)
+- make_annot.py -h exit code: 0 (PASS; optional/non-blocking)
+- Synthetic plaintext munging: PASS, exit code 0; 10/10 artificial variants written
+- Synthetic gzip munging: documented raw-gzip incompatibility reproduced, exit code 1; TypeError from bytes/str header handling
+- Gzip disposition: non-blocking because plaintext succeeds; stream/decompress future raw GWAS inputs to temporary plaintext without modifying LDSC
+- LDSC checkout status: clean; source unmodified
+- Real project data processed: no
+- h2 run: no
+- rg run: no
+
+ready_for_real_data_munging: yes
+required_input_handling: use plaintext input; stream/decompress gzip sources before munging

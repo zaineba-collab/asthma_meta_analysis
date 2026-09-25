@@ -1,0 +1,17 @@
+Total outcomes = 12
+Nominal IVW p < 0.05 = 0/12
+  Outcomes: None
+Bonferroni-significant outcomes = 0/12
+  Outcomes: None
+FDR-significant outcomes = 0/12
+  Outcomes: None
+Significant IVW heterogeneity = 10/12
+  Outcomes: Allergic rhinitis; Bronchiectasis; BMI (inverse-rank normalized); CRP; ALT; AST; GGT; HDL cholesterol; LDL cholesterol; Triglycerides (fasting)
+Significant Egger intercept = 5/12
+  Outcomes: Allergic rhinitis; Bronchiectasis; Eosinophilic disease; AST; Triglycerides (fasting)
+FDR-significant Egger intercept = 5/12
+  Outcomes: Allergic rhinitis; Bronchiectasis; Eosinophilic disease; AST; Triglycerides (fasting)
+Leave-one-out sign reversal = 3/12
+  Outcomes: Eosinophilic disease; NAFLD; Triglycerides (fasting)
+All five methods same beta direction = 2/12
+  Outcomes: NAFLD; LDL cholesterol

@@ -1,0 +1,6 @@
+trait	stage	error	action
+alt	premunging_qc	status=blocked	skipped; review invalid or ambiguous rows
+ggt	premunging_qc	status=blocked	skipped; review invalid or ambiguous rows
+hdl	premunging_qc	status=blocked	skipped; review invalid or ambiguous rows
+ldl	premunging_qc	status=blocked	skipped; review invalid or ambiguous rows
+triglycerides_fasting	premunging_qc	status=blocked	skipped; review invalid or ambiguous rows

@@ -1,2 +1,0 @@
-number_of_snps_analysed	ivw_heterogeneity_q	ivw_heterogeneity_p_value	mr_egger_heterogeneity_q	mr_egger_heterogeneity_p_value	mr_egger_intercept	mr_egger_intercept_se	mr_egger_intercept_p_value	heterogeneity_p_lt_0_05	directional_pleiotropy_p_lt_0_05	notes
-651	5077.16840268967	0	5047.8995794497	0	0.000599061488811702	0.00030881740942785	0.0528300139534382	TRUE	FALSE	Sensitivity analyses should be interpreted alongside the main asthma -> Triglycerides MR estimates; these tests assess evidence of heterogeneity and directional pleiotropy, but do not prove or disprove causality.

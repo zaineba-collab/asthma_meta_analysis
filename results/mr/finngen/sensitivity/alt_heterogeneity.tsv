@@ -1,0 +1,3 @@
+exposure	outcome	outcome_id	outcome_type	method	method_id	nsnp	Q	Q_df	Q_p_value
+Asthma	ALT	3006923	continuous	Inverse variance weighted	mr_ivw	642	2265.30254390732	641	8.9221096684631e-180
+Asthma	ALT	3006923	continuous	MR Egger	mr_egger_regression	642	2265.13872631322	640	5.02486280026415e-180

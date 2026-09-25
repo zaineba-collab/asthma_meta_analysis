@@ -1,0 +1,46 @@
+LDSC environment repair status: FAILED — stopped under the explicit failure rule
+Date: 2026-08-23 (Europe/London)
+
+Environment: ldsc39
+Platform: osx-arm64
+Python before attempted repair: 3.9.23
+Repository branch: ldsc39
+Repository commit: 6c673952cee74bd5c57aef1555a03b1c015399a0
+
+Requested exact setup.py dependency set:
+bitarray=2.6.0
+nose=1.3.7
+numpy=1.23.3
+pandas=1.5.0
+pybedtools=0.9.1
+pysam=0.19.1
+python-dateutil=2.8.2
+pytz=2022.4
+scipy=1.9.2
+six=1.16.0
+
+Channels queried:
+conda-forge
+bioconda
+
+Exact solver failure:
+PackagesNotFoundInChannelsError: The following packages are not available from current channels:
+
+  - pybedtools=0.9.1
+
+Current channels:
+  - https://conda.anaconda.org/conda-forge
+  - https://conda.anaconda.org/bioconda
+
+The Conda transaction did not proceed, so the exact dependency set was not partially installed by this command.
+
+Actions deliberately not taken:
+- No dependency version was substituted.
+- No independent upgrade or downgrade was attempted.
+- No pip compilation/install of pybedtools was attempted after the exact osx-arm64 Conda package was unavailable.
+- No LDSC repository file was edited.
+- No LDSC help/import/synthetic smoke test was run because dependency installation did not succeed.
+- No real GWAS was processed.
+- No munging, --h2, or --rg was run.
+
+Review is required to authorize a different installation route or dependency/version policy.

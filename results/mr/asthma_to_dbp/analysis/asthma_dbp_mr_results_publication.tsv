@@ -1,6 +1,0 @@
-method	number_of_snps	beta_estimate	standard_error	p_value	odds_ratio	beta_lci95	beta_uci95	odds_ratio_lci95	odds_ratio_uci95	odds_ratio_note
-Inverse variance weighted	714	0.00433472366316287	0.031668512970768	0.891127205020445	NA	-0.0577355617595424	0.0664050090858681	NA	NA	Not calculated: Diastolic blood pressure is a continuous outcome
-MR Egger	714	0.0183816946404262	0.0347475761193312	0.596965795353247	NA	-0.0497235545534629	0.0864869438343154	NA	NA	Not calculated: Diastolic blood pressure is a continuous outcome
-Weighted median	714	0.00209888264366115	0.0183689876999932	0.909029872986035	NA	-0.0339043332483255	0.0381020985356478	NA	NA	Not calculated: Diastolic blood pressure is a continuous outcome
-Weighted mode	714	0.0502959262039329	0.0502696511694823	0.317397054645987	NA	-0.0482325900882523	0.148824442496118	NA	NA	Not calculated: Diastolic blood pressure is a continuous outcome
-Simple mode	714	0.167514059431705	0.127526897957813	0.189417289172827	NA	-0.0824386605656084	0.417466779429018	NA	NA	Not calculated: Diastolic blood pressure is a continuous outcome

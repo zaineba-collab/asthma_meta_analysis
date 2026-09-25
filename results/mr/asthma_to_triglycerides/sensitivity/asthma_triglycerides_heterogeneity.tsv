@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	method	Q	Q_df	Q_pval
-asthma_gwama	ieu-b-111	Triglycerides	Asthma	MR Egger	5047.8995794497	649	0
-asthma_gwama	ieu-b-111	Triglycerides	Asthma	Inverse variance weighted	5077.16840268967	650	0

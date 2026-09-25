@@ -1,0 +1,40 @@
+LDSC dependency strategy
+========================
+
+Authoritative dependency source: tools/ldsc/environment3.yml
+LDSC checkout: CBIIT/ldsc, branch ldsc39, commit 6c673952cee74bd5c57aef1555a03b1c015399a0
+Target platform: macOS arm64 (osx-arm64)
+Target environment: /Users/zainebahmed/miniforge3/envs/ldsc39
+Target Python: 3.9
+
+Exact requested dependencies:
+- Conda section: python=3.9, bitarray=2, nose=1.3, pybedtools=0.10.0, pip, flask, requests
+- Pip section: numpy==1.21.5, pandas==1.3.3, scipy==1.7.3
+
+Why this source was selected:
+- requirements.txt is legacy and incompatible with the current Python 3.9 installation.
+- setup.py pins pybedtools==0.9.1, for which the configured channels have no compatible osx-arm64 build.
+- environment3.yml is the pinned repository's explicit Python-3 environment definition.
+- environment3.yml specifies pybedtools=0.10.0 and does not specify pybedtools=0.9.1.
+
+Resolution policy:
+1. Test exact availability/solvability before changing the environment.
+2. Install the official environment3.yml dependency set with exact pins.
+3. Do not use legacy requirements.txt or setup.py installation metadata.
+4. Do not install LDSC as a Python package; run scripts from the checkout.
+5. Stop if an exact pinned dependency is unavailable or cannot be installed.
+
+Pre-install availability and solver result:
+- Platform resolved by Conda: osx-arm64.
+- Python remained constrained to 3.9.
+- pybedtools=0.10.0 resolved to Bioconda build py39hfcd2cc1_3.
+- bitarray=2 resolved to 2.9.3; nose=1.3 resolved to 1.3.7.
+- Exact native Conda builds were jointly solvable for numpy=1.21.5, pandas=1.3.3, and scipy=1.7.3.
+- The complete exact dependency transaction solved without conflict before installation.
+- The three scientific packages were therefore installed as native Conda binaries at exactly the environment3.yml versions, as preferred by the task instructions.
+- A direct pip dry-run found numpy and pandas releases, but pandas' source metadata build failed under modern isolated build tooling. No pip packages were installed by that probe and no version substitution was made.
+
+Installed result:
+- Installation completed successfully through Conda using conda-forge and bioconda.
+- requirements.txt, pip install ., pip install -e ., and setup.py install were not used.
+- LDSC source files were not modified and LDSC was not installed as a package.

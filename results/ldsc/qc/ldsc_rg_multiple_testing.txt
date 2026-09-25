@@ -1,0 +1,6 @@
+planned_hypotheses	12
+primary_bonferroni_threshold	0.0041666666666666666
+estimated_hypotheses	11
+estimable_only_bonferroni_threshold	0.0045454545454545461
+primary_adjustment	p_bonferroni_12=min(rg_p*12,1)
+fdr_adjustment	Benjamini-Hochberg across 11 estimated rg p-values only

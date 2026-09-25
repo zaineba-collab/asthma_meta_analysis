@@ -1,7 +1,0 @@
-Outcome	N instruments	IVW beta	IVW SE	95% CI	IVW p-value	Heterogeneity p-value	MR-Egger intercept p-value	Evidence of heterogeneity	Evidence of directional pleiotropy
-BMI	395	-0.0124	0.00774	-0.0276 to 0.00273	0.108	6.325e-13	0.00741	Yes	Yes
-Diastolic blood pressure	714	0.00433	0.0317	-0.0577 to 0.0664	0.891	0 (underflow)	0.326	Yes	No
-HDL cholesterol	651	-0.00483	0.00348	-0.0116 to 0.00199	0.165	0 (underflow)	0.838	Yes	No
-LDL cholesterol	651	0.00897	0.00416	0.000829 to 0.0171	0.0308	0 (underflow)	5.685e-04	Yes	Yes
-Systolic blood pressure	714	-0.0760	0.0483	-0.171 to 0.0188	0.116	4.612e-230	0.00137	Yes	Yes
-Triglycerides	651	0.0108	0.00383	0.00326 to 0.0183	0.00492	0 (underflow)	0.0528	Yes	No

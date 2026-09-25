@@ -1,0 +1,10 @@
+metric	value
+total_lead_SNPs	5254
+GRCh38_coordinate_resolved	5238
+VEP_input_ready	5050
+successfully_annotated	5050
+failed_or_not_returned	0
+coordinate_unresolved	16
+allele_unresolved_among_coordinate_resolved	188
+successfully_annotated_percent_of_all	96.117244004568
+successfully_annotated_percent_of_VEP_ready	100

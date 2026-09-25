@@ -1,0 +1,13 @@
+outcome	outcome_id	ivw_beta_direction	mr_egger_beta_direction	weighted_median_beta_direction	simple_mode_beta_direction	weighted_mode_beta_direction	methods_positive	methods_negative	all_five_same_direction	ivw_p_value	weighted_median_p_value	mr_egger_p_value
+Allergic rhinitis	ALLERG_RHINITIS	positive	negative	negative	negative	negative	1	4	FALSE	0.523857125177319	0.843864445958909	0.219530234384257
+Bronchiectasis	J10_BRONCHIECTASIS	positive	positive	positive	negative	negative	3	2	FALSE	0.490392930343358	0.490926628380167	0.746340407920698
+Eosinophilic disease	EOSINOPHIL_DISEASE	positive	negative	positive	negative	negative	2	3	FALSE	0.957101983881824	0.949786489648805	0.726477828775669
+BMI (inverse-rank normalized)	BMI_IRN	negative	negative	negative	positive	positive	2	3	FALSE	0.191870168256249	0.379838031486786	0.162291750300762
+NAFLD	NAFLD	negative	negative	negative	negative	negative	0	5	TRUE	0.925618249030925	0.989381015725656	0.801095624646606
+CRP	3020460	negative	negative	positive	negative	negative	1	4	FALSE	0.109088539366306	0.900006200875723	0.136031239299979
+ALT	3006923	positive	positive	positive	negative	negative	3	2	FALSE	0.437009497895474	0.833638889490943	0.428119549022599
+AST	3013721	negative	negative	negative	positive	positive	2	3	FALSE	0.388112511845959	0.946310907095871	0.56689181540799
+GGT	3026910	positive	positive	positive	positive	negative	4	1	FALSE	0.396156914851143	0.492325635821049	0.426404840219887
+HDL cholesterol	3023602	negative	negative	negative	positive	positive	2	3	FALSE	0.66229709258839	0.447347470158314	0.550878952858683
+LDL cholesterol	3001308	negative	negative	negative	negative	negative	0	5	TRUE	0.4434239868505	0.334219986745381	0.506995293577249
+Triglycerides (fasting)	3048773	negative	positive	negative	positive	positive	3	2	FALSE	0.941172679505121	0.609296102593955	0.827402136613729

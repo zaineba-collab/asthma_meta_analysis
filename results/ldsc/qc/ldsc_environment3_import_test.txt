@@ -1,0 +1,11 @@
+LDSC environment3 import test
+=============================
+numpy 1.21.5
+pandas 1.3.3
+scipy 1.7.3
+bitarray 2.9.3
+scientific_import_exit_code=0
+pybedtools 0.10.0
+pybedtools_import_exit_code=0
+core LDSC imports: PASS
+ldsc_core_import_exit_code=0

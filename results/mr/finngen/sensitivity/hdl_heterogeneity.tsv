@@ -1,0 +1,3 @@
+exposure	outcome	outcome_id	outcome_type	method	method_id	nsnp	Q	Q_df	Q_p_value
+Asthma	HDL cholesterol	3023602	continuous	Inverse variance weighted	mr_ivw	642	3843.64816069275	641	0
+Asthma	HDL cholesterol	3023602	continuous	MR Egger	mr_egger_regression	642	3824.64796582058	640	0

@@ -1,7 +1,0 @@
-SNP	chr	pos	beta.outcome	se.outcome	samplesize.outcome	pval.outcome	eaf.outcome	effect_allele.outcome	other_allele.outcome	outcome	id.outcome	originalname.outcome	outcome.deprecated	mr_keep.outcome	data_source.outcome	proxy.outcome	target_snp.outcome	proxy_snp.outcome	target_a1.outcome	target_a2.outcome	proxy_a1.outcome	proxy_a2.outcome	duplicate_resolution
-rs249681	5	141538017	-0.0102646	0.0155033	NA	0.51	0.007105	A	G	Triglycerides	ieu-b-111	triglycerides	triglycerides ||  || 	TRUE	igd	NA	NA	NA	NA	NA	NA	NA	excluded_non_identical_duplicate_snp_rows
-rs249681	5	141538017	0.000405042	0.0020483	NA	0.84	0.61776	C	G	Triglycerides	ieu-b-111	triglycerides	triglycerides ||  || 	TRUE	igd	NA	NA	NA	NA	NA	NA	NA	excluded_non_identical_duplicate_snp_rows
-rs1469836247	6	32630349	-0.0179338	0.00252003	NA	1.10002e-12	0.223097	T	G	Triglycerides	ieu-b-111	triglycerides	triglycerides ||  || 	TRUE	igd	NA	NA	NA	NA	NA	NA	NA	excluded_non_identical_duplicate_snp_rows
-rs1469836247	6	32630344	0.00616559	0.00261065	NA	0.0179999	0.178161	C	A	Triglycerides	ieu-b-111	triglycerides	triglycerides ||  || 	TRUE	igd	NA	NA	NA	NA	NA	NA	NA	excluded_non_identical_duplicate_snp_rows
-rs961552	19	52301860	-0.00873089	0.0170117	NA	0.61	0.005699	C	T	Triglycerides	ieu-b-111	triglycerides	triglycerides ||  || 	TRUE	igd	NA	NA	NA	NA	NA	NA	NA	excluded_non_identical_duplicate_snp_rows
-rs961552	19	52301860	0.00340284	0.00223758	NA	0.13	0.7253	G	T	Triglycerides	ieu-b-111	triglycerides	triglycerides ||  || 	TRUE	igd	NA	NA	NA	NA	NA	NA	NA	excluded_non_identical_duplicate_snp_rows

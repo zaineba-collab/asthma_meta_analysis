@@ -1,0 +1,25 @@
+exposure	outcome	outcome_id	outcome_type	method	method_id	nsnp	Q	Q_df	Q_p_value
+Asthma	Allergic rhinitis	ALLERG_RHINITIS	binary	MR Egger	mr_egger_regression	652	1381.02096157443	650	8.33067887433811e-55
+Asthma	Allergic rhinitis	ALLERG_RHINITIS	binary	Inverse variance weighted	mr_ivw	652	2505.63070896066	651	4.87715594008264e-215
+Asthma	Bronchiectasis	J10_BRONCHIECTASIS	binary	MR Egger	mr_egger_regression	652	759.794992033673	650	0.0018240674490219
+Asthma	Bronchiectasis	J10_BRONCHIECTASIS	binary	Inverse variance weighted	mr_ivw	652	779.644374013018	651	0.000372587851844782
+Asthma	Eosinophilic disease	EOSINOPHIL_DISEASE	binary	MR Egger	mr_egger_regression	652	680.409453169954	650	0.197934550961419
+Asthma	Eosinophilic disease	EOSINOPHIL_DISEASE	binary	Inverse variance weighted	mr_ivw	652	701.521480447181	651	0.0832046302553067
+Asthma	BMI (inverse-rank normalized)	BMI_IRN	continuous	MR Egger	mr_egger_regression	652	1993.10012108124	650	3.37553162246559e-136
+Asthma	BMI (inverse-rank normalized)	BMI_IRN	continuous	Inverse variance weighted	mr_ivw	652	1996.81065753943	651	1.69098637357217e-136
+Asthma	NAFLD	NAFLD	binary	MR Egger	mr_egger_regression	652	706.175346005137	650	0.0625594586553785
+Asthma	NAFLD	NAFLD	binary	Inverse variance weighted	mr_ivw	652	709.552158172136	651	0.0553792738128266
+Asthma	CRP	3020460	continuous	MR Egger	mr_egger_regression	641	894.4140314229	639	8.553897404627e-11
+Asthma	CRP	3020460	continuous	Inverse variance weighted	mr_ivw	641	896.263187604553	640	7.75258401123304e-11
+Asthma	ALT	3006923	continuous	MR Egger	mr_egger_regression	642	2265.13872631322	640	5.02486280026415e-180
+Asthma	ALT	3006923	continuous	Inverse variance weighted	mr_ivw	642	2265.30254390732	641	8.9221096684631e-180
+Asthma	AST	3013721	continuous	MR Egger	mr_egger_regression	623	1207.64134599158	621	4.73941584269136e-40
+Asthma	AST	3013721	continuous	Inverse variance weighted	mr_ivw	623	1228.28720547599	622	4.09765193268383e-42
+Asthma	GGT	3026910	continuous	MR Egger	mr_egger_regression	641	1596.57210624868	639	1.98820368979423e-83
+Asthma	GGT	3026910	continuous	Inverse variance weighted	mr_ivw	641	1597.30484637879	640	2.52492717698683e-83
+Asthma	HDL cholesterol	3023602	continuous	MR Egger	mr_egger_regression	642	3824.64796582058	640	0
+Asthma	HDL cholesterol	3023602	continuous	Inverse variance weighted	mr_ivw	642	3843.64816069275	641	0
+Asthma	LDL cholesterol	3001308	continuous	MR Egger	mr_egger_regression	642	4511.2823622319	640	0
+Asthma	LDL cholesterol	3001308	continuous	Inverse variance weighted	mr_ivw	642	4519.84218367799	641	0
+Asthma	Triglycerides (fasting)	3048773	continuous	MR Egger	mr_egger_regression	641	4894.79550710951	639	0
+Asthma	Triglycerides (fasting)	3048773	continuous	Inverse variance weighted	mr_ivw	641	4974.96784752834	640	0

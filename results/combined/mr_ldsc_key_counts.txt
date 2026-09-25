@@ -1,0 +1,14 @@
+MR–LDSC key counts (recalculated from authoritative source tables)
+outcomes planned = 12
+MR Bonferroni significant = 0
+MR Bonferroni significant outcomes = None
+LDSC Bonferroni significant = 7
+LDSC Bonferroni significant outcomes = Allergic rhinitis; BMI IRN; NAFLD; ALT; GGT; HDL cholesterol; Fasting triglycerides
+both significant = 0
+both significant outcomes = None
+LDSC significant / MR not significant = 7
+LDSC significant / MR not significant outcomes = Allergic rhinitis; BMI IRN; NAFLD; ALT; GGT; HDL cholesterol; Fasting triglycerides
+neither significant = 4
+neither significant outcomes = Bronchiectasis; CRP; AST; LDL cholesterol
+LDSC not estimable = 1
+LDSC not estimable outcomes = Eosinophilic disease

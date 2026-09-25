@@ -1,0 +1,8 @@
+LDSC estimator/configuration distinction for HDL and LDL
+Standalone --h2 used LDSC's automatic two-step estimator with cutoff 30.
+Unconstrained --rg used one-step IRWLS for its pairwise trait-specific h2 quantities.
+This distinction produced different trait-specific h2 estimates for HDL and LDL.
+Standalone h2 restricted to the exact asthma-overlap SNP sets reproduced the original univariate h2 estimates.
+SNP loss therefore did not explain the difference.
+Parser accuracy, reference LD scores, regression weights, environment, commit, and unconstrained intercept handling were validated.
+The authoritative rg estimates were retained unchanged; this is documented as an estimator/configuration distinction, not overstated as an error.

@@ -1,0 +1,3 @@
+trait	pzero_excluded_count	present_in_univariate_munged	present_in_pairwise_intersection	differential_contribution	conclusion
+HDL	47	0	0	no	Already absent from both univariate and pairwise munged inputs
+LDL	5	0	0	no	Already absent from both univariate and pairwise munged inputs

@@ -1,0 +1,24 @@
+LDSC environment3 version record
+================================
+
+Repository URL: https://github.com/CBIIT/ldsc.git
+Branch: ldsc39
+Commit: 6c673952cee74bd5c57aef1555a03b1c015399a0
+Definitive reproducibility identifier: Git commit above
+ldsc.py reported version: 3.0.1
+setup.py declared version: 3.0.2
+Python: 3.9.23
+NumPy: 1.21.5
+pandas: 1.3.3
+SciPy: 1.7.3
+bitarray: 2.9.3
+pybedtools: 0.10.0
+nose: 1.3.7
+Flask: 3.1.2
+requests: 2.32.5
+Conda: 26.5.3
+Architecture: arm64 (Conda platform osx-arm64)
+Environment: /Users/zainebahmed/miniforge3/envs/ldsc39
+Dependency source: tools/ldsc/environment3.yml
+
+The differing LDSC version strings were retained unchanged. The Git commit is authoritative for reproducibility.

@@ -1,0 +1,16 @@
+trait	sample_group	n	median_absolute_difference	maximum_absolute_difference	normal_float_domain_n	beyond_normal_float_domain_n	tolerance_normal_domain	normal_domain_agreeing_within_tolerance	status
+ALT	ordinary_random_100	100	2.11104483762e-07	1.48915488507e-06	100	0	0.0001	100	PASS
+ALT	smallest_nonzero_100	100	3.5300236334e-07	0.00594268822641	85	15	0.0001	85	PASS
+ALT	near_underflow_boundary	100	3.5300236334e-07	0.00594268822641	85	15	0.0001	85	PASS
+GGT	ordinary_random_100	100	1.82578960381e-07	1.55442001692e-06	100	0	0.0001	100	PASS
+GGT	smallest_nonzero_100	100	3.05272713774e-07	2.0178870983e-06	100	0	0.0001	100	PASS
+GGT	near_underflow_boundary	100	3.05272713774e-07	2.0178870983e-06	100	0	0.0001	100	PASS
+HDL cholesterol	ordinary_random_100	100	2.31672930492e-07	1.41395374575e-06	100	0	0.0001	100	PASS
+HDL cholesterol	smallest_nonzero_100	100	3.2673777639e-07	0.250784656884	95	5	0.0001	95	PASS
+HDL cholesterol	near_underflow_boundary	100	3.2673777639e-07	0.250784656884	95	5	0.0001	95	PASS
+LDL cholesterol	ordinary_random_100	100	2.13582550007e-07	1.66307930771e-06	100	0	0.0001	100	PASS
+LDL cholesterol	smallest_nonzero_100	100	2.61085723707e-07	1.98214735292e-06	100	0	0.0001	100	PASS
+LDL cholesterol	near_underflow_boundary	100	2.61085723707e-07	1.98214735292e-06	100	0	0.0001	100	PASS
+Fasting triglycerides	ordinary_random_100	100	2.49875884928e-07	1.18998218457e-06	100	0	0.0001	100	PASS
+Fasting triglycerides	smallest_nonzero_100	100	2.77603547261e-07	1.48502451225e-06	97	3	0.0001	97	PASS
+Fasting triglycerides	near_underflow_boundary	100	2.77603547261e-07	1.48502451225e-06	97	3	0.0001	97	PASS

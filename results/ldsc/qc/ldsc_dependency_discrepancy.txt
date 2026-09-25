@@ -1,0 +1,35 @@
+Repository: https://github.com/CBIIT/ldsc.git
+Branch: ldsc39
+Commit: 6c673952cee74bd5c57aef1555a03b1c015399a0
+Working tree before repair: clean (git status --short returned no entries)
+
+Legacy requirements.txt:
+bitarray>=0.8,<0.9
+nose>=1.3,<1.4
+pybedtools>=0.7,<0.8
+scipy>=0.18,<0.19
+numpy>=1.16,<1.17
+pandas>=0.20,<0.21
+
+Python-3 environment3.yml:
+python=3.9
+bitarray=2
+nose=1.3
+pybedtools=0.10.0
+numpy==1.21.5
+pandas==1.3.3
+scipy==1.7.3
+
+Modern setup.py install_requires:
+bitarray==2.6.0
+nose==1.3.7
+numpy==1.23.3
+pandas==1.5.0
+pybedtools==0.9.1
+pysam==0.19.1
+python-dateutil==2.8.2
+pytz==2022.4
+scipy==1.9.2
+six==1.16.0
+
+Conclusion: requirements.txt is stale and incompatible with the repository's Python-3 implementation. The repair uses the exact modern setup.py pins, as authorized. No repository file was edited.

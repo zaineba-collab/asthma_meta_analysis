@@ -1,0 +1,11 @@
+Asthma/HapMap3 streaming feasibility audit
+GWAMA: results/gwama/asthma_meta.out.gz
+HapMap3 list: data/ldsc/reference/w_hm3.snplist
+Canonical rsID rows: 21072243
+Unique canonical rsIDs: 21072243
+Duplicate canonical rsID rows: 0
+Direct HM3 matches: 1187270
+All required association fields valid: 1187270
+HM3-compatible allele pairs: 1187041
+Reference represented (%): 99.993347
+No coordinate-identifier rescue or LDSC munging was performed.

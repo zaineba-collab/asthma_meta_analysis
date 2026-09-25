@@ -1,0 +1,3 @@
+exposure	outcome	outcome_id	outcome_type	method	method_id	nsnp	Q	Q_df	Q_p_value
+Asthma	BMI (inverse-rank normalized)	BMI_IRN	continuous	Inverse variance weighted	mr_ivw	652	1996.81065753943	651	1.69098637357217e-136
+Asthma	BMI (inverse-rank normalized)	BMI_IRN	continuous	MR Egger	mr_egger_regression	652	1993.10012108124	650	3.37553162246559e-136

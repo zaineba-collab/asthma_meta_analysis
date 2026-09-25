@@ -1,0 +1,8 @@
+SNP	chromosome.grch38	position.grch38	exposure_effect_allele	exposure_other_allele	coordinate_source	finngen_rows_with_rsid	compatible_variant_rows	incompatible_variant_rows	compatible_variants	incompatible_variants	resolution
+rs12939565	17	39882136	A	T	current_asthma_explicit_liftover	2	1	1	17:39882136:A:T	17:39882136:A:G	one_unambiguous_valid_variant
+rs146054809	4	19859478	A	G	current_asthma_explicit_liftover	1	0	1		4:19859478:G:C	incompatible_alleles
+rs2055456	3	79821757	C	T	current_asthma_explicit_liftover	2	1	1	3:79821757:T:C	3:79821757:T:G	one_unambiguous_valid_variant
+rs370943675	9	103156482	T	C	current_asthma_explicit_liftover	1	0	1		9:103156482:C:A	incompatible_alleles
+rs558418140	14	34682528	G	C	current_gwama_coordinate_id	1	0	1		14:34213322:C:A	incompatible_alleles
+rs560335706	14	38151775	G	C	current_gwama_coordinate_id	1	0	1		14:37682570:C:T	incompatible_alleles
+rs571546412	10	25402237	T	A	current_gwama_coordinate_id	1	0	1		10:25113308:A:G	incompatible_alleles

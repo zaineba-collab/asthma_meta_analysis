@@ -1,0 +1,4 @@
+Figure 3.4 VEP consequence distribution was not generated.
+Reason: the active VEP input used PLINK positions later validated as GRCh37/hg19,
+whereas VEP was run against GRCh38. A corrected annotation run is required before
+functional consequences can be presented as dissertation results. No annotation was rerun in this reporting task.

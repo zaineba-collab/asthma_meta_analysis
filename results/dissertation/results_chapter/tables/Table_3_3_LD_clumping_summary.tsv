@@ -1,0 +1,11 @@
+Metric	Result
+Input variants	39933
+rsID matched	37669
+rsID unmatched	2235
+Mapping percentage	94.33
+Duplicate rsID rows collapsed	29
+Clumping r2	0.1
+Clumping window (kb)	99999
+P1	5e-09
+P2	5e-09
+Final independent lead SNPs	5254

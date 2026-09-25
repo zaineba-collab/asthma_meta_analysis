@@ -1,0 +1,46 @@
+Asthma TwoSampleMR exposure preparation QC
+
+Source file headers:
+independent_lead_snps.tsv: SNP | chromosome | position | p_value
+asthma_fixed_for_plink_clumping.txt: SNP | original_SNP | pvalue
+asthma_meta.out: rs_number | reference_allele | other_allele | eaf | beta | se | beta_95L | beta_95U | z | p-value | _-log10_p-value | q_statistic | q_p-value | i2 | n_studies | n_samples | effects
+
+Field sources:
+SNP, chromosome, position: results/ld_clumping/independent_lead_snps.tsv
+original GWAMA identifier mapping: results/gwama/asthma_fixed_for_plink_clumping.txt (SNP -> original_SNP)
+effect allele, other allele, beta, SE, p-value: results/gwama/asthma_meta.out
+EAF: GWAMA eaf is -9 for all selected SNPs, so eaf.exposure was not included
+sample size: GWAMA n_samples is -9 for all selected SNPs, so samplesize.exposure was not included
+
+Allele/effect convention:
+scripts/02_harmonise_inputs.R defines EA as the effect allele and BETA as its effect; scripts/05_prepare_gwama_inputs.R passes MARKERNAME, EA, NEA, BETA, SE to GWAMA.
+Direct input/output cross-check for rs9273374: harmonised inputs predominantly contain EA=A with negative beta; GWAMA reports reference_allele=A, other_allele=G, beta=-0.153052.
+Therefore GWAMA beta is aligned to reference_allele; effect_allele.exposure=reference_allele and other_allele.exposure=other_allele.
+The contrary assignment in scripts/21_prepare_mr_exposure.R was not used or modified.
+
+Join validation:
+independent SNPs requested = 5254
+SNPs matched to association statistics = 5254
+SNPs unmatched = 0
+duplicate rsIDs in independent input = 0
+duplicate relevant GWAMA IDs = 0
+duplicate count total = 0
+SNPs with missing beta = 0
+SNPs with missing SE = 0
+SNPs with missing effect allele = 0
+SNPs with missing other allele = 0
+SNPs with missing p-value = 0
+SNPs with either allele missing = 0
+lead/GWAMA p-value discrepancies at reported precision = 0
+numeric parser differences below floating-point tolerance = 10 (maximum relative difference 2.13e-16; values are identical at source precision)
+
+Instrument strength (F = beta^2 / SE^2):
+minimum F = 34.233907635726
+median F = 42.8986509819657
+mean F = 51.4056799765867
+number with F < 10 = 0
+number with F >= 10 = 5254
+
+input PLINK SNP count = 5254
+final exposure SNP count = 5254
+output path = results/mr/finngen/exposure/asthma_exposure_5254.tsv

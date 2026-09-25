@@ -1,0 +1,307 @@
+LDSC environment3 help tests
+============================
+
+COMMAND: python tools/ldsc/ldsc.py -h
+usage: ldsc.py [-h] [--out OUT] [--bfile BFILE] [--l2] [--extract EXTRACT]
+               [--keep KEEP] [--ld-wind-snps LD_WIND_SNPS]
+               [--ld-wind-kb LD_WIND_KB] [--ld-wind-cm LD_WIND_CM]
+               [--print-snps PRINT_SNPS] [--annot ANNOT] [--thin-annot]
+               [--cts-bin CTS_BIN] [--cts-breaks CTS_BREAKS]
+               [--cts-names CTS_NAMES] [--per-allele] [--pq-exp PQ_EXP]
+               [--no-print-annot] [--maf MAF] [--h2 H2] [--h2-cts H2_CTS]
+               [--rg RG] [--ref-ld REF_LD] [--ref-ld-chr REF_LD_CHR]
+               [--w-ld W_LD] [--w-ld-chr W_LD_CHR] [--overlap-annot]
+               [--print-coefficients] [--frqfile FRQFILE]
+               [--frqfile-chr FRQFILE_CHR] [--no-intercept]
+               [--intercept-h2 INTERCEPT_H2]
+               [--intercept-gencov INTERCEPT_GENCOV] [--M M]
+               [--two-step TWO_STEP] [--chisq-max CHISQ_MAX]
+               [--ref-ld-chr-cts REF_LD_CHR_CTS] [--print-all-cts]
+               [--print-cov] [--print-delete-vals] [--chunk-size CHUNK_SIZE]
+               [--pickle] [--yes-really] [--invert-anyway]
+               [--n-blocks N_BLOCKS] [--not-M-5-50] [--return-silly-things]
+               [--no-check-alleles] [--samp-prev SAMP_PREV]
+               [--pop-prev POP_PREV]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --out OUT             Output filename prefix. If --out is not set, LDSC will
+                        use ldsc as the default output filename prefix.
+  --bfile BFILE         Prefix for Plink .bed/.bim/.fam file
+  --l2                  Estimate l2. Compatible with both jackknife and non-
+                        jackknife.
+  --extract EXTRACT     File with SNPs to include in LD Score estimation. The
+                        file should contain one SNP ID per row.
+  --keep KEEP           File with individuals to include in LD Score
+                        estimation. The file should contain one individual ID
+                        per row.
+  --ld-wind-snps LD_WIND_SNPS
+                        Specify the window size to be used for estimating LD
+                        Scores in units of # of SNPs. You can only specify one
+                        --ld-wind-* option.
+  --ld-wind-kb LD_WIND_KB
+                        Specify the window size to be used for estimating LD
+                        Scores in units of kilobase-pairs (kb). You can only
+                        specify one --ld-wind-* option.
+  --ld-wind-cm LD_WIND_CM
+                        Specify the window size to be used for estimating LD
+                        Scores in units of centiMorgans (cM). You can only
+                        specify one --ld-wind-* option.
+  --print-snps PRINT_SNPS
+                        This flag tells LDSC to only print LD Scores for the
+                        SNPs listed (one ID per row) in PRINT_SNPS. The sum
+                        r^2 will still include SNPs not in PRINT_SNPs. This is
+                        useful for reducing the number of LD Scores that have
+                        to be read into memory when estimating h2 or rg.
+  --annot ANNOT         Filename prefix for annotation file for partitioned LD
+                        Score estimation. LDSC will automatically append
+                        .annot or .annot.gz to the filename prefix. See
+                        docs/file_formats_ld for a definition of the .annot
+                        format.
+  --thin-annot          This flag says your annot files have only annotations,
+                        with no SNP, CM, CHR, BP columns.
+  --cts-bin CTS_BIN     This flag tells LDSC to compute partitioned LD Scores,
+                        where the partition is defined by cutting one or
+                        several continuous variable[s] into bins. The argument
+                        to this flag should be the name of a single file or a
+                        comma-separated list of files. The file format is two
+                        columns, with SNP IDs in the first column and the
+                        continuous variable in the second column.
+  --cts-breaks CTS_BREAKS
+                        Use this flag to specify names for the continuous
+                        variables cut into bins with --cts-bin. For each
+                        continuous variable, specify breaks as a comma-
+                        separated list of breakpoints, and separate the
+                        breakpoints for each variable with an x. For example,
+                        if binning on MAF and distance to gene (in kb), you
+                        might set --cts-breaks 0.1,0.25,0.4x10,100,1000
+  --cts-names CTS_NAMES
+                        Use this flag to specify names for the continuous
+                        variables cut into bins with --cts-bin. The argument
+                        to this flag should be a comma-separated list of
+                        names. For example, if binning on DAF and distance to
+                        gene, you might set --cts-bin DAF,DIST_TO_GENE
+  --per-allele          Setting this flag causes LDSC to compute per-allele LD
+                        Scores, i.e., \ell_j := \sum_k p_k(1-p_k)r^2_{jk},
+                        where p_k denotes the MAF of SNP j.
+  --pq-exp PQ_EXP       Setting this flag causes LDSC to compute LD Scores
+                        with the given scale factor, i.e., \ell_j := \sum_k
+                        (p_k(1-p_k))^a r^2_{jk}, where p_k denotes the MAF of
+                        SNP j and a is the argument to --pq-exp.
+  --no-print-annot      By default, setting --cts-bin or --cts-bin-add causes
+                        LDSC to print the resulting annot matrix. Setting
+                        --no-print-annot tells LDSC not to print the annot
+                        matrix.
+  --maf MAF             Minor allele frequency lower bound. Default is MAF >
+                        0.
+  --h2 H2               Filename for a .sumstats[.gz] file for one-phenotype
+                        LD Score regression. --h2 requires at minimum also
+                        setting the --ref-ld and --w-ld flags.
+  --h2-cts H2_CTS       Filename for a .sumstats[.gz] file for cell-type-
+                        specific analysis. --h2-cts requires the --ref-ld-chr,
+                        --w-ld, and --ref-ld-chr-cts flags.
+  --rg RG               Comma-separated list of prefixes of .chisq filed for
+                        genetic correlation estimation.
+  --ref-ld REF_LD       Use --ref-ld to tell LDSC which LD Scores to use as
+                        the predictors in the LD Score regression. LDSC will
+                        automatically append .l2.ldscore/.l2.ldscore.gz to the
+                        filename prefix.
+  --ref-ld-chr REF_LD_CHR
+                        Same as --ref-ld, but will automatically concatenate
+                        .l2.ldscore files split across 22 chromosomes. LDSC
+                        will automatically append .l2.ldscore/.l2.ldscore.gz
+                        to the filename prefix. If the filename prefix
+                        contains the symbol @, LDSC will replace the @ symbol
+                        with chromosome numbers. Otherwise, LDSC will append
+                        chromosome numbers to the end of the filename
+                        prefix.Example 1: --ref-ld-chr ld/ will read
+                        ld/1.l2.ldscore.gz ... ld/22.l2.ldscore.gzExample 2:
+                        --ref-ld-chr ld/@_kg will read ld/1_kg.l2.ldscore.gz
+                        ... ld/22_kg.l2.ldscore.gz
+  --w-ld W_LD           Filename prefix for file with LD Scores with sum r^2
+                        taken over SNPs included in the regression. LDSC will
+                        automatically append .l2.ldscore/.l2.ldscore.gz.
+  --w-ld-chr W_LD_CHR   Same as --w-ld, but will read files split into 22
+                        chromosomes in the same manner as --ref-ld-chr.
+  --overlap-annot       This flag informs LDSC that the partitioned LD Scores
+                        were generates using an annot matrix with overlapping
+                        categories (i.e., not all row sums equal 1), and
+                        prevents LDSC from displaying output that is
+                        meaningless with overlapping categories.
+  --print-coefficients  when categories are overlapping, print coefficients as
+                        well as heritabilities.
+  --frqfile FRQFILE     For use with --overlap-annot. Provides allele
+                        frequencies to prune to common snps if --not-M-5-50 is
+                        not set.
+  --frqfile-chr FRQFILE_CHR
+                        Prefix for --frqfile files split over chromosome.
+  --no-intercept        If used with --h2, this constrains the LD Score
+                        regression intercept to equal 1. If used with --rg,
+                        this constrains the LD Score regression intercepts for
+                        the h2 estimates to be one and the intercept for the
+                        genetic covariance estimate to be zero.
+  --intercept-h2 INTERCEPT_H2
+                        Intercepts for constrained-intercept single-trait LD
+                        Score regression.
+  --intercept-gencov INTERCEPT_GENCOV
+                        Intercepts for constrained-intercept cross-trait LD
+                        Score regression. Must have same length as --rg. The
+                        first entry is ignored.
+  --M M                 # of SNPs (if you don't want to use the .l2.M files
+                        that came with your .l2.ldscore.gz files)
+  --two-step TWO_STEP   Test statistic bound for use with the two-step
+                        estimator. Not compatible with --no-intercept and
+                        --constrain-intercept.
+  --chisq-max CHISQ_MAX
+                        Max chi^2.
+  --ref-ld-chr-cts REF_LD_CHR_CTS
+                        Name of a file that has a list of file name prefixes
+                        for cell-type-specific analysis.
+  --print-all-cts
+  --print-cov           For use with --h2/--rg. This flag tells LDSC to print
+                        the covaraince matrix of the estimates.
+  --print-delete-vals   If this flag is set, LDSC will print the block
+                        jackknife delete-values (i.e., the regression
+                        coefficeints estimated from the data with a block
+                        removed). The delete-values are formatted as a matrix
+                        with (# of jackknife blocks) rows and (# of LD Scores)
+                        columns.
+  --chunk-size CHUNK_SIZE
+                        Chunk size for LD Score calculation. Use the default.
+  --pickle              Store .l2.ldscore files as pickles instead of gzipped
+                        tab-delimited text.
+  --yes-really          Yes, I really want to compute whole-chromosome LD
+                        Score.
+  --invert-anyway       Force LDSC to attempt to invert ill-conditioned
+                        matrices.
+  --n-blocks N_BLOCKS   Number of block jackknife blocks.
+  --not-M-5-50          This flag tells LDSC to use the .l2.M file instead of
+                        the .l2.M_5_50 file.
+  --return-silly-things
+                        Force ldsc to return silly genetic correlation
+                        estimates.
+  --no-check-alleles    For rg estimation, skip checking whether the alleles
+                        match. This check is redundant for pairs of chisq
+                        files generated using munge_sumstats.py and the same
+                        argument to the --merge-alleles flag.
+  --samp-prev SAMP_PREV
+                        Sample prevalence of binary phenotype (for conversion
+                        to liability scale).
+  --pop-prev POP_PREV   Population prevalence of binary phenotype (for
+                        conversion to liability scale).
+ldsc.py_help_exit_code=0
+
+COMMAND: python tools/ldsc/munge_sumstats.py -h
+usage: munge_sumstats.py [-h] [--sumstats SUMSTATS] [--N N] [--N-cas N_CAS]
+                         [--N-con N_CON] [--out OUT] [--info-min INFO_MIN]
+                         [--maf-min MAF_MIN] [--daner] [--daner-n]
+                         [--no-alleles] [--merge-alleles MERGE_ALLELES]
+                         [--n-min N_MIN] [--chunksize CHUNKSIZE] [--snp SNP]
+                         [--N-col N_COL] [--N-cas-col N_CAS_COL]
+                         [--N-con-col N_CON_COL] [--a1 A1] [--a2 A2] [--p P]
+                         [--frq FRQ] [--signed-sumstats SIGNED_SUMSTATS]
+                         [--info INFO] [--info-list INFO_LIST]
+                         [--nstudy NSTUDY] [--nstudy-min NSTUDY_MIN]
+                         [--ignore IGNORE] [--a1-inc] [--keep-maf]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --sumstats SUMSTATS   Input filename.
+  --N N                 Sample size If this option is not set, will try to
+                        infer the sample size from the input file. If the
+                        input file contains a sample size column, and this
+                        flag is set, the argument to this flag has priority.
+  --N-cas N_CAS         Number of cases. If this option is not set, will try
+                        to infer the number of cases from the input file. If
+                        the input file contains a number of cases column, and
+                        this flag is set, the argument to this flag has
+                        priority.
+  --N-con N_CON         Number of controls. If this option is not set, will
+                        try to infer the number of controls from the input
+                        file. If the input file contains a number of controls
+                        column, and this flag is set, the argument to this
+                        flag has priority.
+  --out OUT             Output filename prefix.
+  --info-min INFO_MIN   Minimum INFO score.
+  --maf-min MAF_MIN     Minimum MAF.
+  --daner               Use this flag to parse Stephan Ripke's daner* file
+                        format.
+  --daner-n             Use this flag to parse more recent daner* formatted
+                        files, which include sample size column 'Nca' and
+                        'Nco'.
+  --no-alleles          Don't require alleles. Useful if only unsigned summary
+                        statistics are available and the goal is h2 /
+                        partitioned h2 estimation rather than rg estimation.
+  --merge-alleles MERGE_ALLELES
+                        Same as --merge, except the file should have three
+                        columns: SNP, A1, A2, and all alleles will be matched
+                        to the --merge-alleles file alleles.
+  --n-min N_MIN         Minimum N (sample size). Default is (90th percentile
+                        N) / 2.
+  --chunksize CHUNKSIZE
+                        Chunksize.
+  --snp SNP             Name of SNP column (if not a name that ldsc
+                        understands). NB: case insensitive.
+  --N-col N_COL         Name of N column (if not a name that ldsc
+                        understands). NB: case insensitive.
+  --N-cas-col N_CAS_COL
+                        Name of N column (if not a name that ldsc
+                        understands). NB: case insensitive.
+  --N-con-col N_CON_COL
+                        Name of N column (if not a name that ldsc
+                        understands). NB: case insensitive.
+  --a1 A1               Name of A1 column (if not a name that ldsc
+                        understands). NB: case insensitive.
+  --a2 A2               Name of A2 column (if not a name that ldsc
+                        understands). NB: case insensitive.
+  --p P                 Name of p-value column (if not a name that ldsc
+                        understands). NB: case insensitive.
+  --frq FRQ             Name of FRQ or MAF column (if not a name that ldsc
+                        understands). NB: case insensitive.
+  --signed-sumstats SIGNED_SUMSTATS
+                        Name of signed sumstat column, comma null value (e.g.,
+                        Z,0 or OR,1). NB: case insensitive.
+  --info INFO           Name of INFO column (if not a name that ldsc
+                        understands). NB: case insensitive.
+  --info-list INFO_LIST
+                        Comma-separated list of INFO columns. Will filter on
+                        the mean. NB: case insensitive.
+  --nstudy NSTUDY       Name of NSTUDY column (if not a name that ldsc
+                        understands). NB: case insensitive.
+  --nstudy-min NSTUDY_MIN
+                        Minimum # of studies. Default is to remove everything
+                        below the max, unless there is an N column, in which
+                        case do nothing.
+  --ignore IGNORE       Comma-separated list of column names to ignore.
+  --a1-inc              A1 is the increasing allele.
+  --keep-maf            Keep the MAF column (if one exists).
+munge_sumstats.py_help_exit_code=0
+
+OPTIONAL COMMAND: python tools/ldsc/make_annot.py -h
+usage: make_annot.py [-h] [--gene-set-file GENE_SET_FILE]
+                     [--gene-coord-file GENE_COORD_FILE]
+                     [--windowsize WINDOWSIZE] [--bed-file BED_FILE]
+                     [--nomerge] [--bimfile BIMFILE] [--annot-file ANNOT_FILE]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --gene-set-file GENE_SET_FILE
+                        a file of gene names, one line per gene.
+  --gene-coord-file GENE_COORD_FILE
+                        a file with columns GENE, CHR, START, and END, where
+                        START and END are base pair coordinates of TSS and
+                        TES. This file can contain more genes than are in the
+                        gene set. We provide ENSG_coord.txt as a default.
+  --windowsize WINDOWSIZE
+                        how many base pairs to add around the transcribed
+                        region to make the annotation?
+  --bed-file BED_FILE   the UCSC bed file with the regions that make up your
+                        annotation
+  --nomerge             don't merge the bed file; make an annot file with
+                        values proportional to the number of intervals in the
+                        bedfile overlapping the SNP.
+  --bimfile BIMFILE     plink bim file for the dataset you will use to compute
+                        LD scores.
+  --annot-file ANNOT_FILE
+                        the name of the annot file to output.
+make_annot.py_help_exit_code=0

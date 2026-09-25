@@ -1,0 +1,107 @@
+LDSC INPUT/ENVIRONMENT AUDIT
+Audit date: 2026-08-22
+Scope: local audit only; no downloads, installations, munging, heritability, or genetic-correlation analyses performed.
+Excluded source: results/old_position_issue/ was not inspected or used.
+
+LDSC INSTALLATION
+- ldsc.py: not found in the repository, parent project, project .venv, searched home-directory depth, or PATH.
+- munge_sumstats.py: not found in the repository, parent project, project .venv, searched home-directory depth, or PATH.
+- LDSC version/commit: unavailable because LDSC is not installed locally.
+- `ldsc.py --help`: cannot run because ldsc.py is absent.
+- `munge_sumstats.py --help`: cannot run because munge_sumstats.py is absent.
+
+PYTHON ENVIRONMENT
+- PATH Python: /opt/homebrew/bin/python3
+- PATH Python version: Python 3.14.2
+- Project virtual environment: .venv/bin/python
+- Project virtual-environment Python version: Python 3.14.2
+- No LDSC package/scripts were found in the project virtual environment.
+- No conda environments were reported by the local `conda env list` check.
+- Compatibility warning: the eventual LDSC installation must use a Python/dependency environment supported by the selected LDSC release; the current Python 3.14 environment has not been validated for LDSC.
+
+LD-SCORE REFERENCES
+- European chromosome-partitioned LD scores (for example eur_w_ld_chr or 1000G_Phase3_ldscores): not found.
+- European chromosome-partitioned regression weights (for example weights_hm3_no_hla or 1000G_Phase3_weights_hm3_no_MHC): not found.
+- HapMap3 merge list (w_hm3.snplist): not found.
+- Baseline LD-score annotations: not found.
+- Chromosomes 1-22 available as LDSC LD-score files: no.
+- Chromosomes 1-22 available as LDSC regression-weight files: no.
+- MHC/HLA-excluded LDSC weights: no such files are present, so exclusion status cannot be assessed.
+
+OTHER LOCAL REFERENCE MATERIAL (NOT AN LDSC SUBSTITUTE)
+- data/reference_panel/eur/1000G_EUR_biallelic.{bed,bim,fam}: present.
+- This is a PLINK binary reference panel built by scripts/20_build_eur_reference_panel.R for LD clumping, not precomputed LDSC LD scores or regression weights.
+- Script evidence: 503 samples with SuperPop=EUR from a 1000 Genomes Phase 3 source; 81,106,363 biallelic SNPs in the .bim.
+- data/reference_panel/eur/1000G_EUR_asthma_snps.{bed,bim,fam}: present and also PLINK-format, not LDSC LD scores.
+- Do not pass these PLINK files to --ref-ld-chr or --w-ld-chr.
+
+PRE-MUNGED FINNGEN FILES
+- No local file matching LDSC/pre-munged naming patterns was found under data/finngen/.
+- R13 directories contain raw genome-wide .gz files, tabix indexes, and one phenotype manifest only.
+- R12 lab directories contain raw genome-wide .gz files and tabix indexes only.
+
+AUTHORITATIVE ASTHMA INPUT
+- Proposed source: results/gwama/asthma_meta.out.gz.
+- It is the current corrected 12-study GWAMA 2.1 output and contains 34,316,972 variants (plus header), as recorded independently in current mapping and heterogeneity summaries.
+- Current scripts describe this as the fixed-effect analysis; the current GWAMA log lists 12 input studies and confirms completion.
+- The corrected GRCh38-lifted Shrine input is included in config/gwama_input/gwama.in; current scripts 09 and 12 explicitly state that the output follows the corrected Shrine rerun.
+- Header: rs_number, reference_allele, other_allele, eaf, beta, se, beta_95L, beta_95U, z, p-value, _-log10_p-value, q_statistic, q_p-value, i2, n_studies, n_samples, effects.
+- GWAMA output contains no chromosome or position columns.
+- reference_allele is the beta-aligned effect allele; this was confirmed previously by the current scripts 02/05 data flow and direct input/output checking documented in results/mr/finngen/exposure/asthma_exposure_5254_qc.txt.
+- beta and se can form Z=beta/se; the output also provides z directly.
+- eaf and n_samples are unusable (-9 in audited/current output use). scripts/05_prepare_gwama_inputs.R passed only MARKERNAME, EA, NEA, BETA and SE to GWAMA, discarding even the N values available in some harmonised sources.
+- Marker identifiers are mixed: many rsIDs, but some coordinate/allele or other identifiers. At p<=5e-9, the current mapping audit matched 37,669/39,933 evaluated variants to rsIDs (94.33%), illustrating that rsID coverage is incomplete.
+- Genome build is not uniformly established: although inputs were assembled under data/final_hg38, five contributing files show BUILD=unknown (495_PheCode, HanY, asthma_DISCOVERY, UKBB.asthma-2, and ukb.allasthma). Coordinate-style identifiers from unknown-build files must not be assumed GRCh38.
+- Conclusion: authoritative current asthma association result, but not yet LDSC-ready.
+
+ASTHMA SAMPLE SIZE AND ANCESTRY
+- No usable per-variant or constant meta-analysis N is present in the GWAMA output.
+- Some upstream files contain N: 495_PheCode and asthma_DISCOVERY have per-variant N, GCST90029018 has n, and HanY has N. Other contributing files were assigned N=NA.
+- The 495_PheCode input demonstrably has varying per-variant N; therefore a simple constant across all source data is not supported.
+- No locally documented, overlap-aware total cases/controls for the 12-study asthma meta-analysis was found.
+- Summing study N or cases/controls would not be valid without resolving participant/cohort overlap and compatible phenotype definitions; several inputs are UK Biobank-derived and may overlap.
+- The combined asthma ancestry composition is not documented by local project metadata. The use of a European 1000 Genomes panel for PLINK clumping does not prove that every asthma study is European-only.
+- Required before munging: a defensible LDSC N strategy (ideally per-variant effective N or an overlap-aware trait-level effective N), cases/controls and effective-N convention for the binary phenotype, plus documented ancestry composition.
+
+FINNGEN INPUT FORMAT
+- All 12 raw files contain #chrom, pos, ref, alt, pval, beta, sebeta and af_alt.
+- FinnGen beta and af_alt refer to ALT; therefore Z=beta/sebeta is supported, effect allele=ALT, other allele=REF.
+- Current local FinnGen extraction scripts document the files as GRCh38.
+- R13 files have an rsids column. The seven R12 laboratory files do not have rsids and require a genome-wide rsID mapping or verified pre-munged file for standard HapMap3 LDSC merging.
+- None of the raw files has per-variant N, total N, cases, or controls columns.
+
+FINNGEN SAMPLE SIZE STATUS
+- R13 manifest verified:
+  * Allergic rhinitis: 15,958 cases; 473,610 controls; N=489,568.
+  * Bronchiectasis: 3,096 cases; 405,986 controls; N=409,082.
+  * Eosinophilic disease: 571 cases; 264,141 controls; N=264,712.
+  * BMI inverse-rank normalized: continuous-trait N=362,216 (manifest num_cases=362216, num_controls=0).
+  * NAFLD: 3,943 cases; 496,243 controls; N=500,186.
+- No local exact GWAS N was found for R12 CRP 3020460, ALT 3006923, AST 3013721, GGT 3026910, HDL 3023602, LDL 3001308, or fasting triglycerides 3048773.
+- Generic participant counts were not substituted.
+
+ANCESTRY/REFERENCE WARNINGS
+- FinnGen is a Finnish cohort/genetic isolate. No detailed ancestry-composition metadata file accompanies the local downloads.
+- Standard European 1000 Genomes LD scores are broadly ancestry-related but are not Finnish-specific; LD/frequency differences may affect LDSC fit and should be acknowledged and checked.
+- The asthma meta-analysis ancestry is locally unresolved. Standard European LD scores are inappropriate if materially multi-ancestry summary statistics are present without a justified ancestry-specific strategy.
+
+PLANNED ANALYSIS (NOT RUN)
+- After both traits are correctly munged to a common HapMap3 rsID/allele set, estimate asthma SNP heritability and each outcome SNP heritability as QC, then run 12 pairwise genetic correlations with ldsc.py --rg.
+- Use the same European reference LD-score prefix for --ref-ld-chr and the matching European regression-weight prefix for --w-ld-chr, chromosomes 1-22.
+- Preserve raw and munged logs; verify mean chi-square, SNP count, heritability Z-score/intercept, and genetic-covariance intercept before interpreting rg.
+- Planned pairs: asthma with allergic rhinitis, bronchiectasis, eosinophilic disease, BMI IRN, NAFLD, CRP, ALT, AST, GGT, HDL cholesterol, LDL cholesterol, and fasting triglycerides.
+- Technically ready now: 0/12 correlations, because LDSC/reference resources and a defensible asthma N are absent.
+- Outcome-side conditionally suitable once global blockers are fixed: five R13 traits.
+- Outcome-side unresolved: seven R12 laboratory traits (exact N and rsID mapping/pre-munged inputs absent).
+
+MISSING RESOURCES / DECISIONS BEFORE MUNGING
+1. A supported LDSC installation and reproducible Python environment.
+2. European LD scores for chromosomes 1-22.
+3. Matching European regression weights for chromosomes 1-22, with documented MHC exclusion status.
+4. HapMap3 w_hm3.snplist or the exact merge-alleles list matching the reference bundle.
+5. Asthma per-variant/constant effective-N strategy and overlap-aware case/control metadata.
+6. Asthma ancestry documentation and decision on suitability of European LDSC references.
+7. A genome-wide mapping/filtering strategy from mixed asthma identifiers to reference rsIDs, without trusting unknown-build coordinate IDs.
+8. Exact R12 laboratory GWAS N for all seven traits.
+9. Genome-wide rsID mapping for R12 laboratory files, or verified FinnGen pre-munged LDSC files containing SNP/A1/A2/Z/N.
+10. A documented decision on use of standard European LD scores for Finnish-isolate outcome GWAS.

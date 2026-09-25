@@ -1,0 +1,6 @@
+exposure	outcome	outcome_id	outcome_type	method	method_id	nsnp	beta	SE	p_value	beta_lower_95CI	beta_upper_95CI	OR	OR_lower_95CI	OR_upper_95CI	qc_pass	qc_message
+Asthma	BMI (inverse-rank normalized)	BMI_IRN	continuous	Inverse variance weighted	mr_ivw	652	-0.000217175347883562	0.000166409397584385	0.191870168256249	-0.000543337767148956	0.000108987071381832	NA	NA	NA	TRUE	PASS
+Asthma	BMI (inverse-rank normalized)	BMI_IRN	continuous	MR Egger	mr_egger_regression	652	-0.000233716890546036	0.000167060675281954	0.162291750300762	-0.000561155814098666	9.37220330065934e-05	NA	NA	NA	TRUE	PASS
+Asthma	BMI (inverse-rank normalized)	BMI_IRN	continuous	Weighted median	mr_weighted_median	652	-0.000128751328174222	0.000146609081540511	0.379838031486786	-0.000416105127993623	0.00015860247164518	NA	NA	NA	TRUE	PASS
+Asthma	BMI (inverse-rank normalized)	BMI_IRN	continuous	Simple mode	mr_simple_mode	652	0.0126577689416154	0.0177298371619552	0.475529611755165	-0.0220927118958169	0.0474082497790476	NA	NA	NA	TRUE	PASS
+Asthma	BMI (inverse-rank normalized)	BMI_IRN	continuous	Weighted mode	mr_weighted_mode	652	0.0126577689416154	0.0158270114394264	0.424143111482321	-0.0183631734796604	0.0436787113628911	NA	NA	NA	TRUE	PASS

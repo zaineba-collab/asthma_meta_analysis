@@ -1,6 +1,0 @@
-method	number_of_snps	beta_estimate	standard_error	p_value	odds_ratio	beta_lci95	beta_uci95	odds_ratio_lci95	odds_ratio_uci95	odds_ratio_note
-Inverse variance weighted	651	0.00897284807306313	0.00415512636636072	0.0308141450138799	NA	0.000828800394996127	0.0171168957511301	NA	NA	Not calculated: LDL cholesterol is a continuous outcome
-MR Egger	651	0.00305258854481465	0.00446092488174882	0.494033183308514	NA	-0.00569082422341303	0.0117960013130423	NA	NA	Not calculated: LDL cholesterol is a continuous outcome
-Weighted median	651	0.000469717343628423	0.00172513258131098	0.785407515610292	NA	-0.0029115425157411	0.00385097720299795	NA	NA	Not calculated: LDL cholesterol is a continuous outcome
-Weighted mode	651	0.0042492617287293	0.00818507017315477	0.603834341859417	NA	-0.011793475810654	0.0202919992681126	NA	NA	Not calculated: LDL cholesterol is a continuous outcome
-Simple mode	651	0.0255997993116882	0.0113048385293688	0.0238719695269454	NA	0.00344231579412534	0.0477572828292511	NA	NA	Not calculated: LDL cholesterol is a continuous outcome

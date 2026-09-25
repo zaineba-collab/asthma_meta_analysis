@@ -1,0 +1,26 @@
+Targeted HDL/LDL pairwise h2 audit
+Primary rg estimates and authoritative h2 outputs were not changed.
+References, weights, environment, commit, and unconstrained intercepts were identical.
+Estimator difference: standalone h2 automatically used two-step cutoff 30; rg used one-step IRWLS.
+
+HDL
+category=C. LDSC_CONFIGURATION_DIFFERENCE
+original_univariate_h2=0.236 (0.0292) on 1150113 SNPs
+rg_reported_pairwise_h2=0.1623 (0.0218) on 1140576 SNPs
+temporary_exact_overlap_h2=0.2359 (0.029) on 1140576 SNPs
+temporary_exact_overlap_intercept=1.8348 (0.0464)
+original_univariate_intercept=1.8366 (0.046)
+pzero_exclusions=47; absent from both authoritative munged inputs and therefore not differential
+explanation=exact-overlap standalone h2 retains the univariate estimate; rg used one-step IRWLS while standalone h2 automatically used two-step cutoff 30
+
+LDL
+category=C. LDSC_CONFIGURATION_DIFFERENCE
+original_univariate_h2=0.0646 (0.0127) on 1150126 SNPs
+rg_reported_pairwise_h2=0.0342 (0.0106) on 1140582 SNPs
+temporary_exact_overlap_h2=0.0642 (0.0124) on 1140582 SNPs
+temporary_exact_overlap_intercept=1.2431 (0.0266)
+original_univariate_intercept=1.2422 (0.026)
+pzero_exclusions=5; absent from both authoritative munged inputs and therefore not differential
+explanation=exact-overlap standalone h2 retains the univariate estimate; rg used one-step IRWLS while standalone h2 automatically used two-step cutoff 30
+
+Mixed-model/effective-N caveat retained; no N rescaling was attempted.

@@ -1,0 +1,13 @@
+outcome	outcome_id	release	outcome_type	requested_snps	matched_snps	unmatched_snps	coverage_percent	duplicate_matches	rsid_matches	coordinate_allele_matches	missing_beta	missing_se	missing_effect_allele	missing_other_allele	missing_pvalue	missing_eaf	cases	controls	sample_size
+Allergic rhinitis	ALLERG_RHINITIS	R13	binary	5254	810	4444	15.4168252759802	0	795	15	0	0	0	0	0	0	15958	473610	489568
+Bronchiectasis	J10_BRONCHIECTASIS	R13	binary	5254	810	4444	15.4168252759802	0	795	15	0	0	0	0	0	0	3096	405986	409082
+Eosinophilic disease	EOSINOPHIL_DISEASE	R13	binary	5254	810	4444	15.4168252759802	0	795	15	0	0	0	0	0	0	571	264141	264712
+BMI (inverse-rank normalized)	BMI_IRN	R13	continuous	5254	810	4444	15.4168252759802	0	795	15	0	0	0	0	0	0	NA	NA	362216
+NAFLD	NAFLD	R13	binary	5254	810	4444	15.4168252759802	0	795	15	0	0	0	0	0	0	3943	496243	500186
+CRP	3020460	R12_lab_values	continuous	5254	797	4457	15.1693947468595	0	0	797	0	0	0	0	0	0	NA	NA	NA
+ALT	3006923	R12_lab_values	continuous	5254	798	4456	15.1884278644842	0	0	798	0	0	0	0	0	0	NA	NA	NA
+AST	3013721	R12_lab_values	continuous	5254	773	4481	14.7125999238675	0	0	773	0	0	0	0	0	0	NA	NA	NA
+GGT	3026910	R12_lab_values	continuous	5254	796	4458	15.1503616292349	0	0	796	0	0	0	0	0	0	NA	NA	NA
+HDL cholesterol	3023602	R12_lab_values	continuous	5254	798	4456	15.1884278644842	0	0	798	0	0	0	0	0	0	NA	NA	NA
+LDL cholesterol	3001308	R12_lab_values	continuous	5254	798	4456	15.1884278644842	0	0	798	0	0	0	0	0	0	NA	NA	NA
+Triglycerides (fasting)	3048773	R12_lab_values	continuous	5254	797	4457	15.1693947468595	0	0	797	0	0	0	0	0	0	NA	NA	NA

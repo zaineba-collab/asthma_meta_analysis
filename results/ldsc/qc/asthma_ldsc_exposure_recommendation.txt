@@ -1,0 +1,12 @@
+Recommended ranking: C > B > A
+
+C — Use a single high-quality European asthma GWAS. Primary recommendation: local asthma_DISCOVERY.tsv, identified as GCST90302886 (DeWan et al.; PMID 37377600): 48,623 British-ancestry asthma cases, 290,722 controls, N=339,345, array-imputed genome-wide data, and 1,183,793/1,187,349 direct no-MHC HapMap3 SNPs (99.700509%).
+Alternative single-study candidates: GCST90029018 has 99.914263% HM3 coverage but conflicting total N and no case/control split; GCST007562 has exact case/control counts but smaller N and 91.697976% direct HM3 coverage. GCST009720 is European but has only 60.502851% direct reconstructed-HM3 coverage in the local file.
+
+B — A genuinely non-overlapping European multi-study re-meta-analysis cannot be designed from these 12 files alone because all 12 include UK Biobank. Shrine includes additional external European cohorts, but its UKB component is inseparable. A valid Strategy B requires cohort-stratified/non-UKB statistics or a documented overlap-management design.
+
+A — The existing GWAMA is not suitable for standard EUR LDSC: duplicated UKB participants, one confirmed multi-ancestry input (Han), unresolved exact ancestry for fastGWA PheCode 495, five sparse WES single-variant analyses, heterogeneous asthma definitions, and no defensible combined sample size.
+
+The five Backman GCST files are European UKB WES single-variant analyses of overlapping participant pools and different asthma definitions. They are not five independent cohorts and should not be combined together as independent conventional GWAS inputs. Their sparse exome coverage is unsuitable for standard common-variant LDSC.
+
+No GWAMA, LDSC, munging, installation, deletion, or summary-statistic creation was performed.

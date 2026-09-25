@@ -1,0 +1,5 @@
+FinnGen laboratory-trait LDSC methodological note
+FinnGen quantitative laboratory GWAS were generated using mixed-model analyses.
+Nominal-N scaling can affect absolute LDSC h2 estimates, so univariate h2 is treated primarily as QC here.
+Genetic correlation (rg) is the primary cross-trait LDSC quantity of interest.
+No sample-size alteration or summary-statistic rescaling was performed.

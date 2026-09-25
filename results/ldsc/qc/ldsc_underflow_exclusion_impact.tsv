@@ -1,0 +1,6 @@
+trait	final_munged_SNPs	underflow_variants_excluded	excluded_fraction_percent	whether_excluded_fraction_gt_0.01_percent
+ALT	1150155	50	0.004347051	no
+GGT	1150388	11	0.000956190	no
+HDL cholesterol	1150113	47	0.004086388	no
+LDL cholesterol	1150126	5	0.000434733	no
+Fasting triglycerides	1150108	64	0.005564385	no

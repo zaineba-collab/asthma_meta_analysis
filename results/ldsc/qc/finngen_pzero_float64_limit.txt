@@ -1,0 +1,5 @@
+numpy_version	1.21.5
+float64_tiny_normal	2.2250738585072014e-308
+MAX_NORMAL_MLOGP	307.65265556858878
+subnormal_values_used	no
+pvalue_floor_or_cap_used	no

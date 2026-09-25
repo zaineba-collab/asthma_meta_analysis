@@ -1,0 +1,3 @@
+exposure	outcome	outcome_id	outcome_type	method	method_id	nsnp	Q	Q_df	Q_p_value
+Asthma	Triglycerides (fasting)	3048773	continuous	Inverse variance weighted	mr_ivw	641	4974.96784752834	640	0
+Asthma	Triglycerides (fasting)	3048773	continuous	MR Egger	mr_egger_regression	641	4894.79550710951	639	0

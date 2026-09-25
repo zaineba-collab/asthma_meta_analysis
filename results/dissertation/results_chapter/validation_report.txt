@@ -1,0 +1,13 @@
+Dissertation Results evidence-pack validation
+Authoritative analytical files were read only; script 37 calls no analysis function.
+Archived results/old_position_issue was not read or used.
+Input GWAS count = 12; GWAMA variant count = 34,316,972.
+Independent lead SNP count = 5,254; terminology retained as independent lead SNPs, not loci.
+FinnGen MR outcomes = 12; MR Bonferroni significant = 0.
+LDSC planned outcomes = 12; estimable = 11; Bonferroni significant = 7.
+Eosinophilic disease rg = NOT_ESTIMABLE_LOW_H2.
+LDSC asthma source = GCST90302886, not the 12-study GWAMA.
+Binary and continuous MR scales remain in separate panels in Figure 3.5.
+DISCUSSION-style prohibited phrases audit = PASS.
+MATERIAL DISCREPANCY: active VEP positions were GRCh37/hg19 but VEP assembly was GRCh38; functional annotations withheld.
+Figure 3.4 status = NOT GENERATED pending corrected annotation.

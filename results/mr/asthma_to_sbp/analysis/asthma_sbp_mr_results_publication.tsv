@@ -1,6 +1,0 @@
-method	number_of_snps	beta_estimate	standard_error	p_value	odds_ratio	beta_lci95	beta_uci95	odds_ratio_lci95	odds_ratio_uci95	odds_ratio_note
-Inverse variance weighted	714	-0.0760071087052902	0.0483463317119103	0.115918533789989	NA	-0.170765918860634	0.0187517014500541	NA	NA	Not calculated: Systolic blood pressure is a continuous outcome
-MR Egger	714	-0.00632556746338785	0.0527009283539621	0.904495121662916	NA	-0.109619387037153	0.0969682521103778	NA	NA	Not calculated: Systolic blood pressure is a continuous outcome
-Weighted median	714	-0.00525191223900711	0.0313373394447791	0.866903641452711	NA	-0.0666730975507742	0.05616927307276	NA	NA	Not calculated: Systolic blood pressure is a continuous outcome
-Weighted mode	714	-0.107649038800936	0.0760820805870787	0.157532454833335	NA	-0.256769916751611	0.0414718391497378	NA	NA	Not calculated: Systolic blood pressure is a continuous outcome
-Simple mode	714	0.0769756836576526	0.166789149477667	0.644569972467223	NA	-0.249931049318574	0.40388241663388	NA	NA	Not calculated: Systolic blood pressure is a continuous outcome

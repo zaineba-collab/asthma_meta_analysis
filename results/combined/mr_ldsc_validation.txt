@@ -1,0 +1,10 @@
+Final MR–LDSC reporting validation
+exactly 12 outcomes = PASS
+duplicate outcome rows = 0
+MR values match authoritative script-26 summary = PASS
+LDSC values and flags match authoritative script-33 summary = PASS
+eosinophilic disease remains NOT_ESTIMABLE_LOW_H2 = PASS
+MR Bonferroni significant count = 0
+LDSC Bonferroni significant count = 7
+effect scales are separated in the overview figure = PASS
+no MR or LDSC analysis function is called by script 36 = PASS

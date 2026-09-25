@@ -1,0 +1,432 @@
+section	metric	value	units	source_file	source_column	source_row_or_filter	rounded_display_value	notes	unit	row_or_contrast	formatted_value
+"3.2"	"Input GWAS"	"12"	"studies"	"results/gwama/asthma_meta.log.out"	"Study count"	"Study count line"	"12"	""	NA	NA	NA
+"3.2"	"Variants analysed"	"34316972"	"variants"	"results/gwama/heterogeneity_summary.txt"	"value"	"Total SNPs in GWAMA output"	"34,316,972"	""	NA	NA	NA
+"3.2"	"Variants with P < 5e-8"	"50764"	"variants"	"results/gwama/genome_wide_significant.txt"	"rows"	"excluding header"	"50,764"	""	NA	NA	NA
+"3.2"	"Project-significant variants"	"39933"	"variants"	"results/gwama/asthma_fixed_for_plink_clumping_mapping_summary.txt"	"Value"	"P <= 5e-9 row"	"39,933"	""	NA	NA	NA
+"3.2"	"Top SNP"	"rs9273374"	"SNP"	"results/gwama/top20_signals.txt"	"rs_number"	"minimum P row"	"rs9273374"	""	NA	NA	NA
+"3.2"	"Top beta"	"-0.153052"	"beta"	"results/gwama/top20_signals.txt"	"beta"	"minimum P row"	"-0.153052"	""	NA	NA	NA
+"3.2"	"Top SE"	"0.004504"	"SE"	"results/gwama/top20_signals.txt"	"se"	"minimum P row"	"0.004504"	""	NA	NA	NA
+"3.2"	"Top P"	"5.22e-253"	"P"	"results/gwama/top20_signals.txt"	"p-value"	"minimum P row"	"5.22 × 10^-253"	""	NA	NA	NA
+"3.2"	"Top SNP chromosome"	"6"	"chromosome"	"results/mr/finngen/qc/exposure_coordinate_repair_qc.tsv"	"value"	"rs9273374_GRCh38"	"6"	"Corrected GRCh38 coordinate; clumping used the older GRCh37 reference coordinate"	NA	NA	NA
+"3.2"	"Top SNP GRCh38 position"	"32658837"	"bp"	"results/mr/finngen/qc/exposure_coordinate_repair_qc.tsv"	"value"	"rs9273374_GRCh38"	"32,658,837"	"PLINK/reference-panel coordinate was 32,626,614 (GRCh37)"	NA	NA	NA
+"3.2"	"lambda_GC"	"1.3171038076398"	"ratio"	"results/gwama/lambda_gc.txt"	"value"	"Lambda GC"	"1.3171"	""	NA	NA	NA
+"3.3"	"Variants with I2 >= 0.75"	"229395"	"variants"	"results/gwama/heterogeneity_summary.txt"	"value"	"I2 >= 0.75"	"229,395"	""	NA	NA	NA
+"3.3"	"Percentage with I2 >= 0.75"	"0.668"	"percent"	"results/gwama/heterogeneity_summary.txt"	"value"	"I2 >= 0.75 percentage"	"0.668%"	""	NA	NA	NA
+"3.3"	"Cochran Q P < 0.05"	"966173"	"variants"	"results/gwama/heterogeneity_summary.txt"	"value"	"Q p-value < 0.05"	"966,173"	""	NA	NA	NA
+"3.3"	"Cochran Q P < 0.05 percentage"	"2.815"	"percent"	"results/gwama/heterogeneity_summary.txt"	"value"	"Q p-value < 0.05 percentage"	"2.815%"	""	NA	NA	NA
+"3.4"	"Sentinel SNPs"	"1563"	"count"	"results/pruning/asthma_fixed_sentinels_clean.txt"	"rows"	"Sentinel SNPs"	"1,563"	""	NA	NA	NA
+"3.4"	"Merged loci"	"405"	"count"	"results/loci/loci_summary.txt"	"Value"	"Merged loci"	"405"	""	NA	NA	NA
+"3.4"	"Median locus width"	"4674582"	"bp"	"results/loci/loci_summary.txt"	"Value"	"Median locus width"	"4,674,582"	""	NA	NA	NA
+"3.4"	"Mean locus width"	"6047095"	"bp"	"results/loci/loci_summary.txt"	"Value"	"Mean locus width"	"6,047,095"	""	NA	NA	NA
+"3.4"	"Largest locus"	"24489380"	"bp"	"results/loci/loci_summary.txt"	"Value"	"Largest locus"	"24,489,380"	""	NA	NA	NA
+"3.4"	"Maximum sentinels per locus"	"16"	"bp"	"results/loci/loci_summary.txt"	"Value"	"Maximum sentinels per locus"	"16"	""	NA	NA	NA
+"3.5"	"rsID mapping input"	"39933"	"variants"	"results/gwama/asthma_fixed_for_plink_clumping_mapping_summary.txt"	"Value"	"rsID mapping input"	"39933"	""	NA	NA	NA
+"3.5"	"rsID matched"	"37669"	"variants"	"results/gwama/asthma_fixed_for_plink_clumping_mapping_summary.txt"	"Value"	"rsID matched"	"37669"	""	NA	NA	NA
+"3.5"	"rsID unmatched"	"2235"	"variants"	"results/gwama/asthma_fixed_for_plink_clumping_mapping_summary.txt"	"Value"	"rsID unmatched"	"2235"	""	NA	NA	NA
+"3.5"	"Mapping rate"	"94.33"	"percent"	"results/gwama/asthma_fixed_for_plink_clumping_mapping_summary.txt"	"Value"	"Mapping rate"	"94.33"	""	NA	NA	NA
+"3.5"	"Duplicate mappings collapsed"	"29"	"variants"	"results/gwama/asthma_fixed_for_plink_clumping_mapping_summary.txt"	"Value"	"Duplicate mappings collapsed"	"29"	""	NA	NA	NA
+"3.5"	"Independent lead SNPs"	"5254"	"variants"	"results/ld_clumping/independent_lead_snps.tsv"	"rows"	"Independent lead SNPs"	"5254"	""	NA	NA	NA
+"3.5"	"Clumping r2"	"0.1"	"parameter"	"results/ld_clumping/asthma_fixed_plink_clumped.log"	"PLINK option"	"Clumping r2"	"0.1"	""	NA	NA	NA
+"3.5"	"Clumping window"	"99999"	"kb"	"results/ld_clumping/asthma_fixed_plink_clumped.log"	"PLINK option"	"Clumping window"	"99999"	""	NA	NA	NA
+"3.5"	"P1"	"5e-09"	"parameter"	"results/ld_clumping/asthma_fixed_plink_clumped.log"	"PLINK option"	"P1"	"5e-09"	""	NA	NA	NA
+"3.5"	"P2"	"5e-09"	"parameter"	"results/ld_clumping/asthma_fixed_plink_clumped.log"	"PLINK option"	"P2"	"5e-09"	""	NA	NA	NA
+"3.6"	"Lead SNPs"	"5254"	NA	"results/ld_clumping/independent_lead_snps.tsv"	"rows"	NA	NA	"Corrected GRCh38 VEP annotation"	"SNPs"	"all"	"5,254"
+"3.6"	"Validated GRCh38 coordinates"	"5238"	NA	"results/annotation_grch38/qc/vep_grch38_input_mapping.tsv"	"coordinate_status"	NA	NA	"Corrected GRCh38 VEP annotation"	"SNPs"	"RESOLVED_GRCH38"	"5,238"
+"3.6"	"VEP-ready SNPs"	"5050"	NA	"results/annotation_grch38/qc/vep_grch38_input_mapping.tsv"	"vep_ready"	NA	NA	"Corrected GRCh38 VEP annotation"	"SNPs"	"TRUE"	"5,050"
+"3.6"	"Successfully annotated SNPs"	"5050"	NA	"results/annotation_grch38/qc/vep_annotation_completion_qc.tsv"	"successfully_annotated"	NA	NA	"Corrected GRCh38 VEP annotation"	"SNPs"	"metric"	"5,050"
+"3.6"	"Coordinate unresolved SNPs"	"16"	NA	"results/annotation_grch38/qc/vep_grch38_input_mapping.tsv"	"coordinate_status"	NA	NA	"Corrected GRCh38 VEP annotation"	"SNPs"	"UNRESOLVED_GRCH38_COORDINATE"	"16"
+"3.6"	"Annotation completion"	"96.117244004568"	NA	"results/annotation_grch38/qc/vep_annotation_completion_qc.tsv"	"successfully_annotated_percent_of_all"	NA	NA	"Corrected GRCh38 VEP annotation"	"percent"	"metric"	"96.12%"
+"3.7.1"	"total_instruments"	"5254"	"SNPs"	"results/mr/finngen/qc/exposure_coordinate_repair_qc.tsv"	"value"	"total_instruments"	"5,254"	""	NA	NA	NA
+"3.7.1"	"GRCh38_coordinates_recovered"	"5238"	"SNPs"	"results/mr/finngen/qc/exposure_coordinate_repair_qc.tsv"	"value"	"GRCh38_coordinates_recovered"	"5,238"	""	NA	NA	NA
+"3.7.1"	"coordinates_unresolved"	"16"	"SNPs"	"results/mr/finngen/qc/exposure_coordinate_repair_qc.tsv"	"value"	"coordinates_unresolved"	"16"	""	NA	NA	NA
+"3.7.1"	"old_position_differs_new"	"3047"	"SNPs"	"results/mr/finngen/qc/exposure_coordinate_repair_qc.tsv"	"value"	"old_position_differs_new"	"3,047"	""	NA	NA	NA
+"3.7.1"	"GRCh38 coordinate recovery"	"99.6954701180053"	"percent"	"results/mr/finngen/qc/exposure_coordinate_repair_qc.tsv"	"value"	"recovered / total"	"99.70%"	""	NA	NA	NA
+"3.7.1"	"Allergic rhinitis FinnGen_matched_SNPs"	"810"	"SNPs"	"results/mr/finngen/qc/finngen_outcome_extraction_grch38_qc.tsv"	"FinnGen_matched_SNPs"	"Allergic rhinitis"	"810"	""	NA	NA	NA
+"3.7.1"	"Allergic rhinitis Entering_harmonisation"	"810"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Entering_harmonisation"	"Allergic rhinitis"	"810"	""	NA	NA	NA
+"3.7.1"	"Allergic rhinitis Palindromic_ambiguous_removed"	"158"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Palindromic_ambiguous_removed"	"Allergic rhinitis"	"158"	""	NA	NA	NA
+"3.7.1"	"Allergic rhinitis Final_MR_ready_SNPs"	"652"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Final_MR_ready_SNPs"	"Allergic rhinitis"	"652"	""	NA	NA	NA
+"3.7.1"	"Allergic rhinitis Retention_percent"	"80.4938271604938"	"percent"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Retention_percent"	"Allergic rhinitis"	"80.49%"	""	NA	NA	NA
+"3.7.1"	"Bronchiectasis FinnGen_matched_SNPs"	"810"	"SNPs"	"results/mr/finngen/qc/finngen_outcome_extraction_grch38_qc.tsv"	"FinnGen_matched_SNPs"	"Bronchiectasis"	"810"	""	NA	NA	NA
+"3.7.1"	"Bronchiectasis Entering_harmonisation"	"810"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Entering_harmonisation"	"Bronchiectasis"	"810"	""	NA	NA	NA
+"3.7.1"	"Bronchiectasis Palindromic_ambiguous_removed"	"158"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Palindromic_ambiguous_removed"	"Bronchiectasis"	"158"	""	NA	NA	NA
+"3.7.1"	"Bronchiectasis Final_MR_ready_SNPs"	"652"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Final_MR_ready_SNPs"	"Bronchiectasis"	"652"	""	NA	NA	NA
+"3.7.1"	"Bronchiectasis Retention_percent"	"80.4938271604938"	"percent"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Retention_percent"	"Bronchiectasis"	"80.49%"	""	NA	NA	NA
+"3.7.1"	"Eosinophilic disease FinnGen_matched_SNPs"	"810"	"SNPs"	"results/mr/finngen/qc/finngen_outcome_extraction_grch38_qc.tsv"	"FinnGen_matched_SNPs"	"Eosinophilic disease"	"810"	""	NA	NA	NA
+"3.7.1"	"Eosinophilic disease Entering_harmonisation"	"810"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Entering_harmonisation"	"Eosinophilic disease"	"810"	""	NA	NA	NA
+"3.7.1"	"Eosinophilic disease Palindromic_ambiguous_removed"	"158"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Palindromic_ambiguous_removed"	"Eosinophilic disease"	"158"	""	NA	NA	NA
+"3.7.1"	"Eosinophilic disease Final_MR_ready_SNPs"	"652"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Final_MR_ready_SNPs"	"Eosinophilic disease"	"652"	""	NA	NA	NA
+"3.7.1"	"Eosinophilic disease Retention_percent"	"80.4938271604938"	"percent"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Retention_percent"	"Eosinophilic disease"	"80.49%"	""	NA	NA	NA
+"3.7.1"	"BMI (inverse-rank normalized) FinnGen_matched_SNPs"	"810"	"SNPs"	"results/mr/finngen/qc/finngen_outcome_extraction_grch38_qc.tsv"	"FinnGen_matched_SNPs"	"BMI (inverse-rank normalized)"	"810"	""	NA	NA	NA
+"3.7.1"	"BMI (inverse-rank normalized) Entering_harmonisation"	"810"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Entering_harmonisation"	"BMI (inverse-rank normalized)"	"810"	""	NA	NA	NA
+"3.7.1"	"BMI (inverse-rank normalized) Palindromic_ambiguous_removed"	"158"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Palindromic_ambiguous_removed"	"BMI (inverse-rank normalized)"	"158"	""	NA	NA	NA
+"3.7.1"	"BMI (inverse-rank normalized) Final_MR_ready_SNPs"	"652"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Final_MR_ready_SNPs"	"BMI (inverse-rank normalized)"	"652"	""	NA	NA	NA
+"3.7.1"	"BMI (inverse-rank normalized) Retention_percent"	"80.4938271604938"	"percent"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Retention_percent"	"BMI (inverse-rank normalized)"	"80.49%"	""	NA	NA	NA
+"3.7.1"	"NAFLD FinnGen_matched_SNPs"	"810"	"SNPs"	"results/mr/finngen/qc/finngen_outcome_extraction_grch38_qc.tsv"	"FinnGen_matched_SNPs"	"NAFLD"	"810"	""	NA	NA	NA
+"3.7.1"	"NAFLD Entering_harmonisation"	"810"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Entering_harmonisation"	"NAFLD"	"810"	""	NA	NA	NA
+"3.7.1"	"NAFLD Palindromic_ambiguous_removed"	"158"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Palindromic_ambiguous_removed"	"NAFLD"	"158"	""	NA	NA	NA
+"3.7.1"	"NAFLD Final_MR_ready_SNPs"	"652"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Final_MR_ready_SNPs"	"NAFLD"	"652"	""	NA	NA	NA
+"3.7.1"	"NAFLD Retention_percent"	"80.4938271604938"	"percent"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Retention_percent"	"NAFLD"	"80.49%"	""	NA	NA	NA
+"3.7.1"	"CRP FinnGen_matched_SNPs"	"797"	"SNPs"	"results/mr/finngen/qc/finngen_outcome_extraction_grch38_qc.tsv"	"FinnGen_matched_SNPs"	"CRP"	"797"	""	NA	NA	NA
+"3.7.1"	"CRP Entering_harmonisation"	"797"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Entering_harmonisation"	"CRP"	"797"	""	NA	NA	NA
+"3.7.1"	"CRP Palindromic_ambiguous_removed"	"156"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Palindromic_ambiguous_removed"	"CRP"	"156"	""	NA	NA	NA
+"3.7.1"	"CRP Final_MR_ready_SNPs"	"641"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Final_MR_ready_SNPs"	"CRP"	"641"	""	NA	NA	NA
+"3.7.1"	"CRP Retention_percent"	"80.426599749059"	"percent"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Retention_percent"	"CRP"	"80.43%"	""	NA	NA	NA
+"3.7.1"	"ALT FinnGen_matched_SNPs"	"798"	"SNPs"	"results/mr/finngen/qc/finngen_outcome_extraction_grch38_qc.tsv"	"FinnGen_matched_SNPs"	"ALT"	"798"	""	NA	NA	NA
+"3.7.1"	"ALT Entering_harmonisation"	"798"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Entering_harmonisation"	"ALT"	"798"	""	NA	NA	NA
+"3.7.1"	"ALT Palindromic_ambiguous_removed"	"156"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Palindromic_ambiguous_removed"	"ALT"	"156"	""	NA	NA	NA
+"3.7.1"	"ALT Final_MR_ready_SNPs"	"642"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Final_MR_ready_SNPs"	"ALT"	"642"	""	NA	NA	NA
+"3.7.1"	"ALT Retention_percent"	"80.4511278195489"	"percent"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Retention_percent"	"ALT"	"80.45%"	""	NA	NA	NA
+"3.7.1"	"AST FinnGen_matched_SNPs"	"773"	"SNPs"	"results/mr/finngen/qc/finngen_outcome_extraction_grch38_qc.tsv"	"FinnGen_matched_SNPs"	"AST"	"773"	""	NA	NA	NA
+"3.7.1"	"AST Entering_harmonisation"	"773"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Entering_harmonisation"	"AST"	"773"	""	NA	NA	NA
+"3.7.1"	"AST Palindromic_ambiguous_removed"	"150"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Palindromic_ambiguous_removed"	"AST"	"150"	""	NA	NA	NA
+"3.7.1"	"AST Final_MR_ready_SNPs"	"623"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Final_MR_ready_SNPs"	"AST"	"623"	""	NA	NA	NA
+"3.7.1"	"AST Retention_percent"	"80.5950840879689"	"percent"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Retention_percent"	"AST"	"80.60%"	""	NA	NA	NA
+"3.7.1"	"GGT FinnGen_matched_SNPs"	"796"	"SNPs"	"results/mr/finngen/qc/finngen_outcome_extraction_grch38_qc.tsv"	"FinnGen_matched_SNPs"	"GGT"	"796"	""	NA	NA	NA
+"3.7.1"	"GGT Entering_harmonisation"	"796"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Entering_harmonisation"	"GGT"	"796"	""	NA	NA	NA
+"3.7.1"	"GGT Palindromic_ambiguous_removed"	"155"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Palindromic_ambiguous_removed"	"GGT"	"155"	""	NA	NA	NA
+"3.7.1"	"GGT Final_MR_ready_SNPs"	"641"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Final_MR_ready_SNPs"	"GGT"	"641"	""	NA	NA	NA
+"3.7.1"	"GGT Retention_percent"	"80.5276381909548"	"percent"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Retention_percent"	"GGT"	"80.53%"	""	NA	NA	NA
+"3.7.1"	"HDL cholesterol FinnGen_matched_SNPs"	"798"	"SNPs"	"results/mr/finngen/qc/finngen_outcome_extraction_grch38_qc.tsv"	"FinnGen_matched_SNPs"	"HDL cholesterol"	"798"	""	NA	NA	NA
+"3.7.1"	"HDL cholesterol Entering_harmonisation"	"798"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Entering_harmonisation"	"HDL cholesterol"	"798"	""	NA	NA	NA
+"3.7.1"	"HDL cholesterol Palindromic_ambiguous_removed"	"156"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Palindromic_ambiguous_removed"	"HDL cholesterol"	"156"	""	NA	NA	NA
+"3.7.1"	"HDL cholesterol Final_MR_ready_SNPs"	"642"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Final_MR_ready_SNPs"	"HDL cholesterol"	"642"	""	NA	NA	NA
+"3.7.1"	"HDL cholesterol Retention_percent"	"80.4511278195489"	"percent"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Retention_percent"	"HDL cholesterol"	"80.45%"	""	NA	NA	NA
+"3.7.1"	"LDL cholesterol FinnGen_matched_SNPs"	"798"	"SNPs"	"results/mr/finngen/qc/finngen_outcome_extraction_grch38_qc.tsv"	"FinnGen_matched_SNPs"	"LDL cholesterol"	"798"	""	NA	NA	NA
+"3.7.1"	"LDL cholesterol Entering_harmonisation"	"798"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Entering_harmonisation"	"LDL cholesterol"	"798"	""	NA	NA	NA
+"3.7.1"	"LDL cholesterol Palindromic_ambiguous_removed"	"156"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Palindromic_ambiguous_removed"	"LDL cholesterol"	"156"	""	NA	NA	NA
+"3.7.1"	"LDL cholesterol Final_MR_ready_SNPs"	"642"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Final_MR_ready_SNPs"	"LDL cholesterol"	"642"	""	NA	NA	NA
+"3.7.1"	"LDL cholesterol Retention_percent"	"80.4511278195489"	"percent"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Retention_percent"	"LDL cholesterol"	"80.45%"	""	NA	NA	NA
+"3.7.1"	"Triglycerides (fasting) FinnGen_matched_SNPs"	"797"	"SNPs"	"results/mr/finngen/qc/finngen_outcome_extraction_grch38_qc.tsv"	"FinnGen_matched_SNPs"	"Triglycerides (fasting)"	"797"	""	NA	NA	NA
+"3.7.1"	"Triglycerides (fasting) Entering_harmonisation"	"797"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Entering_harmonisation"	"Triglycerides (fasting)"	"797"	""	NA	NA	NA
+"3.7.1"	"Triglycerides (fasting) Palindromic_ambiguous_removed"	"156"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Palindromic_ambiguous_removed"	"Triglycerides (fasting)"	"156"	""	NA	NA	NA
+"3.7.1"	"Triglycerides (fasting) Final_MR_ready_SNPs"	"641"	"SNPs"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Final_MR_ready_SNPs"	"Triglycerides (fasting)"	"641"	""	NA	NA	NA
+"3.7.1"	"Triglycerides (fasting) Retention_percent"	"80.426599749059"	"percent"	"results/mr/finngen/qc/finngen_harmonisation_qc.tsv"	"Retention_percent"	"Triglycerides (fasting)"	"80.43%"	""	NA	NA	NA
+"3.7.2"	"Allergic rhinitis final_mr_ready_snps"	"652"	"final_mr_ready_snps"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"final_mr_ready_snps"	"Allergic rhinitis"	"652"	""	NA	NA	NA
+"3.7.2"	"Allergic rhinitis ivw_beta"	"0.000620712080544741"	"ivw_beta"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_beta"	"Allergic rhinitis"	"0.0006207"	""	NA	NA	NA
+"3.7.2"	"Allergic rhinitis ivw_SE"	"0.000973801865307224"	"ivw_SE"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_SE"	"Allergic rhinitis"	"0.0009738"	""	NA	NA	NA
+"3.7.2"	"Allergic rhinitis ivw_lower_95CI"	"-0.00128793957545742"	"ivw_lower_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_lower_95CI"	"Allergic rhinitis"	"-0.001288"	""	NA	NA	NA
+"3.7.2"	"Allergic rhinitis ivw_upper_95CI"	"0.0025293637365469"	"ivw_upper_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_upper_95CI"	"Allergic rhinitis"	"0.003"	""	NA	NA	NA
+"3.7.2"	"Allergic rhinitis ivw_p_value"	"0.523857125177319"	"ivw_p_value"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_value"	"Allergic rhinitis"	"0.524"	""	NA	NA	NA
+"3.7.2"	"Allergic rhinitis ivw_p_bonferroni"	"1"	"ivw_p_bonferroni"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_bonferroni"	"Allergic rhinitis"	"1"	""	NA	NA	NA
+"3.7.2"	"Allergic rhinitis ivw_p_fdr_bh"	"0.785785687765979"	"ivw_p_fdr_bh"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_fdr_bh"	"Allergic rhinitis"	"0.786"	""	NA	NA	NA
+"3.7.2"	"Bronchiectasis final_mr_ready_snps"	"652"	"final_mr_ready_snps"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"final_mr_ready_snps"	"Bronchiectasis"	"652"	""	NA	NA	NA
+"3.7.2"	"Bronchiectasis ivw_beta"	"0.000842130210195404"	"ivw_beta"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_beta"	"Bronchiectasis"	"0.0008421"	""	NA	NA	NA
+"3.7.2"	"Bronchiectasis ivw_SE"	"0.00122103776688157"	"ivw_SE"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_SE"	"Bronchiectasis"	"0.001221"	""	NA	NA	NA
+"3.7.2"	"Bronchiectasis ivw_lower_95CI"	"-0.00155110381289247"	"ivw_lower_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_lower_95CI"	"Bronchiectasis"	"-0.001551"	""	NA	NA	NA
+"3.7.2"	"Bronchiectasis ivw_upper_95CI"	"0.00323536423328327"	"ivw_upper_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_upper_95CI"	"Bronchiectasis"	"0.003"	""	NA	NA	NA
+"3.7.2"	"Bronchiectasis ivw_p_value"	"0.490392930343358"	"ivw_p_value"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_value"	"Bronchiectasis"	"0.49"	""	NA	NA	NA
+"3.7.2"	"Bronchiectasis ivw_p_bonferroni"	"1"	"ivw_p_bonferroni"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_bonferroni"	"Bronchiectasis"	"1"	""	NA	NA	NA
+"3.7.2"	"Bronchiectasis ivw_p_fdr_bh"	"0.785785687765979"	"ivw_p_fdr_bh"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_fdr_bh"	"Bronchiectasis"	"0.786"	""	NA	NA	NA
+"3.7.2"	"Eosinophilic disease final_mr_ready_snps"	"652"	"final_mr_ready_snps"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"final_mr_ready_snps"	"Eosinophilic disease"	"652"	""	NA	NA	NA
+"3.7.2"	"Eosinophilic disease ivw_beta"	"0.000145597349940325"	"ivw_beta"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_beta"	"Eosinophilic disease"	"0.0001456"	""	NA	NA	NA
+"3.7.2"	"Eosinophilic disease ivw_SE"	"0.00270674242874457"	"ivw_SE"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_SE"	"Eosinophilic disease"	"0.002707"	""	NA	NA	NA
+"3.7.2"	"Eosinophilic disease ivw_lower_95CI"	"-0.00515961781039902"	"ivw_lower_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_lower_95CI"	"Eosinophilic disease"	"-0.00516"	""	NA	NA	NA
+"3.7.2"	"Eosinophilic disease ivw_upper_95CI"	"0.00545081251027967"	"ivw_upper_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_upper_95CI"	"Eosinophilic disease"	"0.005"	""	NA	NA	NA
+"3.7.2"	"Eosinophilic disease ivw_p_value"	"0.957101983881824"	"ivw_p_value"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_value"	"Eosinophilic disease"	"0.957"	""	NA	NA	NA
+"3.7.2"	"Eosinophilic disease ivw_p_bonferroni"	"1"	"ivw_p_bonferroni"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_bonferroni"	"Eosinophilic disease"	"1"	""	NA	NA	NA
+"3.7.2"	"Eosinophilic disease ivw_p_fdr_bh"	"0.957101983881824"	"ivw_p_fdr_bh"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_fdr_bh"	"Eosinophilic disease"	"0.957"	""	NA	NA	NA
+"3.7.2"	"BMI (inverse-rank normalized) final_mr_ready_snps"	"652"	"final_mr_ready_snps"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"final_mr_ready_snps"	"BMI (inverse-rank normalized)"	"652"	""	NA	NA	NA
+"3.7.2"	"BMI (inverse-rank normalized) ivw_beta"	"-0.000217175347883562"	"ivw_beta"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_beta"	"BMI (inverse-rank normalized)"	"-0.0002172"	""	NA	NA	NA
+"3.7.2"	"BMI (inverse-rank normalized) ivw_SE"	"0.000166409397584385"	"ivw_SE"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_SE"	"BMI (inverse-rank normalized)"	"0.0001664"	""	NA	NA	NA
+"3.7.2"	"BMI (inverse-rank normalized) ivw_lower_95CI"	"-0.000543337767148956"	"ivw_lower_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_lower_95CI"	"BMI (inverse-rank normalized)"	"-0.0005433"	""	NA	NA	NA
+"3.7.2"	"BMI (inverse-rank normalized) ivw_upper_95CI"	"0.000108987071381832"	"ivw_upper_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_upper_95CI"	"BMI (inverse-rank normalized)"	"1.09e-04"	""	NA	NA	NA
+"3.7.2"	"BMI (inverse-rank normalized) ivw_p_value"	"0.191870168256249"	"ivw_p_value"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_value"	"BMI (inverse-rank normalized)"	"0.192"	""	NA	NA	NA
+"3.7.2"	"BMI (inverse-rank normalized) ivw_p_bonferroni"	"1"	"ivw_p_bonferroni"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_bonferroni"	"BMI (inverse-rank normalized)"	"1"	""	NA	NA	NA
+"3.7.2"	"BMI (inverse-rank normalized) ivw_p_fdr_bh"	"0.785785687765979"	"ivw_p_fdr_bh"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_fdr_bh"	"BMI (inverse-rank normalized)"	"0.786"	""	NA	NA	NA
+"3.7.2"	"NAFLD final_mr_ready_snps"	"652"	"final_mr_ready_snps"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"final_mr_ready_snps"	"NAFLD"	"652"	""	NA	NA	NA
+"3.7.2"	"NAFLD ivw_beta"	"-9.63147371930543e-05"	"ivw_beta"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_beta"	"NAFLD"	"-0.00009631"	""	NA	NA	NA
+"3.7.2"	"NAFLD ivw_SE"	"0.00103165834224751"	"ivw_SE"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_SE"	"NAFLD"	"0.001032"	""	NA	NA	NA
+"3.7.2"	"NAFLD ivw_lower_95CI"	"-0.00211836508799817"	"ivw_lower_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_lower_95CI"	"NAFLD"	"-0.002118"	""	NA	NA	NA
+"3.7.2"	"NAFLD ivw_upper_95CI"	"0.00192573561361206"	"ivw_upper_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_upper_95CI"	"NAFLD"	"0.002"	""	NA	NA	NA
+"3.7.2"	"NAFLD ivw_p_value"	"0.925618249030925"	"ivw_p_value"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_value"	"NAFLD"	"0.926"	""	NA	NA	NA
+"3.7.2"	"NAFLD ivw_p_bonferroni"	"1"	"ivw_p_bonferroni"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_bonferroni"	"NAFLD"	"1"	""	NA	NA	NA
+"3.7.2"	"NAFLD ivw_p_fdr_bh"	"0.957101983881824"	"ivw_p_fdr_bh"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_fdr_bh"	"NAFLD"	"0.957"	""	NA	NA	NA
+"3.7.2"	"CRP final_mr_ready_snps"	"641"	"final_mr_ready_snps"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"final_mr_ready_snps"	"CRP"	"641"	""	NA	NA	NA
+"3.7.2"	"CRP ivw_beta"	"-0.000201702307536281"	"ivw_beta"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_beta"	"CRP"	"-0.0002017"	""	NA	NA	NA
+"3.7.2"	"CRP ivw_SE"	"0.000125882720136605"	"ivw_SE"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_SE"	"CRP"	"0.0001259"	""	NA	NA	NA
+"3.7.2"	"CRP ivw_lower_95CI"	"-0.000448432439004026"	"ivw_lower_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_lower_95CI"	"CRP"	"-0.0004484"	""	NA	NA	NA
+"3.7.2"	"CRP ivw_upper_95CI"	"4.5027823931464e-05"	"ivw_upper_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_upper_95CI"	"CRP"	"4.5e-05"	""	NA	NA	NA
+"3.7.2"	"CRP ivw_p_value"	"0.109088539366306"	"ivw_p_value"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_value"	"CRP"	"0.109"	""	NA	NA	NA
+"3.7.2"	"CRP ivw_p_bonferroni"	"1"	"ivw_p_bonferroni"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_bonferroni"	"CRP"	"1"	""	NA	NA	NA
+"3.7.2"	"CRP ivw_p_fdr_bh"	"0.785785687765979"	"ivw_p_fdr_bh"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_fdr_bh"	"CRP"	"0.786"	""	NA	NA	NA
+"3.7.2"	"ALT final_mr_ready_snps"	"642"	"final_mr_ready_snps"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"final_mr_ready_snps"	"ALT"	"642"	""	NA	NA	NA
+"3.7.2"	"ALT ivw_beta"	"0.000129384739787473"	"ivw_beta"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_beta"	"ALT"	"0.0001294"	""	NA	NA	NA
+"3.7.2"	"ALT ivw_SE"	"0.00016646411655694"	"ivw_SE"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_SE"	"ALT"	"0.0001665"	""	NA	NA	NA
+"3.7.2"	"ALT ivw_lower_95CI"	"-0.00019688492866413"	"ivw_lower_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_lower_95CI"	"ALT"	"-0.0001969"	""	NA	NA	NA
+"3.7.2"	"ALT ivw_upper_95CI"	"0.000455654408239076"	"ivw_upper_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_upper_95CI"	"ALT"	"4.56e-04"	""	NA	NA	NA
+"3.7.2"	"ALT ivw_p_value"	"0.437009497895474"	"ivw_p_value"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_value"	"ALT"	"0.437"	""	NA	NA	NA
+"3.7.2"	"ALT ivw_p_bonferroni"	"1"	"ivw_p_bonferroni"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_bonferroni"	"ALT"	"1"	""	NA	NA	NA
+"3.7.2"	"ALT ivw_p_fdr_bh"	"0.785785687765979"	"ivw_p_fdr_bh"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_fdr_bh"	"ALT"	"0.786"	""	NA	NA	NA
+"3.7.2"	"AST final_mr_ready_snps"	"623"	"final_mr_ready_snps"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"final_mr_ready_snps"	"AST"	"623"	""	NA	NA	NA
+"3.7.2"	"AST ivw_beta"	"-0.000204128417726959"	"ivw_beta"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_beta"	"AST"	"-0.0002041"	""	NA	NA	NA
+"3.7.2"	"AST ivw_SE"	"0.000236521068632343"	"ivw_SE"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_SE"	"AST"	"0.0002365"	""	NA	NA	NA
+"3.7.2"	"AST ivw_lower_95CI"	"-0.000667709712246352"	"ivw_lower_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_lower_95CI"	"AST"	"-0.0006677"	""	NA	NA	NA
+"3.7.2"	"AST ivw_upper_95CI"	"0.000259452876792433"	"ivw_upper_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_upper_95CI"	"AST"	"2.59e-04"	""	NA	NA	NA
+"3.7.2"	"AST ivw_p_value"	"0.388112511845959"	"ivw_p_value"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_value"	"AST"	"0.388"	""	NA	NA	NA
+"3.7.2"	"AST ivw_p_bonferroni"	"1"	"ivw_p_bonferroni"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_bonferroni"	"AST"	"1"	""	NA	NA	NA
+"3.7.2"	"AST ivw_p_fdr_bh"	"0.785785687765979"	"ivw_p_fdr_bh"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_fdr_bh"	"AST"	"0.786"	""	NA	NA	NA
+"3.7.2"	"GGT final_mr_ready_snps"	"641"	"final_mr_ready_snps"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"final_mr_ready_snps"	"GGT"	"641"	""	NA	NA	NA
+"3.7.2"	"GGT ivw_beta"	"0.000147629075141017"	"ivw_beta"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_beta"	"GGT"	"0.0001476"	""	NA	NA	NA
+"3.7.2"	"GGT ivw_SE"	"0.000173987324118872"	"ivw_SE"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_SE"	"GGT"	"0.000174"	""	NA	NA	NA
+"3.7.2"	"GGT ivw_lower_95CI"	"-0.000193386080131972"	"ivw_lower_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_lower_95CI"	"GGT"	"-0.0001934"	""	NA	NA	NA
+"3.7.2"	"GGT ivw_upper_95CI"	"0.000488644230414006"	"ivw_upper_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_upper_95CI"	"GGT"	"4.89e-04"	""	NA	NA	NA
+"3.7.2"	"GGT ivw_p_value"	"0.396156914851143"	"ivw_p_value"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_value"	"GGT"	"0.396"	""	NA	NA	NA
+"3.7.2"	"GGT ivw_p_bonferroni"	"1"	"ivw_p_bonferroni"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_bonferroni"	"GGT"	"1"	""	NA	NA	NA
+"3.7.2"	"GGT ivw_p_fdr_bh"	"0.785785687765979"	"ivw_p_fdr_bh"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_fdr_bh"	"GGT"	"0.786"	""	NA	NA	NA
+"3.7.2"	"HDL cholesterol final_mr_ready_snps"	"642"	"final_mr_ready_snps"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"final_mr_ready_snps"	"HDL cholesterol"	"642"	""	NA	NA	NA
+"3.7.2"	"HDL cholesterol ivw_beta"	"-9.28083117096095e-05"	"ivw_beta"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_beta"	"HDL cholesterol"	"-0.00009281"	""	NA	NA	NA
+"3.7.2"	"HDL cholesterol ivw_SE"	"0.000212500536423005"	"ivw_SE"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_SE"	"HDL cholesterol"	"0.0002125"	""	NA	NA	NA
+"3.7.2"	"HDL cholesterol ivw_lower_95CI"	"-0.0005093093630987"	"ivw_lower_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_lower_95CI"	"HDL cholesterol"	"-0.0005093"	""	NA	NA	NA
+"3.7.2"	"HDL cholesterol ivw_upper_95CI"	"0.000323692739679481"	"ivw_upper_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_upper_95CI"	"HDL cholesterol"	"3.24e-04"	""	NA	NA	NA
+"3.7.2"	"HDL cholesterol ivw_p_value"	"0.66229709258839"	"ivw_p_value"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_value"	"HDL cholesterol"	"0.662"	""	NA	NA	NA
+"3.7.2"	"HDL cholesterol ivw_p_bonferroni"	"1"	"ivw_p_bonferroni"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_bonferroni"	"HDL cholesterol"	"1"	""	NA	NA	NA
+"3.7.2"	"HDL cholesterol ivw_p_fdr_bh"	"0.883062790117853"	"ivw_p_fdr_bh"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_fdr_bh"	"HDL cholesterol"	"0.883"	""	NA	NA	NA
+"3.7.2"	"LDL cholesterol final_mr_ready_snps"	"642"	"final_mr_ready_snps"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"final_mr_ready_snps"	"LDL cholesterol"	"642"	""	NA	NA	NA
+"3.7.2"	"LDL cholesterol ivw_beta"	"-0.000196007395861295"	"ivw_beta"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_beta"	"LDL cholesterol"	"-0.000196"	""	NA	NA	NA
+"3.7.2"	"LDL cholesterol ivw_SE"	"0.000255742729498248"	"ivw_SE"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_SE"	"LDL cholesterol"	"0.0002557"	""	NA	NA	NA
+"3.7.2"	"LDL cholesterol ivw_lower_95CI"	"-0.000697263145677862"	"ivw_lower_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_lower_95CI"	"LDL cholesterol"	"-0.0006973"	""	NA	NA	NA
+"3.7.2"	"LDL cholesterol ivw_upper_95CI"	"0.000305248353955271"	"ivw_upper_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_upper_95CI"	"LDL cholesterol"	"3.05e-04"	""	NA	NA	NA
+"3.7.2"	"LDL cholesterol ivw_p_value"	"0.4434239868505"	"ivw_p_value"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_value"	"LDL cholesterol"	"0.443"	""	NA	NA	NA
+"3.7.2"	"LDL cholesterol ivw_p_bonferroni"	"1"	"ivw_p_bonferroni"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_bonferroni"	"LDL cholesterol"	"1"	""	NA	NA	NA
+"3.7.2"	"LDL cholesterol ivw_p_fdr_bh"	"0.785785687765979"	"ivw_p_fdr_bh"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_fdr_bh"	"LDL cholesterol"	"0.786"	""	NA	NA	NA
+"3.7.2"	"Triglycerides (fasting) final_mr_ready_snps"	"641"	"final_mr_ready_snps"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"final_mr_ready_snps"	"Triglycerides (fasting)"	"641"	""	NA	NA	NA
+"3.7.2"	"Triglycerides (fasting) ivw_beta"	"-1.99703846322911e-05"	"ivw_beta"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_beta"	"Triglycerides (fasting)"	"-0.00001997"	""	NA	NA	NA
+"3.7.2"	"Triglycerides (fasting) ivw_SE"	"0.000270615945307765"	"ivw_SE"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_SE"	"Triglycerides (fasting)"	"0.0002706"	""	NA	NA	NA
+"3.7.2"	"Triglycerides (fasting) ivw_lower_95CI"	"-0.00055037763743551"	"ivw_lower_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_lower_95CI"	"Triglycerides (fasting)"	"-0.0005504"	""	NA	NA	NA
+"3.7.2"	"Triglycerides (fasting) ivw_upper_95CI"	"0.000510436868170928"	"ivw_upper_95CI"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_upper_95CI"	"Triglycerides (fasting)"	"5.1e-04"	""	NA	NA	NA
+"3.7.2"	"Triglycerides (fasting) ivw_p_value"	"0.941172679505121"	"ivw_p_value"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_value"	"Triglycerides (fasting)"	"0.941"	""	NA	NA	NA
+"3.7.2"	"Triglycerides (fasting) ivw_p_bonferroni"	"1"	"ivw_p_bonferroni"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_bonferroni"	"Triglycerides (fasting)"	"1"	""	NA	NA	NA
+"3.7.2"	"Triglycerides (fasting) ivw_p_fdr_bh"	"0.957101983881824"	"ivw_p_fdr_bh"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_fdr_bh"	"Triglycerides (fasting)"	"0.957"	""	NA	NA	NA
+"3.7.2"	"Nominal IVW significant"	"0"	"outcomes"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_p_value"	"P < 0.05"	"0"	""	NA	NA	NA
+"3.7.2"	"Bonferroni IVW significant"	"0"	"outcomes"	"results/mr/finngen/summary/finngen_mr_final_summary.tsv"	"ivw_bonferroni_significant"	"TRUE"	"0"	""	NA	NA	NA
+"3.7.3"	"Allergic rhinitis ivw_heterogeneity_p_value"	"4.87715594008264e-215"	"ivw_heterogeneity_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"ivw_heterogeneity_p_value"	"Allergic rhinitis"	"4.88e-215"	""	NA	NA	NA
+"3.7.3"	"Allergic rhinitis egger_intercept"	"0.0227901749587063"	"egger_intercept"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept"	"Allergic rhinitis"	"0.0227901749587063"	""	NA	NA	NA
+"3.7.3"	"Allergic rhinitis egger_intercept_p_value"	"3.85036755916676e-86"	"egger_intercept_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept_p_value"	"Allergic rhinitis"	"3.85e-86"	""	NA	NA	NA
+"3.7.3"	"Allergic rhinitis p_egger_fdr"	"4.62044107100011e-85"	"p_egger_fdr"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"p_egger_fdr"	"Allergic rhinitis"	"4.62e-85"	""	NA	NA	NA
+"3.7.3"	"Allergic rhinitis leave_one_out_sign_change"	"FALSE"	"leave_one_out_sign_change"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"leave_one_out_sign_change"	"Allergic rhinitis"	"FALSE"	""	NA	NA	NA
+"3.7.3"	"Bronchiectasis ivw_heterogeneity_p_value"	"0.000372587851844782"	"ivw_heterogeneity_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"ivw_heterogeneity_p_value"	"Bronchiectasis"	"3.73e-04"	""	NA	NA	NA
+"3.7.3"	"Bronchiectasis egger_intercept"	"0.00675174694170948"	"egger_intercept"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept"	"Bronchiectasis"	"0.00675174694170948"	""	NA	NA	NA
+"3.7.3"	"Bronchiectasis egger_intercept_p_value"	"4.26390945471639e-05"	"egger_intercept_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept_p_value"	"Bronchiectasis"	"4.26e-05"	""	NA	NA	NA
+"3.7.3"	"Bronchiectasis p_egger_fdr"	"0.000170556378188656"	"p_egger_fdr"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"p_egger_fdr"	"Bronchiectasis"	"1.71e-04"	""	NA	NA	NA
+"3.7.3"	"Bronchiectasis leave_one_out_sign_change"	"FALSE"	"leave_one_out_sign_change"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"leave_one_out_sign_change"	"Bronchiectasis"	"FALSE"	""	NA	NA	NA
+"3.7.3"	"Eosinophilic disease ivw_heterogeneity_p_value"	"0.0832046302553067"	"ivw_heterogeneity_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"ivw_heterogeneity_p_value"	"Eosinophilic disease"	"0.083"	""	NA	NA	NA
+"3.7.3"	"Eosinophilic disease egger_intercept"	"0.0160999202753102"	"egger_intercept"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept"	"Eosinophilic disease"	"0.0160999202753102"	""	NA	NA	NA
+"3.7.3"	"Eosinophilic disease egger_intercept_p_value"	"8.39090308103799e-06"	"egger_intercept_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept_p_value"	"Eosinophilic disease"	"8.39e-06"	""	NA	NA	NA
+"3.7.3"	"Eosinophilic disease p_egger_fdr"	"5.03454184862279e-05"	"p_egger_fdr"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"p_egger_fdr"	"Eosinophilic disease"	"5.03e-05"	""	NA	NA	NA
+"3.7.3"	"Eosinophilic disease leave_one_out_sign_change"	"TRUE"	"leave_one_out_sign_change"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"leave_one_out_sign_change"	"Eosinophilic disease"	"TRUE"	""	NA	NA	NA
+"3.7.3"	"BMI (inverse-rank normalized) ivw_heterogeneity_p_value"	"1.69098637357217e-136"	"ivw_heterogeneity_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"ivw_heterogeneity_p_value"	"BMI (inverse-rank normalized)"	"1.69e-136"	""	NA	NA	NA
+"3.7.3"	"BMI (inverse-rank normalized) egger_intercept"	"0.000248045818761495"	"egger_intercept"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept"	"BMI (inverse-rank normalized)"	"0.000248045818761495"	""	NA	NA	NA
+"3.7.3"	"BMI (inverse-rank normalized) egger_intercept_p_value"	"0.271719725853208"	"egger_intercept_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept_p_value"	"BMI (inverse-rank normalized)"	"0.272"	""	NA	NA	NA
+"3.7.3"	"BMI (inverse-rank normalized) p_egger_fdr"	"0.32606367102385"	"p_egger_fdr"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"p_egger_fdr"	"BMI (inverse-rank normalized)"	"0.326"	""	NA	NA	NA
+"3.7.3"	"BMI (inverse-rank normalized) leave_one_out_sign_change"	"FALSE"	"leave_one_out_sign_change"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"leave_one_out_sign_change"	"BMI (inverse-rank normalized)"	"FALSE"	""	NA	NA	NA
+"3.7.3"	"NAFLD ivw_heterogeneity_p_value"	"0.0553792738128266"	"ivw_heterogeneity_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"ivw_heterogeneity_p_value"	"NAFLD"	"0.055"	""	NA	NA	NA
+"3.7.3"	"NAFLD egger_intercept"	"0.00245863257149887"	"egger_intercept"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept"	"NAFLD"	"0.00245863257149887"	""	NA	NA	NA
+"3.7.3"	"NAFLD egger_intercept_p_value"	"0.0783692865885573"	"egger_intercept_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept_p_value"	"NAFLD"	"0.078"	""	NA	NA	NA
+"3.7.3"	"NAFLD p_egger_fdr"	"0.134347348437527"	"p_egger_fdr"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"p_egger_fdr"	"NAFLD"	"0.134"	""	NA	NA	NA
+"3.7.3"	"NAFLD leave_one_out_sign_change"	"TRUE"	"leave_one_out_sign_change"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"leave_one_out_sign_change"	"NAFLD"	"TRUE"	""	NA	NA	NA
+"3.7.3"	"CRP ivw_heterogeneity_p_value"	"7.75258401123304e-11"	"ivw_heterogeneity_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"ivw_heterogeneity_p_value"	"CRP"	"7.75e-11"	""	NA	NA	NA
+"3.7.3"	"CRP egger_intercept"	"-0.000196192703469598"	"egger_intercept"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept"	"CRP"	"-0.000196192703469598"	""	NA	NA	NA
+"3.7.3"	"CRP egger_intercept_p_value"	"0.250824662858425"	"egger_intercept_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept_p_value"	"CRP"	"0.251"	""	NA	NA	NA
+"3.7.3"	"CRP p_egger_fdr"	"0.32606367102385"	"p_egger_fdr"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"p_egger_fdr"	"CRP"	"0.326"	""	NA	NA	NA
+"3.7.3"	"CRP leave_one_out_sign_change"	"FALSE"	"leave_one_out_sign_change"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"leave_one_out_sign_change"	"CRP"	"FALSE"	""	NA	NA	NA
+"3.7.3"	"ALT ivw_heterogeneity_p_value"	"8.9221096684631e-180"	"ivw_heterogeneity_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"ivw_heterogeneity_p_value"	"ALT"	"8.92e-180"	""	NA	NA	NA
+"3.7.3"	"ALT egger_intercept"	"-4.8739388892746e-05"	"egger_intercept"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept"	"ALT"	"-4.8739388892746e-05"	""	NA	NA	NA
+"3.7.3"	"ALT egger_intercept_p_value"	"0.829726053595356"	"egger_intercept_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept_p_value"	"ALT"	"0.83"	""	NA	NA	NA
+"3.7.3"	"ALT p_egger_fdr"	"0.829726053595356"	"p_egger_fdr"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"p_egger_fdr"	"ALT"	"0.83"	""	NA	NA	NA
+"3.7.3"	"ALT leave_one_out_sign_change"	"FALSE"	"leave_one_out_sign_change"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"leave_one_out_sign_change"	"ALT"	"FALSE"	""	NA	NA	NA
+"3.7.3"	"AST ivw_heterogeneity_p_value"	"4.09765193268383e-42"	"ivw_heterogeneity_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"ivw_heterogeneity_p_value"	"AST"	"4.1e-42"	""	NA	NA	NA
+"3.7.3"	"AST egger_intercept"	"-0.00103732831896115"	"egger_intercept"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept"	"AST"	"-0.00103732831896115"	""	NA	NA	NA
+"3.7.3"	"AST egger_intercept_p_value"	"0.0011818936289587"	"egger_intercept_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept_p_value"	"AST"	"0.001"	""	NA	NA	NA
+"3.7.3"	"AST p_egger_fdr"	"0.00306834309944223"	"p_egger_fdr"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"p_egger_fdr"	"AST"	"0.003"	""	NA	NA	NA
+"3.7.3"	"AST leave_one_out_sign_change"	"FALSE"	"leave_one_out_sign_change"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"leave_one_out_sign_change"	"AST"	"FALSE"	""	NA	NA	NA
+"3.7.3"	"GGT ivw_heterogeneity_p_value"	"2.52492717698683e-83"	"ivw_heterogeneity_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"ivw_heterogeneity_p_value"	"GGT"	"2.52e-83"	""	NA	NA	NA
+"3.7.3"	"GGT egger_intercept"	"0.000127795521624332"	"egger_intercept"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept"	"GGT"	"0.000127795521624332"	""	NA	NA	NA
+"3.7.3"	"GGT egger_intercept_p_value"	"0.588323670816973"	"egger_intercept_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept_p_value"	"GGT"	"0.588"	""	NA	NA	NA
+"3.7.3"	"GGT p_egger_fdr"	"0.641807640891243"	"p_egger_fdr"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"p_egger_fdr"	"GGT"	"0.642"	""	NA	NA	NA
+"3.7.3"	"GGT leave_one_out_sign_change"	"FALSE"	"leave_one_out_sign_change"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"leave_one_out_sign_change"	"GGT"	"FALSE"	""	NA	NA	NA
+"3.7.3"	"HDL cholesterol ivw_heterogeneity_p_value"	"0"	"ivw_heterogeneity_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"ivw_heterogeneity_p_value"	"HDL cholesterol"	"0e+00"	""	NA	NA	NA
+"3.7.3"	"HDL cholesterol egger_intercept"	"0.000515765596761491"	"egger_intercept"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept"	"HDL cholesterol"	"0.000515765596761491"	""	NA	NA	NA
+"3.7.3"	"HDL cholesterol egger_intercept_p_value"	"0.0750454844854953"	"egger_intercept_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept_p_value"	"HDL cholesterol"	"0.075"	""	NA	NA	NA
+"3.7.3"	"HDL cholesterol p_egger_fdr"	"0.134347348437527"	"p_egger_fdr"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"p_egger_fdr"	"HDL cholesterol"	"0.134"	""	NA	NA	NA
+"3.7.3"	"HDL cholesterol leave_one_out_sign_change"	"FALSE"	"leave_one_out_sign_change"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"leave_one_out_sign_change"	"HDL cholesterol"	"FALSE"	""	NA	NA	NA
+"3.7.3"	"LDL cholesterol ivw_heterogeneity_p_value"	"0"	"ivw_heterogeneity_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"ivw_heterogeneity_p_value"	"LDL cholesterol"	"0e+00"	""	NA	NA	NA
+"3.7.3"	"LDL cholesterol egger_intercept"	"-0.000384321031990269"	"egger_intercept"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept"	"LDL cholesterol"	"-0.000384321031990269"	""	NA	NA	NA
+"3.7.3"	"LDL cholesterol egger_intercept_p_value"	"0.270886121761464"	"egger_intercept_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept_p_value"	"LDL cholesterol"	"0.271"	""	NA	NA	NA
+"3.7.3"	"LDL cholesterol p_egger_fdr"	"0.32606367102385"	"p_egger_fdr"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"p_egger_fdr"	"LDL cholesterol"	"0.326"	""	NA	NA	NA
+"3.7.3"	"LDL cholesterol leave_one_out_sign_change"	"FALSE"	"leave_one_out_sign_change"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"leave_one_out_sign_change"	"LDL cholesterol"	"FALSE"	""	NA	NA	NA
+"3.7.3"	"Triglycerides (fasting) ivw_heterogeneity_p_value"	"0"	"ivw_heterogeneity_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"ivw_heterogeneity_p_value"	"Triglycerides (fasting)"	"0e+00"	""	NA	NA	NA
+"3.7.3"	"Triglycerides (fasting) egger_intercept"	"-0.001184886415553"	"egger_intercept"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept"	"Triglycerides (fasting)"	"-0.001184886415553"	""	NA	NA	NA
+"3.7.3"	"Triglycerides (fasting) egger_intercept_p_value"	"0.00127847629143426"	"egger_intercept_p_value"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept_p_value"	"Triglycerides (fasting)"	"0.001"	""	NA	NA	NA
+"3.7.3"	"Triglycerides (fasting) p_egger_fdr"	"0.00306834309944223"	"p_egger_fdr"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"p_egger_fdr"	"Triglycerides (fasting)"	"0.003"	""	NA	NA	NA
+"3.7.3"	"Triglycerides (fasting) leave_one_out_sign_change"	"TRUE"	"leave_one_out_sign_change"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"leave_one_out_sign_change"	"Triglycerides (fasting)"	"TRUE"	""	NA	NA	NA
+"3.7.3"	"Heterogeneity evidence"	"10"	"outcomes"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"heterogeneity_evidence"	"TRUE"	"10"	""	NA	NA	NA
+"3.7.3"	"Egger intercept P < 0.05"	"5"	"outcomes"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"egger_intercept_p_value"	"P < 0.05"	"5"	""	NA	NA	NA
+"3.7.3"	"Egger intercept FDR significant"	"5"	"outcomes"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"p_egger_fdr"	"P < 0.05"	"5"	""	NA	NA	NA
+"3.7.3"	"LOO sign reversals"	"3"	"outcomes"	"results/mr/finngen/sensitivity/finngen_mr_sensitivity_summary.tsv"	"leave_one_out_sign_change"	"TRUE"	"3"	""	NA	NA	NA
+"3.8.1"	"Asthma h2_obs"	"0.0423"	"h2_obs"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"Asthma"	"0.0423"	""	NA	NA	NA
+"3.8.1"	"Asthma h2_se"	"0.004"	"h2_se"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_se"	"Asthma"	"0.004"	""	NA	NA	NA
+"3.8.1"	"Asthma h2_z"	"10.575"	"h2_z"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_z"	"Asthma"	"10.58"	""	NA	NA	NA
+"3.8.1"	"Asthma h2_p"	"3.89177500005416e-26"	"h2_p"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_p"	"Asthma"	"3.89e-26"	""	NA	NA	NA
+"3.8.1"	"Allergic rhinitis h2_obs"	"0.0103"	"h2_obs"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"Allergic rhinitis"	"0.0103"	""	NA	NA	NA
+"3.8.1"	"Allergic rhinitis h2_se"	"0.0015"	"h2_se"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_se"	"Allergic rhinitis"	"0.0015"	""	NA	NA	NA
+"3.8.1"	"Allergic rhinitis h2_z"	"6.86666666666667"	"h2_z"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_z"	"Allergic rhinitis"	"6.867"	""	NA	NA	NA
+"3.8.1"	"Allergic rhinitis h2_p"	"6.5719386225292e-12"	"h2_p"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_p"	"Allergic rhinitis"	"6.57e-12"	""	NA	NA	NA
+"3.8.1"	"Bronchiectasis h2_obs"	"0.0028"	"h2_obs"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"Bronchiectasis"	"0.0028"	""	NA	NA	NA
+"3.8.1"	"Bronchiectasis h2_se"	"0.001"	"h2_se"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_se"	"Bronchiectasis"	"0.001"	""	NA	NA	NA
+"3.8.1"	"Bronchiectasis h2_z"	"2.8"	"h2_z"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_z"	"Bronchiectasis"	"2.8"	""	NA	NA	NA
+"3.8.1"	"Bronchiectasis h2_p"	"0.00511026066085586"	"h2_p"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_p"	"Bronchiectasis"	"0.005"	""	NA	NA	NA
+"3.8.1"	"Eosinophilic disease h2_obs"	"-4e-04"	"h2_obs"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"Eosinophilic disease"	"-0.0004"	""	NA	NA	NA
+"3.8.1"	"Eosinophilic disease h2_se"	"0.0013"	"h2_se"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_se"	"Eosinophilic disease"	"0.0013"	""	NA	NA	NA
+"3.8.1"	"Eosinophilic disease h2_z"	"-0.307692307692308"	"h2_z"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_z"	"Eosinophilic disease"	"-0.3077"	""	NA	NA	NA
+"3.8.1"	"Eosinophilic disease h2_p"	"0.75831647352629"	"h2_p"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_p"	"Eosinophilic disease"	"0.758"	""	NA	NA	NA
+"3.8.1"	"BMI IRN h2_obs"	"0.1828"	"h2_obs"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"BMI IRN"	"0.1828"	""	NA	NA	NA
+"3.8.1"	"BMI IRN h2_se"	"0.0095"	"h2_se"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_se"	"BMI IRN"	"0.0095"	""	NA	NA	NA
+"3.8.1"	"BMI IRN h2_z"	"19.2421052631579"	"h2_z"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_z"	"BMI IRN"	"19.24"	""	NA	NA	NA
+"3.8.1"	"BMI IRN h2_p"	"1.64393887600053e-82"	"h2_p"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_p"	"BMI IRN"	"1.64e-82"	""	NA	NA	NA
+"3.8.1"	"NAFLD h2_obs"	"0.0049"	"h2_obs"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"NAFLD"	"0.0049"	""	NA	NA	NA
+"3.8.1"	"NAFLD h2_se"	"0.0011"	"h2_se"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_se"	"NAFLD"	"0.0011"	""	NA	NA	NA
+"3.8.1"	"NAFLD h2_z"	"4.45454545454545"	"h2_z"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_z"	"NAFLD"	"4.455"	""	NA	NA	NA
+"3.8.1"	"NAFLD h2_p"	"8.4071117079263e-06"	"h2_p"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_p"	"NAFLD"	"8.41e-06"	""	NA	NA	NA
+"3.8.1"	"CRP h2_obs"	"0.0072"	"h2_obs"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"CRP"	"0.0072"	""	NA	NA	NA
+"3.8.1"	"CRP h2_se"	"0.0018"	"h2_se"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_se"	"CRP"	"0.0018"	""	NA	NA	NA
+"3.8.1"	"CRP h2_z"	"4"	"h2_z"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_z"	"CRP"	"4"	""	NA	NA	NA
+"3.8.1"	"CRP h2_p"	"6.33424836662397e-05"	"h2_p"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_p"	"CRP"	"6.33e-05"	""	NA	NA	NA
+"3.8.1"	"ALT h2_obs"	"0.115"	"h2_obs"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"ALT"	"0.115"	""	NA	NA	NA
+"3.8.1"	"ALT h2_se"	"0.03"	"h2_se"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_se"	"ALT"	"0.03"	""	NA	NA	NA
+"3.8.1"	"ALT h2_z"	"3.83333333333333"	"h2_z"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_z"	"ALT"	"3.833"	""	NA	NA	NA
+"3.8.1"	"ALT h2_p"	"0.000126418463736805"	"h2_p"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_p"	"ALT"	"1.26e-04"	""	NA	NA	NA
+"3.8.1"	"AST h2_obs"	"0.055"	"h2_obs"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"AST"	"0.055"	""	NA	NA	NA
+"3.8.1"	"AST h2_se"	"0.0086"	"h2_se"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_se"	"AST"	"0.0086"	""	NA	NA	NA
+"3.8.1"	"AST h2_z"	"6.3953488372093"	"h2_z"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_z"	"AST"	"6.395"	""	NA	NA	NA
+"3.8.1"	"AST h2_p"	"1.60181239114391e-10"	"h2_p"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_p"	"AST"	"1.6e-10"	""	NA	NA	NA
+"3.8.1"	"GGT h2_obs"	"0.1188"	"h2_obs"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"GGT"	"0.1188"	""	NA	NA	NA
+"3.8.1"	"GGT h2_se"	"0.0145"	"h2_se"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_se"	"GGT"	"0.0145"	""	NA	NA	NA
+"3.8.1"	"GGT h2_z"	"8.19310344827586"	"h2_z"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_z"	"GGT"	"8.193"	""	NA	NA	NA
+"3.8.1"	"GGT h2_p"	"2.54575188557671e-16"	"h2_p"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_p"	"GGT"	"2.55e-16"	""	NA	NA	NA
+"3.8.1"	"HDL cholesterol h2_obs"	"0.236"	"h2_obs"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"HDL cholesterol"	"0.236"	""	NA	NA	NA
+"3.8.1"	"HDL cholesterol h2_se"	"0.0292"	"h2_se"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_se"	"HDL cholesterol"	"0.0292"	""	NA	NA	NA
+"3.8.1"	"HDL cholesterol h2_z"	"8.08219178082192"	"h2_z"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_z"	"HDL cholesterol"	"8.082"	""	NA	NA	NA
+"3.8.1"	"HDL cholesterol h2_p"	"6.3612960594676e-16"	"h2_p"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_p"	"HDL cholesterol"	"6.36e-16"	""	NA	NA	NA
+"3.8.1"	"LDL cholesterol h2_obs"	"0.0646"	"h2_obs"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"LDL cholesterol"	"0.0646"	""	NA	NA	NA
+"3.8.1"	"LDL cholesterol h2_se"	"0.0127"	"h2_se"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_se"	"LDL cholesterol"	"0.0127"	""	NA	NA	NA
+"3.8.1"	"LDL cholesterol h2_z"	"5.08661417322835"	"h2_z"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_z"	"LDL cholesterol"	"5.087"	""	NA	NA	NA
+"3.8.1"	"LDL cholesterol h2_p"	"3.6451231866583e-07"	"h2_p"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_p"	"LDL cholesterol"	"3.65e-07"	""	NA	NA	NA
+"3.8.1"	"Fasting triglycerides h2_obs"	"0.1871"	"h2_obs"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"Fasting triglycerides"	"0.1871"	""	NA	NA	NA
+"3.8.1"	"Fasting triglycerides h2_se"	"0.0234"	"h2_se"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_se"	"Fasting triglycerides"	"0.0234"	""	NA	NA	NA
+"3.8.1"	"Fasting triglycerides h2_z"	"7.99572649572649"	"h2_z"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_z"	"Fasting triglycerides"	"7.996"	""	NA	NA	NA
+"3.8.1"	"Fasting triglycerides h2_p"	"1.28812041899485e-15"	"h2_p"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_p"	"Fasting triglycerides"	"1.29e-15"	""	NA	NA	NA
+"3.8.1"	"Positive h2 traits"	"12"	"traits"	"results/ldsc/qc/ldsc_h2_summary.tsv"	"h2_obs"	"> 0"	"12"	""	NA	NA	NA
+"3.8.2"	"Allergic rhinitis rg"	"0.7114"	"rg"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg"	"Allergic rhinitis"	"0.7114"	""	NA	NA	NA
+"3.8.2"	"Allergic rhinitis rg_se"	"0.0547"	"rg_se"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_se"	"Allergic rhinitis"	"0.0547"	""	NA	NA	NA
+"3.8.2"	"Allergic rhinitis rg_lower_95CI"	"0.604188"	"rg_lower_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_lower_95CI"	"Allergic rhinitis"	"0.6042"	""	NA	NA	NA
+"3.8.2"	"Allergic rhinitis rg_upper_95CI"	"0.818612"	"rg_upper_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_upper_95CI"	"Allergic rhinitis"	"0.8186"	""	NA	NA	NA
+"3.8.2"	"Allergic rhinitis rg_p"	"1.3027e-38"	"rg_p"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_p"	"Allergic rhinitis"	"1.3e-38"	""	NA	NA	NA
+"3.8.2"	"Allergic rhinitis p_bonferroni_12"	"1.56324e-37"	"p_bonferroni_12"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_bonferroni_12"	"Allergic rhinitis"	"1.56e-37"	""	NA	NA	NA
+"3.8.2"	"Allergic rhinitis p_fdr_bh_11"	"1.43297e-37"	"p_fdr_bh_11"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_fdr_bh_11"	"Allergic rhinitis"	"1.43e-37"	""	NA	NA	NA
+"3.8.2"	"Allergic rhinitis cross_trait_intercept"	"0.0307"	"cross_trait_intercept"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"cross_trait_intercept"	"Allergic rhinitis"	"0.0307"	""	NA	NA	NA
+"3.8.2"	"Allergic rhinitis SNPs"	"1140722"	"SNPs"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"SNPs"	"Allergic rhinitis"	"1141000"	""	NA	NA	NA
+"3.8.2"	"Bronchiectasis rg"	"0.1474"	"rg"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg"	"Bronchiectasis"	"0.1474"	""	NA	NA	NA
+"3.8.2"	"Bronchiectasis rg_se"	"0.0911"	"rg_se"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_se"	"Bronchiectasis"	"0.0911"	""	NA	NA	NA
+"3.8.2"	"Bronchiectasis rg_lower_95CI"	"-0.031156"	"rg_lower_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_lower_95CI"	"Bronchiectasis"	"-0.03116"	""	NA	NA	NA
+"3.8.2"	"Bronchiectasis rg_upper_95CI"	"0.325956"	"rg_upper_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_upper_95CI"	"Bronchiectasis"	"0.326"	""	NA	NA	NA
+"3.8.2"	"Bronchiectasis rg_p"	"0.1057"	"rg_p"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_p"	"Bronchiectasis"	"0.106"	""	NA	NA	NA
+"3.8.2"	"Bronchiectasis p_bonferroni_12"	"1"	"p_bonferroni_12"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_bonferroni_12"	"Bronchiectasis"	"1"	""	NA	NA	NA
+"3.8.2"	"Bronchiectasis p_fdr_bh_11"	"0.1453375"	"p_fdr_bh_11"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_fdr_bh_11"	"Bronchiectasis"	"0.145"	""	NA	NA	NA
+"3.8.2"	"Bronchiectasis cross_trait_intercept"	"0.0136"	"cross_trait_intercept"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"cross_trait_intercept"	"Bronchiectasis"	"0.0136"	""	NA	NA	NA
+"3.8.2"	"Bronchiectasis SNPs"	"1140768"	"SNPs"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"SNPs"	"Bronchiectasis"	"1141000"	""	NA	NA	NA
+"3.8.2"	"Eosinophilic disease rg"	NA	"rg"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg"	"Eosinophilic disease"	NA	""	NA	NA	NA
+"3.8.2"	"Eosinophilic disease rg_se"	NA	"rg_se"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_se"	"Eosinophilic disease"	NA	""	NA	NA	NA
+"3.8.2"	"Eosinophilic disease rg_lower_95CI"	NA	"rg_lower_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_lower_95CI"	"Eosinophilic disease"	NA	""	NA	NA	NA
+"3.8.2"	"Eosinophilic disease rg_upper_95CI"	NA	"rg_upper_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_upper_95CI"	"Eosinophilic disease"	NA	""	NA	NA	NA
+"3.8.2"	"Eosinophilic disease rg_p"	NA	"rg_p"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_p"	"Eosinophilic disease"	NA	""	NA	NA	NA
+"3.8.2"	"Eosinophilic disease p_bonferroni_12"	NA	"p_bonferroni_12"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_bonferroni_12"	"Eosinophilic disease"	NA	""	NA	NA	NA
+"3.8.2"	"Eosinophilic disease p_fdr_bh_11"	NA	"p_fdr_bh_11"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_fdr_bh_11"	"Eosinophilic disease"	NA	""	NA	NA	NA
+"3.8.2"	"Eosinophilic disease cross_trait_intercept"	NA	"cross_trait_intercept"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"cross_trait_intercept"	"Eosinophilic disease"	NA	""	NA	NA	NA
+"3.8.2"	"Eosinophilic disease SNPs"	NA	"SNPs"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"SNPs"	"Eosinophilic disease"	NA	""	NA	NA	NA
+"3.8.2"	"BMI IRN rg"	"0.193"	"rg"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg"	"BMI IRN"	"0.193"	""	NA	NA	NA
+"3.8.2"	"BMI IRN rg_se"	"0.0252"	"rg_se"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_se"	"BMI IRN"	"0.0252"	""	NA	NA	NA
+"3.8.2"	"BMI IRN rg_lower_95CI"	"0.143608"	"rg_lower_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_lower_95CI"	"BMI IRN"	"0.1436"	""	NA	NA	NA
+"3.8.2"	"BMI IRN rg_upper_95CI"	"0.242392"	"rg_upper_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_upper_95CI"	"BMI IRN"	"0.2424"	""	NA	NA	NA
+"3.8.2"	"BMI IRN rg_p"	"1.8007e-14"	"rg_p"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_p"	"BMI IRN"	"1.8e-14"	""	NA	NA	NA
+"3.8.2"	"BMI IRN p_bonferroni_12"	"2.16084e-13"	"p_bonferroni_12"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_bonferroni_12"	"BMI IRN"	"2.16e-13"	""	NA	NA	NA
+"3.8.2"	"BMI IRN p_fdr_bh_11"	"9.90385e-14"	"p_fdr_bh_11"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_fdr_bh_11"	"BMI IRN"	"9.9e-14"	""	NA	NA	NA
+"3.8.2"	"BMI IRN cross_trait_intercept"	"0.0018"	"cross_trait_intercept"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"cross_trait_intercept"	"BMI IRN"	"0.0018"	""	NA	NA	NA
+"3.8.2"	"BMI IRN SNPs"	"1140840"	"SNPs"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"SNPs"	"BMI IRN"	"1141000"	""	NA	NA	NA
+"3.8.2"	"NAFLD rg"	"0.2287"	"rg"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg"	"NAFLD"	"0.2287"	""	NA	NA	NA
+"3.8.2"	"NAFLD rg_se"	"0.0734"	"rg_se"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_se"	"NAFLD"	"0.0734"	""	NA	NA	NA
+"3.8.2"	"NAFLD rg_lower_95CI"	"0.084836"	"rg_lower_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_lower_95CI"	"NAFLD"	"0.08484"	""	NA	NA	NA
+"3.8.2"	"NAFLD rg_upper_95CI"	"0.372564"	"rg_upper_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_upper_95CI"	"NAFLD"	"0.3726"	""	NA	NA	NA
+"3.8.2"	"NAFLD rg_p"	"0.0018"	"rg_p"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_p"	"NAFLD"	"0.002"	""	NA	NA	NA
+"3.8.2"	"NAFLD p_bonferroni_12"	"0.0216"	"p_bonferroni_12"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_bonferroni_12"	"NAFLD"	"0.022"	""	NA	NA	NA
+"3.8.2"	"NAFLD p_fdr_bh_11"	"0.00282857142857143"	"p_fdr_bh_11"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_fdr_bh_11"	"NAFLD"	"0.003"	""	NA	NA	NA
+"3.8.2"	"NAFLD cross_trait_intercept"	"-0.0028"	"cross_trait_intercept"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"cross_trait_intercept"	"NAFLD"	"-0.0028"	""	NA	NA	NA
+"3.8.2"	"NAFLD SNPs"	"1140723"	"SNPs"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"SNPs"	"NAFLD"	"1141000"	""	NA	NA	NA
+"3.8.2"	"CRP rg"	"-0.0717"	"rg"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg"	"CRP"	"-0.0717"	""	NA	NA	NA
+"3.8.2"	"CRP rg_se"	"0.0635"	"rg_se"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_se"	"CRP"	"0.0635"	""	NA	NA	NA
+"3.8.2"	"CRP rg_lower_95CI"	"-0.19616"	"rg_lower_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_lower_95CI"	"CRP"	"-0.1962"	""	NA	NA	NA
+"3.8.2"	"CRP rg_upper_95CI"	"0.05276"	"rg_upper_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_upper_95CI"	"CRP"	"0.05276"	""	NA	NA	NA
+"3.8.2"	"CRP rg_p"	"0.259"	"rg_p"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_p"	"CRP"	"0.259"	""	NA	NA	NA
+"3.8.2"	"CRP p_bonferroni_12"	"1"	"p_bonferroni_12"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_bonferroni_12"	"CRP"	"1"	""	NA	NA	NA
+"3.8.2"	"CRP p_fdr_bh_11"	"0.2849"	"p_fdr_bh_11"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_fdr_bh_11"	"CRP"	"0.285"	""	NA	NA	NA
+"3.8.2"	"CRP cross_trait_intercept"	"0.0053"	"cross_trait_intercept"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"cross_trait_intercept"	"CRP"	"0.0053"	""	NA	NA	NA
+"3.8.2"	"CRP SNPs"	"1140759"	"SNPs"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"SNPs"	"CRP"	"1141000"	""	NA	NA	NA
+"3.8.2"	"ALT rg"	"0.134"	"rg"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg"	"ALT"	"0.134"	""	NA	NA	NA
+"3.8.2"	"ALT rg_se"	"0.0276"	"rg_se"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_se"	"ALT"	"0.0276"	""	NA	NA	NA
+"3.8.2"	"ALT rg_lower_95CI"	"0.079904"	"rg_lower_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_lower_95CI"	"ALT"	"0.0799"	""	NA	NA	NA
+"3.8.2"	"ALT rg_upper_95CI"	"0.188096"	"rg_upper_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_upper_95CI"	"ALT"	"0.1881"	""	NA	NA	NA
+"3.8.2"	"ALT rg_p"	"1.2614e-06"	"rg_p"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_p"	"ALT"	"1.26e-06"	""	NA	NA	NA
+"3.8.2"	"ALT p_bonferroni_12"	"1.51368e-05"	"p_bonferroni_12"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_bonferroni_12"	"ALT"	"1.51e-05"	""	NA	NA	NA
+"3.8.2"	"ALT p_fdr_bh_11"	"4.62513333333333e-06"	"p_fdr_bh_11"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_fdr_bh_11"	"ALT"	"4.63e-06"	""	NA	NA	NA
+"3.8.2"	"ALT cross_trait_intercept"	"-0.0059"	"cross_trait_intercept"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"cross_trait_intercept"	"ALT"	"-0.0059"	""	NA	NA	NA
+"3.8.2"	"ALT SNPs"	"1140621"	"SNPs"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"SNPs"	"ALT"	"1141000"	""	NA	NA	NA
+"3.8.2"	"AST rg"	"0.0065"	"rg"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg"	"AST"	"0.0065"	""	NA	NA	NA
+"3.8.2"	"AST rg_se"	"0.0473"	"rg_se"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_se"	"AST"	"0.0473"	""	NA	NA	NA
+"3.8.2"	"AST rg_lower_95CI"	"-0.086208"	"rg_lower_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_lower_95CI"	"AST"	"-0.08621"	""	NA	NA	NA
+"3.8.2"	"AST rg_upper_95CI"	"0.099208"	"rg_upper_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_upper_95CI"	"AST"	"0.09921"	""	NA	NA	NA
+"3.8.2"	"AST rg_p"	"0.8904"	"rg_p"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_p"	"AST"	"0.89"	""	NA	NA	NA
+"3.8.2"	"AST p_bonferroni_12"	"1"	"p_bonferroni_12"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_bonferroni_12"	"AST"	"1"	""	NA	NA	NA
+"3.8.2"	"AST p_fdr_bh_11"	"0.8904"	"p_fdr_bh_11"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_fdr_bh_11"	"AST"	"0.89"	""	NA	NA	NA
+"3.8.2"	"AST cross_trait_intercept"	"-0.0025"	"cross_trait_intercept"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"cross_trait_intercept"	"AST"	"-0.0025"	""	NA	NA	NA
+"3.8.2"	"AST SNPs"	"1140811"	"SNPs"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"SNPs"	"AST"	"1141000"	""	NA	NA	NA
+"3.8.2"	"GGT rg"	"0.1334"	"rg"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg"	"GGT"	"0.1334"	""	NA	NA	NA
+"3.8.2"	"GGT rg_se"	"0.0305"	"rg_se"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_se"	"GGT"	"0.0305"	""	NA	NA	NA
+"3.8.2"	"GGT rg_lower_95CI"	"0.07362"	"rg_lower_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_lower_95CI"	"GGT"	"0.07362"	""	NA	NA	NA
+"3.8.2"	"GGT rg_upper_95CI"	"0.19318"	"rg_upper_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_upper_95CI"	"GGT"	"0.1932"	""	NA	NA	NA
+"3.8.2"	"GGT rg_p"	"1.2357e-05"	"rg_p"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_p"	"GGT"	"1.24e-05"	""	NA	NA	NA
+"3.8.2"	"GGT p_bonferroni_12"	"0.000148284"	"p_bonferroni_12"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_bonferroni_12"	"GGT"	"1.48e-04"	""	NA	NA	NA
+"3.8.2"	"GGT p_fdr_bh_11"	"3.398175e-05"	"p_fdr_bh_11"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_fdr_bh_11"	"GGT"	"3.4e-05"	""	NA	NA	NA
+"3.8.2"	"GGT cross_trait_intercept"	"0.0082"	"cross_trait_intercept"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"cross_trait_intercept"	"GGT"	"0.0082"	""	NA	NA	NA
+"3.8.2"	"GGT SNPs"	"1140867"	"SNPs"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"SNPs"	"GGT"	"1141000"	""	NA	NA	NA
+"3.8.2"	"HDL cholesterol rg"	"-0.1329"	"rg"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg"	"HDL cholesterol"	"-0.1329"	""	NA	NA	NA
+"3.8.2"	"HDL cholesterol rg_se"	"0.0324"	"rg_se"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_se"	"HDL cholesterol"	"0.0324"	""	NA	NA	NA
+"3.8.2"	"HDL cholesterol rg_lower_95CI"	"-0.196404"	"rg_lower_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_lower_95CI"	"HDL cholesterol"	"-0.1964"	""	NA	NA	NA
+"3.8.2"	"HDL cholesterol rg_upper_95CI"	"-0.069396"	"rg_upper_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_upper_95CI"	"HDL cholesterol"	"-0.0694"	""	NA	NA	NA
+"3.8.2"	"HDL cholesterol rg_p"	"4.1846e-05"	"rg_p"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_p"	"HDL cholesterol"	"4.18e-05"	""	NA	NA	NA
+"3.8.2"	"HDL cholesterol p_bonferroni_12"	"0.000502152"	"p_bonferroni_12"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_bonferroni_12"	"HDL cholesterol"	"5.02e-04"	""	NA	NA	NA
+"3.8.2"	"HDL cholesterol p_fdr_bh_11"	"7.67176666666667e-05"	"p_fdr_bh_11"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_fdr_bh_11"	"HDL cholesterol"	"7.67e-05"	""	NA	NA	NA
+"3.8.2"	"HDL cholesterol cross_trait_intercept"	"0.015"	"cross_trait_intercept"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"cross_trait_intercept"	"HDL cholesterol"	"0.015"	""	NA	NA	NA
+"3.8.2"	"HDL cholesterol SNPs"	"1140576"	"SNPs"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"SNPs"	"HDL cholesterol"	"1141000"	""	NA	NA	NA
+"3.8.2"	"LDL cholesterol rg"	"-0.0657"	"rg"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg"	"LDL cholesterol"	"-0.0657"	""	NA	NA	NA
+"3.8.2"	"LDL cholesterol rg_se"	"0.0443"	"rg_se"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_se"	"LDL cholesterol"	"0.0443"	""	NA	NA	NA
+"3.8.2"	"LDL cholesterol rg_lower_95CI"	"-0.152528"	"rg_lower_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_lower_95CI"	"LDL cholesterol"	"-0.1525"	""	NA	NA	NA
+"3.8.2"	"LDL cholesterol rg_upper_95CI"	"0.021128"	"rg_upper_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_upper_95CI"	"LDL cholesterol"	"0.02113"	""	NA	NA	NA
+"3.8.2"	"LDL cholesterol rg_p"	"0.1381"	"rg_p"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_p"	"LDL cholesterol"	"0.138"	""	NA	NA	NA
+"3.8.2"	"LDL cholesterol p_bonferroni_12"	"1"	"p_bonferroni_12"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_bonferroni_12"	"LDL cholesterol"	"1"	""	NA	NA	NA
+"3.8.2"	"LDL cholesterol p_fdr_bh_11"	"0.168788888888889"	"p_fdr_bh_11"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_fdr_bh_11"	"LDL cholesterol"	"0.169"	""	NA	NA	NA
+"3.8.2"	"LDL cholesterol cross_trait_intercept"	"0.0081"	"cross_trait_intercept"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"cross_trait_intercept"	"LDL cholesterol"	"0.0081"	""	NA	NA	NA
+"3.8.2"	"LDL cholesterol SNPs"	"1140582"	"SNPs"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"SNPs"	"LDL cholesterol"	"1141000"	""	NA	NA	NA
+"3.8.2"	"Fasting triglycerides rg"	"0.1096"	"rg"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg"	"Fasting triglycerides"	"0.1096"	""	NA	NA	NA
+"3.8.2"	"Fasting triglycerides rg_se"	"0.0266"	"rg_se"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_se"	"Fasting triglycerides"	"0.0266"	""	NA	NA	NA
+"3.8.2"	"Fasting triglycerides rg_lower_95CI"	"0.057464"	"rg_lower_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_lower_95CI"	"Fasting triglycerides"	"0.05746"	""	NA	NA	NA
+"3.8.2"	"Fasting triglycerides rg_upper_95CI"	"0.161736"	"rg_upper_95CI"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_upper_95CI"	"Fasting triglycerides"	"0.1617"	""	NA	NA	NA
+"3.8.2"	"Fasting triglycerides rg_p"	"3.8962e-05"	"rg_p"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg_p"	"Fasting triglycerides"	"3.9e-05"	""	NA	NA	NA
+"3.8.2"	"Fasting triglycerides p_bonferroni_12"	"0.000467544"	"p_bonferroni_12"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_bonferroni_12"	"Fasting triglycerides"	"4.68e-04"	""	NA	NA	NA
+"3.8.2"	"Fasting triglycerides p_fdr_bh_11"	"7.67176666666667e-05"	"p_fdr_bh_11"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"p_fdr_bh_11"	"Fasting triglycerides"	"7.67e-05"	""	NA	NA	NA
+"3.8.2"	"Fasting triglycerides cross_trait_intercept"	"0.0012"	"cross_trait_intercept"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"cross_trait_intercept"	"Fasting triglycerides"	"0.0012"	""	NA	NA	NA
+"3.8.2"	"Fasting triglycerides SNPs"	"1140574"	"SNPs"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"SNPs"	"Fasting triglycerides"	"1141000"	""	NA	NA	NA
+"3.8.2"	"Planned rg"	"12"	"outcomes"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rows"	"all"	"12"	""	NA	NA	NA
+"3.8.2"	"Estimable rg"	"11"	"outcomes"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"rg"	"non-missing"	"11"	""	NA	NA	NA
+"3.8.2"	"Bonferroni-significant rg"	"7"	"outcomes"	"results/ldsc/qc/ldsc_rg_summary.tsv"	"bonferroni12_significant"	"yes"	"7"	""	NA	NA	NA
+"3.9"	"LDSC_SIGNIFICANT_MR_NOT_SIGNIFICANT"	"7"	"outcomes"	"results/combined/finngen_mr_ldsc_comparison.tsv"	"mr_ldsc_pattern"	"LDSC_SIGNIFICANT_MR_NOT_SIGNIFICANT"	"7"	""	NA	NA	NA
+"3.9"	"NEITHER_SIGNIFICANT"	"4"	"outcomes"	"results/combined/finngen_mr_ldsc_comparison.tsv"	"mr_ldsc_pattern"	"NEITHER_SIGNIFICANT"	"4"	""	NA	NA	NA
+"3.9"	"LDSC_NOT_ESTIMABLE"	"1"	"outcomes"	"results/combined/finngen_mr_ldsc_comparison.tsv"	"mr_ldsc_pattern"	"LDSC_NOT_ESTIMABLE"	"1"	""	NA	NA	NA

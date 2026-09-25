@@ -1,0 +1,85 @@
+outcome	outcome_id	SNP	enters_harmonisation	retained	removed	absent_from_corrected_outcome	palindromic	ambiguous	remove	exclusion_reason
+Allergic rhinitis	ALLERG_RHINITIS	rs12939565	TRUE	FALSE	TRUE	FALSE	TRUE	TRUE	FALSE	ambiguous_palindromic_missing_exposure_eaf
+Allergic rhinitis	ALLERG_RHINITIS	rs2055456	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	NA
+Allergic rhinitis	ALLERG_RHINITIS	rs146054809	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Allergic rhinitis	ALLERG_RHINITIS	rs370943675	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Allergic rhinitis	ALLERG_RHINITIS	rs558418140	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Allergic rhinitis	ALLERG_RHINITIS	rs560335706	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Allergic rhinitis	ALLERG_RHINITIS	rs571546412	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Bronchiectasis	J10_BRONCHIECTASIS	rs12939565	TRUE	FALSE	TRUE	FALSE	TRUE	TRUE	FALSE	ambiguous_palindromic_missing_exposure_eaf
+Bronchiectasis	J10_BRONCHIECTASIS	rs2055456	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	NA
+Bronchiectasis	J10_BRONCHIECTASIS	rs146054809	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Bronchiectasis	J10_BRONCHIECTASIS	rs370943675	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Bronchiectasis	J10_BRONCHIECTASIS	rs558418140	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Bronchiectasis	J10_BRONCHIECTASIS	rs560335706	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Bronchiectasis	J10_BRONCHIECTASIS	rs571546412	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Eosinophilic disease	EOSINOPHIL_DISEASE	rs12939565	TRUE	FALSE	TRUE	FALSE	TRUE	TRUE	FALSE	ambiguous_palindromic_missing_exposure_eaf
+Eosinophilic disease	EOSINOPHIL_DISEASE	rs2055456	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	NA
+Eosinophilic disease	EOSINOPHIL_DISEASE	rs146054809	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Eosinophilic disease	EOSINOPHIL_DISEASE	rs370943675	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Eosinophilic disease	EOSINOPHIL_DISEASE	rs558418140	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Eosinophilic disease	EOSINOPHIL_DISEASE	rs560335706	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Eosinophilic disease	EOSINOPHIL_DISEASE	rs571546412	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+BMI (inverse-rank normalized)	BMI_IRN	rs12939565	TRUE	FALSE	TRUE	FALSE	TRUE	TRUE	FALSE	ambiguous_palindromic_missing_exposure_eaf
+BMI (inverse-rank normalized)	BMI_IRN	rs2055456	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	NA
+BMI (inverse-rank normalized)	BMI_IRN	rs146054809	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+BMI (inverse-rank normalized)	BMI_IRN	rs370943675	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+BMI (inverse-rank normalized)	BMI_IRN	rs558418140	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+BMI (inverse-rank normalized)	BMI_IRN	rs560335706	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+BMI (inverse-rank normalized)	BMI_IRN	rs571546412	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+NAFLD	NAFLD	rs12939565	TRUE	FALSE	TRUE	FALSE	TRUE	TRUE	FALSE	ambiguous_palindromic_missing_exposure_eaf
+NAFLD	NAFLD	rs2055456	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	NA
+NAFLD	NAFLD	rs146054809	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+NAFLD	NAFLD	rs370943675	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+NAFLD	NAFLD	rs558418140	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+NAFLD	NAFLD	rs560335706	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+NAFLD	NAFLD	rs571546412	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+CRP	3020460	rs12939565	TRUE	FALSE	TRUE	FALSE	TRUE	TRUE	FALSE	ambiguous_palindromic_missing_exposure_eaf
+CRP	3020460	rs2055456	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	NA
+CRP	3020460	rs146054809	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+CRP	3020460	rs370943675	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+CRP	3020460	rs558418140	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+CRP	3020460	rs560335706	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+CRP	3020460	rs571546412	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+ALT	3006923	rs12939565	TRUE	FALSE	TRUE	FALSE	TRUE	TRUE	FALSE	ambiguous_palindromic_missing_exposure_eaf
+ALT	3006923	rs2055456	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	NA
+ALT	3006923	rs146054809	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+ALT	3006923	rs370943675	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+ALT	3006923	rs558418140	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+ALT	3006923	rs560335706	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+ALT	3006923	rs571546412	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+AST	3013721	rs12939565	TRUE	FALSE	TRUE	FALSE	TRUE	TRUE	FALSE	ambiguous_palindromic_missing_exposure_eaf
+AST	3013721	rs2055456	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	NA
+AST	3013721	rs146054809	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+AST	3013721	rs370943675	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+AST	3013721	rs558418140	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+AST	3013721	rs560335706	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+AST	3013721	rs571546412	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+GGT	3026910	rs12939565	TRUE	FALSE	TRUE	FALSE	TRUE	TRUE	FALSE	ambiguous_palindromic_missing_exposure_eaf
+GGT	3026910	rs2055456	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	NA
+GGT	3026910	rs146054809	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+GGT	3026910	rs370943675	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+GGT	3026910	rs558418140	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+GGT	3026910	rs560335706	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+GGT	3026910	rs571546412	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+HDL cholesterol	3023602	rs12939565	TRUE	FALSE	TRUE	FALSE	TRUE	TRUE	FALSE	ambiguous_palindromic_missing_exposure_eaf
+HDL cholesterol	3023602	rs2055456	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	NA
+HDL cholesterol	3023602	rs146054809	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+HDL cholesterol	3023602	rs370943675	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+HDL cholesterol	3023602	rs558418140	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+HDL cholesterol	3023602	rs560335706	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+HDL cholesterol	3023602	rs571546412	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+LDL cholesterol	3001308	rs12939565	TRUE	FALSE	TRUE	FALSE	TRUE	TRUE	FALSE	ambiguous_palindromic_missing_exposure_eaf
+LDL cholesterol	3001308	rs2055456	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	NA
+LDL cholesterol	3001308	rs146054809	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+LDL cholesterol	3001308	rs370943675	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+LDL cholesterol	3001308	rs558418140	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+LDL cholesterol	3001308	rs560335706	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+LDL cholesterol	3001308	rs571546412	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Triglycerides (fasting)	3048773	rs12939565	TRUE	FALSE	TRUE	FALSE	TRUE	TRUE	FALSE	ambiguous_palindromic_missing_exposure_eaf
+Triglycerides (fasting)	3048773	rs2055456	TRUE	TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	NA
+Triglycerides (fasting)	3048773	rs146054809	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Triglycerides (fasting)	3048773	rs370943675	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Triglycerides (fasting)	3048773	rs558418140	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Triglycerides (fasting)	3048773	rs560335706	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome
+Triglycerides (fasting)	3048773	rs571546412	FALSE	FALSE	FALSE	TRUE	NA	NA	NA	absent_from_corrected_outcome

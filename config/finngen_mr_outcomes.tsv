@@ -1,0 +1,13 @@
+output_stub	outcome	outcome_id	release	outcome_type	file	cases	controls	sample_size
+allergic_rhinitis	Allergic rhinitis	ALLERG_RHINITIS	R13	binary	data/finngen/r13_disease/finngen_R13_ALLERG_RHINITIS.gz	15958	473610	489568
+bronchiectasis	Bronchiectasis	J10_BRONCHIECTASIS	R13	binary	data/finngen/r13_disease/finngen_R13_J10_BRONCHIECTASIS.gz	3096	405986	409082
+eosinophilic_disease	Eosinophilic disease	EOSINOPHIL_DISEASE	R13	binary	data/finngen/r13_disease/finngen_R13_EOSINOPHIL_DISEASE.gz	571	264141	264712
+bmi_irn	BMI (inverse-rank normalized)	BMI_IRN	R13	continuous	data/finngen/r13_disease/finngen_R13_BMI_IRN.gz	NA	NA	362216
+nafld	NAFLD	NAFLD	R13	binary	data/finngen/r13_disease/finngen_R13_NAFLD.gz	3943	496243	500186
+crp	CRP	3020460	R12_lab_values	continuous	data/finngen/lab_values/finngen_R12_CRP_3020460.gz	NA	NA	NA
+alt	ALT	3006923	R12_lab_values	continuous	data/finngen/lab_values/finngen_R12_ALT_3006923.gz	NA	NA	NA
+ast	AST	3013721	R12_lab_values	continuous	data/finngen/lab_values/finngen_R12_AST_3013721.gz	NA	NA	NA
+ggt	GGT	3026910	R12_lab_values	continuous	data/finngen/lab_values/finngen_R12_GGT_3026910.gz	NA	NA	NA
+hdl	HDL cholesterol	3023602	R12_lab_values	continuous	data/finngen/lab_values/finngen_R12_HDL_3023602.gz	NA	NA	NA
+ldl	LDL cholesterol	3001308	R12_lab_values	continuous	data/finngen/lab_values/finngen_R12_LDL_3001308.gz	NA	NA	NA
+triglycerides_fasting	Triglycerides (fasting)	3048773	R12_lab_values	continuous	data/finngen/lab_values/finngen_R12_TRIGLYCERIDES_3048773.gz	NA	NA	NA

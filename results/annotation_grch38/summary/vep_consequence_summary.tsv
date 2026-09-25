@@ -1,0 +1,37 @@
+summary_type	consequence	count	percentage	collapse_rule
+raw_most_severe_VEP_term	intron_variant	1892	37.4653465346535	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	intron_variant,non_coding_transcript_variant	1259	24.9306930693069	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	intergenic_variant	921	18.2376237623762	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	upstream_gene_variant	242	4.79207920792079	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	downstream_gene_variant	199	3.94059405940594	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	non_coding_transcript_exon_variant	190	3.76237623762376	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	intron_variant,NMD_transcript_variant	95	1.88118811881188	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	3_prime_UTR_variant	89	1.76237623762376	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	missense_variant	48	0.95049504950495	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	5_prime_UTR_variant	38	0.752475247524752	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	synonymous_variant	25	0.495049504950495	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	3_prime_UTR_variant,NMD_transcript_variant	15	0.297029702970297	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	splice_polypyrimidine_tract_variant,intron_variant	6	0.118811881188119	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	missense_variant,NMD_transcript_variant	4	0.0792079207920792	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	stop_gained	4	0.0792079207920792	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	splice_region_variant,splice_polypyrimidine_tract_variant,intron_variant	3	0.0594059405940594	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	splice_region_variant,synonymous_variant	3	0.0594059405940594	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	synonymous_variant,NMD_transcript_variant	3	0.0594059405940594	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	splice_acceptor_variant	2	0.0396039603960396	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	splice_donor_region_variant,intron_variant	2	0.0396039603960396	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	splice_donor_region_variant,intron_variant,non_coding_transcript_variant	2	0.0396039603960396	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	splice_region_variant,intron_variant,non_coding_transcript_variant	2	0.0396039603960396	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	splice_acceptor_variant,non_coding_transcript_variant	1	0.0198019801980198	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	splice_polypyrimidine_tract_variant,intron_variant,non_coding_transcript_variant	1	0.0198019801980198	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	splice_region_variant,intron_variant	1	0.0198019801980198	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	splice_region_variant,non_coding_transcript_exon_variant	1	0.0198019801980198	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	splice_region_variant,splice_polypyrimidine_tract_variant,intron_variant,non_coding_transcript_variant	1	0.0198019801980198	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+raw_most_severe_VEP_term	stop_gained,NMD_transcript_variant	1	0.0198019801980198	One most-severe VEP consequence per annotated lead SNP; VEP terminology retained
+dissertation_collapsed_group	intronic	3264	64.6336633663366	intron->intronic; intergenic->intergenic; upstream/downstream combined; regulatory/TFBS combined; UTR combined; synonymous; missense/protein_altering; splice terms combined; remainder=other
+dissertation_collapsed_group	intergenic	921	18.2376237623762	intron->intronic; intergenic->intergenic; upstream/downstream combined; regulatory/TFBS combined; UTR combined; synonymous; missense/protein_altering; splice terms combined; remainder=other
+dissertation_collapsed_group	upstream/downstream	441	8.73267326732673	intron->intronic; intergenic->intergenic; upstream/downstream combined; regulatory/TFBS combined; UTR combined; synonymous; missense/protein_altering; splice terms combined; remainder=other
+dissertation_collapsed_group	other	195	3.86138613861386	intron->intronic; intergenic->intergenic; upstream/downstream combined; regulatory/TFBS combined; UTR combined; synonymous; missense/protein_altering; splice terms combined; remainder=other
+dissertation_collapsed_group	UTR	142	2.81188118811881	intron->intronic; intergenic->intergenic; upstream/downstream combined; regulatory/TFBS combined; UTR combined; synonymous; missense/protein_altering; splice terms combined; remainder=other
+dissertation_collapsed_group	missense	52	1.02970297029703	intron->intronic; intergenic->intergenic; upstream/downstream combined; regulatory/TFBS combined; UTR combined; synonymous; missense/protein_altering; splice terms combined; remainder=other
+dissertation_collapsed_group	synonymous	31	0.613861386138614	intron->intronic; intergenic->intergenic; upstream/downstream combined; regulatory/TFBS combined; UTR combined; synonymous; missense/protein_altering; splice terms combined; remainder=other
+dissertation_collapsed_group	splice-related	4	0.0792079207920792	intron->intronic; intergenic->intergenic; upstream/downstream combined; regulatory/TFBS combined; UTR combined; synonymous; missense/protein_altering; splice terms combined; remainder=other

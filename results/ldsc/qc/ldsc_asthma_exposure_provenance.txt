@@ -1,0 +1,12 @@
+LDSC asthma exposure provenance
+===============================
+
+Dataset: GCST90302886 / data/raw/asthma_DISCOVERY.tsv
+Population: British / European
+Cases: 48,623
+Controls: 290,722
+Total N: 339,345
+Data type: array/imputed genome-wide GWAS
+Direct reconstructed no-MHC HapMap3 coverage in prior audit: approximately 99.7%
+
+The project-wide 12-input GWAMA is not used for LDSC because it has extensive UK Biobank participant overlap, one multi-ancestry input, one ancestry-unresolved input, five sparse WES datasets, and no defensible combined sample size. LDSC therefore represents this specific high-quality British/European asthma GWAS.

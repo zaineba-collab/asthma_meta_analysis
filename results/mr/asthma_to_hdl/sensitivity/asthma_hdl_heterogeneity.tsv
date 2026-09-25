@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	method	Q	Q_df	Q_pval
-asthma_gwama	ieu-b-109	HDL cholesterol	Asthma	MR Egger	4519.84171306495	649	0
-asthma_gwama	ieu-b-109	HDL cholesterol	Asthma	Inverse variance weighted	4520.13134324533	650	0

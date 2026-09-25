@@ -1,0 +1,13 @@
+file	independent_cohort_group	external_component	independent_of_other_inputs	reason
+UKBB.asthma-2.assoc	UK_Biobank_group	None documented	FALSE	All 12 inputs include UK Biobank; phenotype-specific analyses of the same cohort are not independent
+ukb.allasthma.final.assoc	UK_Biobank_group	None documented	FALSE	All 12 inputs include UK Biobank; phenotype-specific analyses of the same cohort are not independent
+HanY_prePMID_asthma_UKBB.txt.gz	UK_Biobank_group	None documented	FALSE	All 12 inputs include UK Biobank; phenotype-specific analyses of the same cohort are not independent
+Shrine_30552067_moderate-severe_asthma.txt.gz	UK_Biobank_group	Additional European cohorts, inseparable from UKB in these summary statistics	FALSE	All 12 inputs include UK Biobank; phenotype-specific analyses of the same cohort are not independent
+495_PheCode.v1.0.fastGWA.tsv	UK_Biobank_group	None documented	FALSE	All 12 inputs include UK Biobank; phenotype-specific analyses of the same cohort are not independent
+asthma_DISCOVERY.tsv	UK_Biobank_group	None documented	FALSE	All 12 inputs include UK Biobank; phenotype-specific analyses of the same cohort are not independent
+GCST90029018_buildGRCh37.tsv	UK_Biobank_group	None documented	FALSE	All 12 inputs include UK Biobank; phenotype-specific analyses of the same cohort are not independent
+GCST90077671_buildGRCh38.tsv	UK_Biobank_group	None documented	FALSE	All 12 inputs include UK Biobank; phenotype-specific analyses of the same cohort are not independent
+GCST90077672_buildGRCh38.tsv	UK_Biobank_group	None documented	FALSE	All 12 inputs include UK Biobank; phenotype-specific analyses of the same cohort are not independent
+GCST90079456_buildGRCh38.tsv	UK_Biobank_group	None documented	FALSE	All 12 inputs include UK Biobank; phenotype-specific analyses of the same cohort are not independent
+GCST90080141_buildGRCh38.tsv	UK_Biobank_group	None documented	FALSE	All 12 inputs include UK Biobank; phenotype-specific analyses of the same cohort are not independent
+GCST90081448_buildGRCh38.tsv	UK_Biobank_group	None documented	FALSE	All 12 inputs include UK Biobank; phenotype-specific analyses of the same cohort are not independent
